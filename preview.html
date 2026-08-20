@@ -1,0 +1,680 @@
+<!doctype html>
+<!--
+  preview.html — the whole demo, one surface.
+
+  There is no separate "frozen demo" and "live demo" any more. There is a library of
+  course cards that grows as people search. Cards that already exist open instantly and
+  cost nothing; a course nobody has looked up yet shows its retrieved evidence first,
+  then offers to compile it — one gated API call, once, ever. After that it's just
+  another card in the library.
+
+  That caching model is the point, not a demo shortcut: it's how this scales past a
+  curated handful without paying to re-answer the same question.
+
+  Two modes, chosen automatically:
+    - live_server.py running  -> full mode: all corpus courses, compile on demand
+    - plain http.server       -> library mode: browse every existing card, no compiling
+  Library mode exists so the demo cannot fail mid-pitch just because a server is down.
+
+      env -u ANTHROPIC_BASE_URL ANTHROPIC_API_KEY='sk-...' python3 live_server.py
+      # or, browse-only:  python3 -m http.server 8000
+      then open http://localhost:8000/preview.html
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Course intel</title>
+<link rel="stylesheet" href="CourseCard.css">
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+<style>
+  body { margin: 0; background: #f6f2ec; font: 15px/1.6 ui-sans-serif, -apple-system, system-ui, sans-serif; color: #1c1a17; }
+  .boot { text-align: center; padding: 3rem; color: #7a736a; }
+
+  .shell { max-width: 820px; margin: 0 auto; padding: 1.8rem 1rem .4rem; }
+  .wordmark { font: 600 13px/1 ui-monospace, Menlo, monospace; letter-spacing: .08em;
+              text-transform: uppercase; color: #8a8177; margin: 0 0 .7rem; }
+
+  .search-wrap { position: relative; }
+  .search-box { display: flex; align-items: center; gap: .6rem; background: #fffdfa;
+                border: 1px solid #ddd6cc; border-radius: 11px; padding: .1rem .9rem;
+                box-shadow: 0 1px 2px rgba(28,26,23,.04); }
+  .search-box:focus-within { border-color: #1c1a17; box-shadow: 0 0 0 3px rgba(28,26,23,.07); }
+  .search-box .mag { color: #9a9188; flex: none; }
+  .search-box input { flex: 1; border: 0; outline: 0; background: none; color: inherit;
+                      font: 16px/1 inherit; padding: .85rem 0; min-width: 0; }
+  .search-box .clear { border: 0; background: none; color: #9a9188; cursor: pointer;
+                       font-size: 17px; line-height: 1; padding: .3rem; }
+  .scale-line { margin: .55rem .2rem 0; font-size: 12.5px; color: #8a8177; }
+  .scale-line b { font-weight: 600; color: #6d655c; }
+  .saved { color: #2f6a3c; }
+
+  .suggest { position: absolute; z-index: 30; left: 0; right: 0; top: calc(100% + .4rem);
+             background: #fffdfa; border: 1px solid #ddd6cc; border-radius: 11px;
+             box-shadow: 0 10px 30px rgba(28,26,23,.13); overflow: hidden; }
+  .suggest-note { padding: .7rem .9rem; font-size: 12.5px; color: #8a8177;
+                  border-bottom: 1px solid #eee7dd; background: #faf6f0; }
+  .suggest-note b { color: #1c1a17; }
+  .suggest ul { list-style: none; margin: 0; padding: .3rem; max-height: 340px; overflow-y: auto; }
+  .sg { display: flex; align-items: baseline; gap: .55rem; width: 100%; text-align: left;
+        border: 0; background: none; color: inherit; cursor: pointer; padding: .5rem .6rem;
+        border-radius: 7px; font: inherit; }
+  .sg:hover, .sg.cursor { background: #f1ebe2; }
+  .sg-code { font: 600 13px/1.4 ui-monospace, Menlo, monospace; flex: none; }
+  .sg-title { font-size: 13.5px; color: #554e46; overflow: hidden; text-overflow: ellipsis;
+              white-space: nowrap; flex: 1; }
+  .pill { flex: none; font-size: 10.5px; letter-spacing: .03em; text-transform: uppercase;
+          border-radius: 20px; padding: .12rem .5rem; }
+  .pill-ready { background: #e4f0e6; color: #2f6a3c; }
+  .pill-new   { background: #f1ebe2; color: #8a8177; }
+  .pill-multi { background: #e6ecf5; color: #33507e; }
+
+  .section { max-width: 820px; margin: 0 auto; padding: 1.4rem 1rem 0; }
+  .section-title { font: 600 12px/1 ui-monospace, Menlo, monospace; letter-spacing: .07em;
+                   text-transform: uppercase; color: #8a8177; margin: 0 0 .3rem;
+                   display: flex; align-items: baseline; gap: .6rem; }
+  .section-sub { font-size: 12.5px; color: #9a9188; margin: 0 0 .8rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(226px, 1fr)); gap: .6rem; }
+  .tile { display: block; text-align: left; background: #fffdfa; border: 1px solid #ddd6cc;
+          border-radius: 11px; padding: .8rem .9rem; cursor: pointer; color: inherit;
+          font: inherit; transition: border-color .12s, transform .12s; }
+  .tile:hover { border-color: #1c1a17; transform: translateY(-1px); }
+  .tile-top { display: flex; justify-content: space-between; align-items: baseline; gap: .5rem; }
+  .tile-code { font: 600 13px/1.4 ui-monospace, Menlo, monospace; }
+  .tile-title { font-size: 13.5px; color: #554e46; margin: .15rem 0 .4rem; }
+  .tile-meta { font-size: 11px; color: #8a8177; }
+  .more-line { margin: .9rem .2rem 0; font-size: 12.5px; color: #8a8177; }
+  .more-line button { border: 0; background: none; color: #a3521f; cursor: pointer;
+                      font: inherit; padding: 0; text-decoration: underline; }
+
+  .crumb { max-width: 820px; margin: 0 auto; padding: .2rem 1rem 0; }
+  .crumb button { border: 1px solid #ddd6cc; background: #fffdfa; color: inherit;
+                  border-radius: 7px; padding: .4rem .7rem; font: 13px/1 inherit; cursor: pointer; }
+  .crumb button:hover { border-color: #1c1a17; }
+  .origin-note { max-width: 820px; margin: .5rem auto 0; padding: 0 1rem;
+                 font-size: 12px; color: #8a8177; }
+
+  .ask-row { display: flex; align-items: flex-start; gap: .6rem; width: 100%; text-align: left;
+             border: 0; background: none; color: inherit; cursor: pointer; padding: .6rem;
+             border-radius: 7px; font: inherit; }
+  .ask-row:hover { background: #f1ebe2; }
+  .ask-badge { flex: none; font: 600 10px/1.5 ui-monospace, Menlo, monospace; letter-spacing: .04em;
+               text-transform: uppercase; background: #e4f0e6; color: #2f6a3c;
+               border-radius: 20px; padding: .1rem .5rem; margin-top: .1rem; }
+  .ask-body { flex: 1; min-width: 0; }
+  .ask-q { display: block; font-size: 13.5px; color: #1c1a17; }
+  .ask-meta { display: block; font-size: 11.5px; color: #8a8177; margin-top: .15rem; }
+  .ask-head { padding: .55rem .9rem; font-size: 11px; letter-spacing: .06em;
+              text-transform: uppercase; color: #8a8177; background: #faf6f0;
+              border-bottom: 1px solid #eee7dd; }
+
+  .answer { max-width: 820px; margin: 1rem auto; padding: 0 1rem 3rem; }
+  .answer-card { background: #fffdfa; border: 1px solid #ddd6cc; border-radius: 12px;
+                 padding: 1.2rem 1.3rem; }
+  .asked { font-size: 12px; letter-spacing: .05em; text-transform: uppercase;
+           color: #8a8177; margin: 0 0 .2rem; }
+  .asked-q { font: 600 19px/1.35 inherit; margin: 0 0 .7rem; }
+  .matched { font-size: 12.5px; color: #7a736a; background: #f6f2ec; border-radius: 8px;
+             padding: .5rem .7rem; margin: 0 0 1rem; }
+  .matched b { color: #1c1a17; font-weight: 600; }
+  .answer-foot { display: flex; align-items: center; gap: .7rem; flex-wrap: wrap;
+                 margin-top: 1rem; padding-top: .9rem; border-top: 1px solid #eee7dd; }
+  .link-btn { border: 1px solid #ddd6cc; background: #fffdfa; color: inherit; border-radius: 7px;
+              padding: .45rem .75rem; font: 13px/1 inherit; cursor: pointer; }
+  .link-btn:hover { border-color: #1c1a17; }
+
+  .cp { max-width: 820px; margin: 1rem auto; padding: 0 1rem 3rem; }
+  .cp-card { background: #fffdfa; border: 1px solid #ddd6cc; border-radius: 12px; padding: 1.1rem 1.2rem; }
+  .cp-head { display: flex; justify-content: space-between; align-items: baseline; gap: .6rem; }
+  .cp-code { font: 600 15px/1.3 ui-monospace, Menlo, monospace; }
+  .cp-title { color: #7a736a; font-size: 13.5px; }
+  .cp-sub { font-size: 12.5px; color: #8a8177; margin: .3rem 0 .9rem; }
+  .cp-hits { list-style: none; margin: 0 0 1rem; padding: 0; display: flex; flex-direction: column; gap: .4rem; }
+  .cp-hit { display: flex; gap: .5rem; align-items: baseline; font-size: 12.5px; color: #554e46;
+            border-left: 2px solid #e4ddd3; padding-left: .55rem; }
+  .cp-hit .src { flex: none; font: 600 10.5px/1.4 ui-monospace, Menlo, monospace;
+                 text-transform: uppercase; color: #8a8177; }
+  .cp-hit .snip { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .cp-warn { font-size: 13px; color: #a3521f; margin: 0 0 1rem; }
+  .cp-actions { display: flex; align-items: center; gap: .8rem; flex-wrap: wrap; }
+  .cp-full { display: flex; align-items: center; gap: .4rem; font-size: 12.5px; color: #7a736a; }
+  .btn { border: 0; background: #1c1a17; color: #fffdfa; border-radius: 8px;
+         padding: .6rem 1rem; font: 600 13.5px/1 inherit; cursor: pointer; }
+  .btn:disabled { background: #c8c0b4; cursor: not-allowed; }
+  .cp-cost { font-size: 12px; color: #8a8177; }
+  .cp-status { margin-top: .8rem; font-size: 13px; }
+  .cp-status.err { color: #a3321f; }
+
+  @media (prefers-color-scheme: dark) {
+    body { background: #131110; color: #ece7e0; }
+    .wordmark, .scale-line, .section-title, .section-sub, .tile-meta, .cp-sub, .cp-cost,
+    .more-line, .origin-note { color: #8d857b; }
+    .scale-line b { color: #b3aa9f; }
+    .saved { color: #7fc491; }
+    .search-box, .suggest, .tile, .crumb button, .cp-card { background: #201d1a; border-color: #35312c; }
+    .search-box:focus-within { border-color: #ece7e0; box-shadow: 0 0 0 3px rgba(236,231,224,.09); }
+    .suggest-note { background: #1a1815; border-bottom-color: #35312c; }
+    .suggest-note b { color: #ece7e0; }
+    .sg:hover, .sg.cursor { background: #2b2723; }
+    .sg-title, .tile-title, .cp-hit { color: #c3bcb2; }
+    .tile:hover, .crumb button:hover { border-color: #ece7e0; }
+    .ask-row:hover { background: #2b2723; }
+    .ask-badge { background: #1d3322; color: #7fc491; }
+    .ask-q { color: #ece7e0; }
+    .ask-meta, .ask-head, .asked, .matched { color: #8d857b; }
+    .ask-head { background: #1a1815; border-bottom-color: #35312c; }
+    .answer-card, .link-btn { background: #201d1a; border-color: #35312c; }
+    .matched { background: #1a1815; }
+    .matched b { color: #ece7e0; }
+    .answer-foot { border-top-color: #35312c; }
+    .link-btn:hover { border-color: #ece7e0; }
+    .pill-ready { background: #1d3322; color: #7fc491; }
+    .pill-new   { background: #2b2723; color: #8d857b; }
+    .pill-multi { background: #1e2636; color: #8fabde; }
+    .btn { background: #ece7e0; color: #191714; }
+    .btn:disabled { background: #3a352f; color: #6d655c; }
+  }
+</style>
+</head>
+<body>
+<div id="root"><div class="boot">Loading…</div></div>
+
+<script type="text/plain" id="app-src">
+
+/* ── data access ────────────────────────────────────────────────────────────
+ * Full mode talks to live_server.py. Library mode falls back to reading the two
+ * card directories straight off a plain static server, so the demo still opens
+ * (browse-only) if nobody started the API.
+ */
+async function api(path, opts) {
+  const res = await fetch(path, opts);
+  let data = null;
+  try { data = await res.json(); } catch (e) {}
+  if (!res.ok) {
+    const err = new Error((data && data.error) || (res.status + " " + res.statusText));
+    err.status = res.status; err.data = data;
+    throw err;
+  }
+  return data;
+}
+
+async function listDir(dir) {
+  const res = await fetch(dir + "/");
+  if (!res.ok) return [];
+  const doc = new DOMParser().parseFromString(await res.text(), "text/html");
+  return [...doc.querySelectorAll("a[href]")]
+    .map((a) => decodeURIComponent(a.getAttribute("href").split("/").pop()))
+    .filter((f) => /\.json$/i.test(f) && !f.startsWith("_"))
+    .map((f) => f.replace(/\.json$/i, ""));
+}
+
+/** Library mode: no API. Read both card dirs and build the same row shape. */
+async function loadStatic() {
+  const [seed, cached] = await Promise.all([listDir("demo_data"), listDir("card_cache")]);
+  const rows = [];
+  const add = async (id, origin) => {
+    const dir = origin === "seed" ? "demo_data" : "card_cache";
+    const j = await (await fetch(`${dir}/${id}.json`)).json();
+    rows.push({
+      course: id, title: j.title, has_card: true, origin,
+      chunks: Object.keys(j.receipts || {}).length,
+      receipts: Object.keys(j.receipts || {}).length,
+      sources: [...new Set(Object.values(j.receipts || {}).map((r) => r.source).filter(Boolean))].sort(),
+      hits: 0, kind: j.kind || "single", member_courses: j.courses || [],
+    });
+  };
+  await Promise.all([...seed.map((id) => add(id, "seed")),
+                     ...cached.filter((id) => !seed.includes(id)).map((id) => add(id, "cache"))]);
+  rows.sort((a, b) => a.course.localeCompare(b.course));
+  return {
+    courses: rows, has_key: false, offline: true,
+    stats: { cards_total: rows.length, cards_seed: seed.length,
+             cards_cached: rows.length - seed.length, cache_hits: 0, api_calls_spent: 0 },
+  };
+}
+
+/* ── matching ─────────────────────────────────────────────────────────────── */
+const plural = (n, word) => `${n} ${word}${n === 1 ? "" : "s"}`;
+const norm = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+
+function score(row, q) {
+  const nq = norm(q);
+  if (!nq) return 0;
+  const hay = [row.course, row.title || "", ...(row.member_courses || [])];
+  let best = -1;
+  for (const h of hay) {
+    const at = norm(h).indexOf(nq);
+    if (at === -1) continue;
+    const s = (at === 0 ? 100 : 50) - Math.min(at, 40);
+    if (s > best) best = s;
+  }
+  // an existing card outranks an equally-good match that would cost a call
+  return best < 0 ? best : best + (row.has_card ? 5 : 0);
+}
+
+function search(rows, q) {
+  if (!q.trim()) return rows;
+  return rows.map((r) => ({ r, s: score(r, q) })).filter((x) => x.s >= 0)
+    .sort((a, b) => b.s - a.s).map((x) => x.r);
+}
+
+/* ── bits ─────────────────────────────────────────────────────────────────── */
+function Pill({ row }) {
+  if (row.kind === "multi") return <span className="pill pill-multi">compare {row.member_courses.length}</span>;
+  if (row.has_card) return <span className="pill pill-ready">ready</span>;
+  return <span className="pill pill-new">{row.chunks} chunks</span>;
+}
+
+function Tile({ row, onPick }) {
+  return (
+    <button className="tile" onClick={() => onPick(row)}>
+      <div className="tile-top">
+        <span className="tile-code">{row.course}</span>
+        <Pill row={row} />
+      </div>
+      {row.title && <div className="tile-title">{row.title}</div>}
+      <div className="tile-meta">
+        {row.has_card
+          ? `${plural(row.receipts ?? row.chunks, "cited source")}${row.hits ? ` · opened ${row.hits}×` : ""}`
+          : `${plural(row.chunks, "corpus chunk")} · not compiled yet`}
+      </div>
+    </button>
+  );
+}
+
+/* The answer view. Markdown, Cite and Receipts come from CourseCard.jsx, which is
+ * compiled in the same Babel pass as this file — so citations behave identically here
+ * without exporting anything or duplicating the renderer. */
+function AnswerView({ ask, onOpenCard }) {
+  const [open, setOpen] = useState(false);
+  const [hl, setHl] = useState(null);
+  const itemRefs = useRef({});
+  const m = ask.match;
+
+  const jump = (id) => {
+    setOpen(true); setHl(id);
+    requestAnimationFrame(() => {
+      const el = itemRefs.current[id];
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  };
+
+  return (
+    <div className="answer">
+      <div className="answer-card">
+        <p className="asked">You asked</p>
+        <h2 className="asked-q">{ask.query}</h2>
+        <p className="matched">
+          Answered from an existing card — <b>{m.card_id}</b>
+          {m.title ? ` · ${m.title}` : ""} · <b>{m.tab_label}</b>. No new API call:
+          this question was already synthesized and citation-checked.
+        </p>
+        <Markdown md={m.answer_md} receipts={m.receipts} onJump={jump} />
+        <Receipts receipts={m.receipts} ids={m.cited_ids} open={open} setOpen={setOpen}
+                  highlighted={hl} itemRefs={itemRefs} />
+        <div className="answer-foot">
+          <button className="link-btn" onClick={() => onOpenCard(m.card_id)}>
+            Open the full {m.card_id} card →
+          </button>
+          <span className="cp-cost">matched question: “{m.question}”</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Search({ rows, stats, offline, q, setQ, onPick, onAnswer, onCompileCourse }) {
+  const [open, setOpen] = useState(false);
+  const [cur, setCur] = useState(0);
+  const [askRes, setAskRes] = useState(null);
+  const wrap = useRef(null);
+
+  const hits = useMemo(() => search(rows, q), [rows, q]);
+  const answered = !!(askRes && askRes.good_match);
+  // Only fall back to "here is every course" when we have nothing at all to offer —
+  // showing it under a successful answer reads as a contradiction.
+  const empty = q.trim() !== "" && hits.length === 0 && !answered;
+  const shown = (empty ? rows : hits).slice(0, 60);
+
+  useEffect(() => { setCur(0); }, [q]);
+
+  // Free-text matching against already-answered questions. Debounced, and free —
+  // /api/ask never calls a model. Skipped in browse-only mode (no API at all).
+  useEffect(() => {
+    if (offline || q.trim().length < 3) { setAskRes(null); return; }
+    let alive = true;
+    const t = setTimeout(() => {
+      api("/api/ask?q=" + encodeURIComponent(q.trim()))
+        .then((r) => alive && setAskRes(r))
+        .catch(() => alive && setAskRes(null));
+    }, 220);
+    return () => { alive = false; clearTimeout(t); };
+  }, [q, offline]);
+  useEffect(() => {
+    const away = (e) => { if (wrap.current && !wrap.current.contains(e.target)) setOpen(false); };
+    document.addEventListener("mousedown", away);
+    return () => document.removeEventListener("mousedown", away);
+  }, []);
+
+  const choose = (row) => { setOpen(false); onPick(row); };
+  const onKey = (e) => {
+    if (e.key === "Escape") { setOpen(false); return; }
+    if (!open && (e.key === "ArrowDown" || e.key === "Enter")) { setOpen(true); return; }
+    if (e.key === "ArrowDown") { e.preventDefault(); setCur((c) => Math.min(c + 1, shown.length - 1)); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); setCur((c) => Math.max(c - 1, 0)); }
+    else if (e.key === "Enter" && shown[cur]) { e.preventDefault(); choose(shown[cur]); }
+  };
+
+  const saved = stats.cache_hits;
+  return (
+    <div className="shell">
+      <p className="wordmark">Course intel</p>
+      <div className="search-wrap" ref={wrap}>
+        <div className="search-box">
+          <span className="mag" aria-hidden="true">⌕</span>
+          <input type="text" value={q} aria-label="Search courses" role="combobox"
+                 aria-expanded={open} aria-autocomplete="list"
+                 placeholder={offline ? "Search the card library — code or title"
+                                       : "Ask a question, or search a course — try “can I take 150 and 213 together?”"}
+                 onChange={(e) => { setQ(e.target.value); setOpen(true); }}
+                 onFocus={() => setOpen(true)} onKeyDown={onKey} />
+          {q && <button className="clear" aria-label="Clear search"
+                        onClick={() => { setQ(""); setOpen(true); }}>×</button>}
+        </div>
+        {open && (
+          <div className="suggest">
+            {askRes && askRes.good_match && askRes.matches[0] && (
+              <>
+                <div className="ask-head">Answer — already compiled, no API call</div>
+                <button className="ask-row" onMouseDown={(e) => e.preventDefault()}
+                        onClick={() => { setOpen(false); onAnswer({ query: q.trim(), match: askRes.matches[0] }); }}>
+                  <span className="ask-badge">answer</span>
+                  <span className="ask-body">
+                    <span className="ask-q">{askRes.matches[0].question}</span>
+                    <span className="ask-meta">
+                      {askRes.matches[0].card_id}
+                      {askRes.matches[0].title ? ` · ${askRes.matches[0].title}` : ""}
+                      {" · "}{askRes.matches[0].tab_label}
+                    </span>
+                  </span>
+                </button>
+              </>
+            )}
+            {askRes && !askRes.good_match && askRes.compile_hint && (
+              <>
+                <div className="ask-head">No answer for that course yet</div>
+                <button className="ask-row" onMouseDown={(e) => e.preventDefault()}
+                        onClick={() => { setOpen(false); onCompileCourse(askRes.compile_hint); }}>
+                  <span className="ask-badge" style={{ background: "#f1ebe2", color: "#8a8177" }}>
+                    compile
+                  </span>
+                  <span className="ask-body">
+                    <span className="ask-q">Build a card for {askRes.compile_hint}</span>
+                    <span className="ask-meta">
+                      Nothing in the library covers it — this would be a new API call.
+                    </span>
+                  </span>
+                </button>
+              </>
+            )}
+            {empty && (
+              <div className="suggest-note">
+                Nothing matches <b>“{q.trim()}”</b>. Everything available:
+              </div>
+            )}
+            <ul role="listbox">
+              {shown.map((row, i) => (
+                <li key={row.course}>
+                  <button className={"sg" + (!empty && i === cur ? " cursor" : "")}
+                          role="option" aria-selected={!empty && i === cur}
+                          onMouseDown={(e) => e.preventDefault()} onClick={() => choose(row)}>
+                    <span className="sg-code">{row.course}</span>
+                    <span className="sg-title">{row.title || "—"}</span>
+                    <Pill row={row} />
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+      <p className="scale-line">
+        <b>{stats.cards_total} course cards ready</b>
+        {!offline && <> · {rows.length} courses searchable</>}
+        {saved > 0 && <span className="saved"> · {saved} opened from cache, {saved} API calls avoided</span>}
+      </p>
+    </div>
+  );
+}
+
+function Library({ rows, onPick }) {
+  const [showAll, setShowAll] = useState(false);
+  const ready = rows.filter((r) => r.has_card);
+  const rest = rows.filter((r) => !r.has_card);
+  const restShown = showAll ? rest : rest.slice(0, 12);
+
+  return (
+    <>
+      <div className="section">
+        <h2 className="section-title">Previously searched</h2>
+        <p className="section-sub">
+          Already compiled and cited — these open instantly and cost nothing.
+        </p>
+        <div className="grid">
+          {ready.map((r) => <Tile key={r.course} row={r} onPick={onPick} />)}
+        </div>
+      </div>
+
+      {rest.length > 0 && (
+        <div className="section" style={{ paddingBottom: "3rem" }}>
+          <h2 className="section-title">Not searched yet</h2>
+          <p className="section-sub">
+            In the corpus but never compiled. Opening one shows its evidence first, then
+            offers to build the card — one API call, once; after that it joins the list above.
+          </p>
+          <div className="grid">
+            {restShown.map((r) => <Tile key={r.course} row={r} onPick={onPick} />)}
+          </div>
+          {rest.length > restShown.length && (
+            <p className="more-line">
+              <button onClick={() => setShowAll(true)}>
+                show all {rest.length} uncompiled courses
+              </button>
+            </p>
+          )}
+        </div>
+      )}
+    </>
+  );
+}
+
+function CompilePanel({ row, hasKey, offline, onCompiled }) {
+  const [preview, setPreview] = useState(null);
+  const [previewErr, setPreviewErr] = useState(null);
+  const [full, setFull] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [status, setStatus] = useState(null);
+
+  useEffect(() => {
+    setPreview(null); setPreviewErr(null); setStatus(null);
+    if (offline) return;
+    api("/api/preview?course=" + encodeURIComponent(row.course))
+      .then(setPreview).catch((e) => setPreviewErr(e.message));
+  }, [row.course, offline]);
+
+  const thin = preview && preview.hits.length > 0 &&
+               new Set(preview.hits.map((h) => h.source)).size < 2;
+  const canCompile = hasKey && !offline && preview && preview.hits.length > 0 && !busy;
+
+  const compile = () => {
+    setBusy(true); setStatus(null);
+    api("/api/compile", { method: "POST", headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({ course: row.course, full }) })
+      .then((card) => { setBusy(false); onCompiled(card); })
+      .catch((e) => {
+        setBusy(false);
+        const extra = e.data && e.data.invented ? " Invented ids: " + e.data.invented.join(", ") : "";
+        setStatus({ msg: e.message + extra });
+      });
+  };
+
+  return (
+    <div className="cp">
+      <div className="cp-card">
+        <div className="cp-head">
+          <span className="cp-code">{row.course}</span>
+          {row.title && <span className="cp-title">{row.title}</span>}
+        </div>
+        <p className="cp-sub">
+          No card yet. This is the evidence retrieval found — real passages from the
+          corpus, no model call made.
+        </p>
+
+        {offline && <p className="cp-warn">Browse-only mode: live_server.py isn't running,
+          so this course can't be compiled right now.</p>}
+        {previewErr && <p className="cp-warn">Retrieval failed: {previewErr}</p>}
+        {preview && preview.hits.length === 0 && (
+          <p className="cp-warn">Nothing retrieved for {row.course} — there's no evidence
+            to cite, so compiling is disabled.</p>
+        )}
+        {preview && preview.hits.length > 0 && (
+          <ul className="cp-hits">
+            {preview.hits.map((h) => (
+              <li className="cp-hit" key={h.pid}>
+                <span className="src">{h.source}</span>
+                <span className="snip">{h.snippet}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+        {thin && (
+          <p className="cp-warn">Heads up: every passage here comes from one source.
+            The card will be a summary, not a cross-source synthesis.</p>
+        )}
+        {!hasKey && !offline && (
+          <p className="cp-warn">ANTHROPIC_API_KEY isn't set on the server, so compiling
+            is disabled.</p>
+        )}
+
+        <div className="cp-actions">
+          <button className="btn" disabled={!canCompile} onClick={compile}>
+            {busy ? "Compiling…" : full ? "Compile full card (5 calls)" : "Compile card (1 call)"}
+          </button>
+          <label className="cp-full">
+            <input type="checkbox" checked={full} disabled={busy}
+                   onChange={(e) => setFull(e.target.checked)} />
+            all 4 facets too
+          </label>
+          <span className="cp-cost">real API call · ~15–60s · then cached forever</span>
+        </div>
+        {status && <p className="cp-status err">{status.msg}</p>}
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  const [idx, setIdx] = useState(null);
+  const [err, setErr] = useState(null);
+  const [q, setQ] = useState("");
+  const [sel, setSel] = useState(null);
+  const [card, setCard] = useState(null);      // the loaded card for `sel`
+  const [loading, setLoading] = useState(false);
+  const [answer, setAnswer] = useState(null);  // a free-text question resolved from cache
+
+  const refresh = () =>
+    api("/api/courses").catch(() => loadStatic()).then(setIdx).catch((e) => setErr(e.message));
+
+  useEffect(() => { refresh(); }, []);
+
+  if (err) return <div className="boot">Could not load: {err}</div>;
+  if (!idx) return <div className="boot">Loading course library…</div>;
+
+  const offline = !!idx.offline;
+
+  const pick = (row) => {
+    setQ(""); setAnswer(null); setSel(row); setCard(null); window.scrollTo({ top: 0 });
+    if (!row.has_card) return;
+    setLoading(true);
+    const load = offline
+      ? fetch(`${row.origin === "seed" ? "demo_data" : "card_cache"}/${row.course}.json`)
+          .then((r) => r.json())
+      : api("/api/card?course=" + encodeURIComponent(row.course));
+    load.then((c) => { setCard(c); setLoading(false); })
+        .catch((e) => { setErr(e.message); setLoading(false); });
+  };
+
+  const afterCompile = (c) => { setCard(c); refresh(); };
+
+  const showAnswer = (a) => { setQ(""); setSel(null); setCard(null); setAnswer(a);
+                              window.scrollTo({ top: 0 }); };
+  const byId = (id) => idx.courses.find((r) => r.course === id);
+  const openCardById = (id) => { const r = byId(id); if (r) pick(r); };
+  const compileCourse = (id) => {
+    const r = byId(id);
+    if (r) pick(r);   // lands on the compile panel, since it has no card yet
+  };
+
+  let body;
+  if (answer) body = <AnswerView ask={answer} onOpenCard={openCardById} />;
+  else if (!sel) body = <Library rows={idx.courses} onPick={pick} />;
+  else if (loading) body = <div className="boot">Opening card…</div>;
+  else if (card) body = <CourseCard card={card} />;
+  else body = <CompilePanel row={sel} hasKey={idx.has_key} offline={offline}
+                             onCompiled={afterCompile} />;
+
+  return (
+    <>
+      <Search rows={idx.courses} stats={idx.stats} offline={offline}
+              q={q} setQ={setQ} onPick={pick} onAnswer={showAnswer}
+              onCompileCourse={compileCourse} />
+      {answer && (
+        <div className="crumb">
+          <button onClick={() => setAnswer(null)}>← All courses</button>
+        </div>
+      )}
+      {sel && (
+        <>
+          <div className="crumb">
+            <button onClick={() => { setSel(null); setCard(null); }}>← All courses</button>
+          </div>
+          {card && card._origin === "cache" && (
+            <p className="origin-note">
+              Compiled on demand{card._hits > 1 ? ` · opened ${card._hits}×, no new API call` : ""}
+            </p>
+          )}
+        </>
+      )}
+      {body}
+    </>
+  );
+}
+</script>
+
+<script>
+Promise.all([
+  fetch("CourseCard.jsx").then(r => r.text()),
+  Promise.resolve(document.getElementById("app-src").textContent),
+])
+  .then(([src, appSrc]) => {
+    const stripped = src
+      .replace(/^\s*import\s+React[^\n]*\n/m, "")
+      .replace(/^\s*import\s+["'][^"']+\.css["'];?\s*\n/m, "")
+      .replace(/^\s*export default function CourseCard/m, "function CourseCard");
+    const { useState, useEffect, useMemo, useRef } = React;
+    const code = Babel.transform(stripped + "\n" + appSrc, { presets: ["react"] }).code;
+    const App = new Function(
+      "React", "useState", "useEffect", "useMemo", "useRef",
+      code + "\nreturn App;"
+    )(React, useState, useEffect, useMemo, useRef);
+    ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(App));
+  })
+  .catch(e => {
+    document.getElementById("root").innerHTML =
+      '<div class="boot">Failed to boot: ' + e.message + '</div>';
+  });
+</script>
+</body>
+</html>

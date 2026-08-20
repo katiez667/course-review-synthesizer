@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "abigalekim-10-714-0",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "10-714",
+    "professor": null,
+    "date": "Fall 2023",
+    "text": "DLSys is a relatively new class that covers implementing different components of the deep learning stack. I gained insight on the scope of deep learning library implementation, and definitely appreciate libraries like PyTorch a lot more. However, I thought the class was doable by just trying to pass the test cases in the homework, which results in less effective learning."
+  },
+  {
+    "id": "abigalekim-15-740-1",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "15-740",
+    "professor": null,
+    "date": "Fall 2023",
+    "text": "Computer Architecture (the CS Ph.D. version) is a lighter paper-reading/project class that focuses on computer architecture fundamentals. I thought the papers chosen were hard to understand for someone without architecture background, but gave a good overview of the field. Both the assignment and the project are pretty standard for a CS Ph.D. class–decently well-designed, but I could have spent more time on them than I did to get more out of them."
+  },
+  {
+    "id": "abigalekim-15-721-2",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "15-721",
+    "professor": "Andy Pavlo",
+    "date": "Spring 2023",
+    "text": "The highlight of this semester was definitely 15-721, Advanced Database Systems. Andy Pavlo is a phenomenal lecturer and I learned a lot while laughing a lot. The first project, which is implementing your own Foreign Data Wrapper in Postgres, was well designed and taught me a lot about Postgres internals. Due to 15-721, I gained a pretty solid understanding of database system evaluation, design decision tradeoffs, and the field of OLAP DBMSs. This class really made me love database systems even more than I already do!"
+  },
+  {
+    "id": "abigalekim-15-712-3",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "15-712",
+    "professor": null,
+    "date": "Spring 2023",
+    "text": "15-712 is a relatively easy class, and its set of required readings gave me a good overview of the general systems research sphere. I also liked that the midterms in 15-712 were open ended. Some of the questions allowed me to learn new things during the exam."
+  },
+  {
+    "id": "abigalekim-11-485-4",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "11-485",
+    "professor": "Bhiksha Raj",
+    "date": "Fall 2021",
+    "text": "This class took me about 20 hours/week of my time, if not more. The professor, Bhiksha Raj, is kind, passionate, and it is easy to tell that he genuinely loves the subject material. I learned a lot about both fundamentals of deep learning through the “Part 1” assignments, and how to apply these concepts to real-world problems through the “Part 2” assignments. I definitely underestimated the difficulty of this class, and thought it was really hard. By far, out of all my classes, 11-485 (deep learning) was the most accommdating, and for this reason, I highly highly recommend 11-485 if you have the time for it."
+  },
+  {
+    "id": "abigalekim-15-462-5",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "15-462",
+    "professor": null,
+    "date": "Fall 2021",
+    "text": "I found the pre-recorded lectures of Computer Graphics to remind me severely of Zoom school, and I did not enjoy the class mostly because of the lack of professor involvement. However, the material taught in computer graphics is pretty interesting. The TAs for Computer Graphics are really helpful and I really appreciated all of them."
+  },
+  {
+    "id": "abigalekim-15-330-6",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "15-330",
+    "professor": "Bryan Parno",
+    "date": "Fall 2021",
+    "text": "Relatively easy (compared to say, OS or compilers) and fun class. The professor, Bryan Parno, is an excellent lecturer, and the material is simulateneously easy-to-follow and interesting, which is rare for a CMU class. The assignments and exams were well constructed. In other words, they all relate to each other well."
+  },
+  {
+    "id": "abigalekim-80-130-7",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "80-130",
+    "professor": "Derrick Gray",
+    "date": "Fall 2021",
+    "text": "Ethics was honestly a really fun class, and I enjoyed discussing cool ethical theories with my classmates. Derrick Gray is an excellent professor, and taking another class with him was definitely worth the extra time."
+  },
+  {
+    "id": "abigalekim-15-745-8",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "15-745",
+    "professor": null,
+    "date": "Spring 2021",
+    "text": "Optimizing Compilers has both good teaching and well-designed assignments, and I felt like I really understood the material through the assignments and reading."
+  },
+  {
+    "id": "abigalekim-15-539-9",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "15-539",
+    "professor": null,
+    "date": "Spring 2021",
+    "text": "I personally loved CS Pedagogy because even as an experienced teaching assistant, I felt like I was gaining a lot of hands-on, guided experience in creating materials for introductory CS students."
+  },
+  {
+    "id": "abigalekim-15-451-10",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "15-451",
+    "professor": "Sleator",
+    "date": "Spring 2021",
+    "text": "Although 15-451 is a requirement, I thought it was a well-taught requirement, and I found both the professors to be very helpful and supportive. Professor Sleator also is incredibly memey as a person, which I found to be very entertaining in a pandemic."
+  },
+  {
+    "id": "abigalekim-15-400-11",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "15-400",
+    "professor": null,
+    "date": "Spring 2021",
+    "text": "I found research (15-400) to be quite difficult for me to do given the outstanding circumstances."
+  },
+  {
+    "id": "abigalekim-76-210-12",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "76-210",
+    "professor": "Newman",
+    "date": "Fall 2020",
+    "text": "The class that stood out to me most was Banned Books. Professor Newman is absolutely stellar and understands the importance of bringing controversial issues to the classroom discussion space."
+  },
+  {
+    "id": "abigalekim-15-410-13",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "15-410",
+    "professor": null,
+    "date": "Spring 2020",
+    "text": "15-410 is one of the hardest, most time-consuming classes in the entire school of computer science. Taking it in my sophomore spring with limited coding experience was a daring move, but I don’t regret it one bit. I learned a lot of interesting material and debugging resilience from taking OS, and it really increased my confidence as a systems programmer."
+  },
+  {
+    "id": "abigalekim-80-135-14",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "80-135",
+    "professor": "Gray",
+    "date": "Spring 2020",
+    "text": "Intro to Political Philosophy (80-135), taught by Professor Gray, is one of the hidden gems of the CMU class offerings."
+  },
+  {
+    "id": "abigalekim-15-259-15",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "15-259",
+    "professor": "Mor Harchol Balter",
+    "date": "Spring 2020",
+    "text": "As most people who have taken PnC will tell you, Professor Mor Harchol Balter is top tier and PnC is a really high quality class."
+  },
+  {
+    "id": "abigalekim-15-251-16",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "15-251",
+    "professor": null,
+    "date": "Spring 2019",
+    "text": "I struggled in 15-251 and 15-150. I found that all of my classes this semester were taught well, although I do not think I retained the full amount of material from both 15-251 and 15-150 due to being overwhelmed about workload."
+  },
+  {
+    "id": "abigalekim-15-150-17",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "15-150",
+    "professor": null,
+    "date": "Spring 2019",
+    "text": "I struggled in 15-251 and 15-150. I found that all of my classes this semester were taught well, although I do not think I retained the full amount of material from both 15-251 and 15-150 due to being overwhelmed about workload."
+  },
+  {
+    "id": "abigalekim-15-122-18",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "15-122",
+    "professor": null,
+    "date": "Fall 2018",
+    "text": "I really enjoyed 15-122. I found the programming assignments for 15-122 interesting and fun."
+  },
+  {
+    "id": "abigalekim-15-151-19",
+    "source": "blog",
+    "author": "Abigale Kim",
+    "url": "https://abigalekim.github.io/courses/",
+    "course": "15-151",
+    "professor": "Mackey",
+    "date": "Fall 2018",
+    "text": "I really enjoyed 15-122 and 15-151. Professor Mackey, who teaches Concepts, is an unforgettable lecturer."
+  },
+  {
+    "id": "frankfan-15-745-0",
+    "source": "blog",
+    "author": "Frank Fan",
+    "url": "https://weihang7.github.io/courses/",
+    "course": "15-745",
+    "professor": null,
+    "date": "Spring 2020",
+    "text": "This is a course on writing optimization passes more than a raw compiler. It is appropriate to take this course without having taken 15-411 Compiler Design."
+  },
+  {
+    "id": "frankfan-99-361-1",
+    "source": "blog",
+    "author": "Frank Fan",
+    "url": "https://weihang7.github.io/courses/",
+    "course": "99-361",
+    "professor": null,
+    "date": "Spring 2020",
+    "text": "IDeATe portal course for Learning Design"
+  },
+  {
+    "id": "frankfan-15-440-2",
+    "source": "blog",
+    "author": "Frank Fan",
+    "url": "https://weihang7.github.io/courses/",
+    "course": "15-440",
+    "professor": null,
+    "date": "Fall 2019",
+    "text": "As a second systems course, it was not very hard. I also had a very good partner."
+  },
+  {
+    "id": "frankfan-15-322-3",
+    "source": "blog",
+    "author": "Frank Fan",
+    "url": "https://weihang7.github.io/courses/",
+    "course": "15-322",
+    "professor": null,
+    "date": "Fall 2019",
+    "text": "Requires programming in a suboptimal programming language, would not recommend."
+  },
+  {
+    "id": "frankfan-15-400-4",
+    "source": "blog",
+    "author": "Frank Fan",
+    "url": "https://weihang7.github.io/courses/",
+    "course": "15-400",
+    "professor": null,
+    "date": "Spring 2019",
+    "text": "The check-in meetings aren’t that bad. Though I do not recommend taking this course due to the final paper, as oftentimes you will not have enough results to write a full paper."
+  },
+  {
+    "id": "frankfan-15-451-5",
+    "source": "blog",
+    "author": "Frank Fan",
+    "url": "https://weihang7.github.io/courses/",
+    "course": "15-451",
+    "professor": "David Woodruff",
+    "date": "Spring 2019",
+    "text": "If David Woodruff is teaching it, there will be some really interesting algorithms and data structures at the end."
+  },
+  {
+    "id": "frankfan-15-259-6",
+    "source": "blog",
+    "author": "Frank Fan",
+    "url": "https://weihang7.github.io/courses/",
+    "course": "15-259",
+    "professor": null,
+    "date": "Spring 2019",
+    "text": "Very heavy on weekly problem sets, reminds one of high school"
+  },
+  {
+    "id": "frankfan-51-262-7",
+    "source": "blog",
+    "author": "Frank Fan",
+    "url": "https://weihang7.github.io/courses/",
+    "course": "51-262",
+    "professor": null,
+    "date": "Spring 2019",
+    "text": "A little light on formal instruction, which I am not sure if is a good idea for beginners."
+  },
+  {
+    "id": "frankfan-21-269-8",
+    "source": "blog",
+    "author": "Frank Fan",
+    "url": "https://weihang7.github.io/courses/",
+    "course": "21-269",
+    "professor": null,
+    "date": "Spring 2017",
+    "text": "Enough math for all of college."
+  },
+  {
+    "id": "frankfan-15-150-9",
+    "source": "blog",
+    "author": "Frank Fan",
+    "url": "https://weihang7.github.io/courses/",
+    "course": "15-150",
+    "professor": null,
+    "date": "Spring 2017",
+    "text": "Functional programming is the cleanest way to do most things in software engineering, you will use the principles learned here many times later on."
+  },
+  {
+    "id": "frankfan-79-233-10",
+    "source": "blog",
+    "author": "Frank Fan",
+    "url": "https://weihang7.github.io/courses/",
+    "course": "79-233",
+    "professor": null,
+    "date": "Fall 2016",
+    "text": "Provides a lot of reading and background on US foreign intervention both in the Middle East and beyond, allowing one to form their own perspective"
+  },
+  {
+    "id": "fanpuzeng-10-716-0",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "10-716",
+    "professor": "Pradeep Ravikumar",
+    "date": "Spring 2023",
+    "text": "This was my favorite class this semester. It felt like a natural continuation of 10-708 Probabilistic Graphical Models, with a strong focus on understanding the theory of how many non-parametric modern machine learning techniques work. It is very much a math and theory course and can get pretty dense at times, but it is also very rewarding."
+  },
+  {
+    "id": "fanpuzeng-15-712-1",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-712",
+    "professor": "Phil Gibbons",
+    "date": "Spring 2023",
+    "text": "I really liked this class and felt that there wasn’t enough information about this course online by people who have taken it."
+  },
+  {
+    "id": "fanpuzeng-36-709-2",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "36-709",
+    "professor": "Matey Neykov",
+    "date": "Spring 2023",
+    "text": "Overall I really enjoyed this class as it introduced me to many concepts in modern statistical analysis, which is really helpful in understanding statistical machine learning papers."
+  },
+  {
+    "id": "fanpuzeng-36-708-3",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "36-708",
+    "professor": "Aaditya Ramdas",
+    "date": "Spring 2023",
+    "text": "I found the class very practical and helpful, and learned a lot as someone with no data science and practical machine learning background."
+  },
+  {
+    "id": "fanpuzeng-21-329-4",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "21-329",
+    "professor": "Benjamin Siskind",
+    "date": "Spring 2023",
+    "text": "The course was taught by Benny, a postdoctoral associate teaching the class for the first time, so it was expected that there would be a few rough edges. Benny cares about the class, is passionate about the course content, and responds to emails and clarifications fairly promptly."
+  },
+  {
+    "id": "fanpuzeng-17-604-5",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "17-604",
+    "professor": "Dominick (Nick) Frollini",
+    "date": "Spring 2023",
+    "text": "Nick is a very passionate teacher with clear and well-paced lectures. It’s obvious he has done this so many times that it’s almost like a rehearsed performance."
+  },
+  {
+    "id": "fanpuzeng-15-859-6",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-859",
+    "professor": "David Woodruff",
+    "date": "Fall 2022",
+    "text": "His teaching is extremely clear as he makes sure to justify and explain every step used in a proof. The analysis for many sketching algorithms is highly non-trivial, but Woodruff manages to pull off explaining it in a way that reads like a storybook."
+  },
+  {
+    "id": "fanpuzeng-15-859-7",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-859",
+    "professor": "Pravesh Kothari",
+    "date": "Fall 2022",
+    "text": "Overall I felt that Pravesh is a great lecturer, and the topics covered are very interesting and applicable."
+  },
+  {
+    "id": "fanpuzeng-10-708-8",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "10-708",
+    "professor": "Andrej Risteski",
+    "date": "Fall 2022",
+    "text": "This class has a reputation of being one of the hardest ML classes, but I think it is actually an excellent class that is very well-taught."
+  },
+  {
+    "id": "fanpuzeng-15-784-9",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-784",
+    "professor": "Vincent Conitzer, Caspar Oesterheld, Tuomas Sandholm",
+    "date": "Fall 2022",
+    "text": "The content was interesting, but I did not enjoy this course as much as I would have liked because the way that the content was presented was relatively hand-wavey, trading depth for breadth."
+  },
+  {
+    "id": "fanpuzeng-10-617-10",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "10-617",
+    "professor": "Ruslan Salakhutdinov",
+    "date": "Fall 2022",
+    "text": "I really enjoy his lectures, and he made many remarks about what was happening in the field when various techniques were being introduced. However, I think the course infrastructure requires more improvement."
+  },
+  {
+    "id": "fanpuzeng-10-703-11",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "10-703",
+    "professor": "Katerina Fragkiadaki",
+    "date": "Fall 2022",
+    "text": "The homework for this class is really fun as you get to implement reinforcement learning algorithms for agents in various OpenAI Gym environments."
+  },
+  {
+    "id": "fanpuzeng-21-651-12",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "21-651",
+    "professor": "Florian Frick",
+    "date": "Fall 2022",
+    "text": "Much of the content have connections and parallels to other deeper areas of mathematics, which I found very beautiful."
+  },
+  {
+    "id": "fanpuzeng-17-603-13",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "17-603",
+    "professor": "Dominick (Nick) Frollini",
+    "date": "Fall 2022",
+    "text": "I found the segments about how to give oral presentations useful, especially the many tips and things to take note of when presenting. However, I don’t think I gained as much from other topics."
+  },
+  {
+    "id": "fanpuzeng-15-604-14",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-604",
+    "professor": "Dave Eckhardt",
+    "date": "Fall 2022",
+    "text": "It’s usually pretty funny because Dave has a great sense of humor, but many of the sessions are also not critically useful so attendance does being tapering off in the middle of the semester."
+  },
+  {
+    "id": "fanpuzeng-10-725-15",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "10-725",
+    "professor": "Yuanzhi Li",
+    "date": "Spring 2022",
+    "text": "10-725 changed that for me, as Yuanzhi Li started from first principles and rigorously proved how many machine learning algorithms can converge in some amount of steps."
+  },
+  {
+    "id": "fanpuzeng-15-751-16",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-751",
+    "professor": "Ryan O’Donnell",
+    "date": "Spring 2022",
+    "text": "This class aims to prepare students for doing theoretical computer science (TCS) research in the future. It covers a wide range of topics that frequently crop up in TCS research, and the homework is challenging but fun."
+  },
+  {
+    "id": "fanpuzeng-15-312-17",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-312",
+    "professor": "Jan Hoffmann",
+    "date": "Spring 2022",
+    "text": "The programming portion of the homework is the most fun part of this class. You will get to write typecheckers and implement the dynamics of various well-specified languages."
+  },
+  {
+    "id": "fanpuzeng-21-355-18",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "21-355",
+    "professor": "Robin Neumayer",
+    "date": "Spring 2022",
+    "text": "I am really glad that I took the class under Robin, whose passion for teaching, and care and concern shown towards students, made me really enjoy the class and the subject matter."
+  },
+  {
+    "id": "fanpuzeng-21-484-19",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "21-484",
+    "professor": "Wesley Pegden",
+    "date": "Spring 2022",
+    "text": "Wesley is a great teacher and I really appreciate how he would re-explain the key ideas many times in different methods so that we can understand them better."
+  },
+  {
+    "id": "fanpuzeng-15-819-20",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-819",
+    "professor": "Robert Harper",
+    "date": "Spring 2022",
+    "text": "I think I generally had a ok-understanding of what was going on in the class until the segment on logical frameworks, where it became very abstract."
+  },
+  {
+    "id": "fanpuzeng-16-385-21",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "16-385",
+    "professor": "Matthew O’Toole",
+    "date": "Spring 2022",
+    "text": "I took this class as a follow-up to Computer Graphics (15-462). Many computer vision techniques covered will abuse linear algebra heavily."
+  },
+  {
+    "id": "fanpuzeng-18-358-22",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "18-358",
+    "professor": "Tom Zajdel",
+    "date": "Spring 2022",
+    "text": "It was definitely a cool class, and we were also provided handheld radios and taught how to operate them."
+  },
+  {
+    "id": "fanpuzeng-70-350-23",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "70-350",
+    "professor": "Evelyn Pierce",
+    "date": "Spring 2022",
+    "text": "The class was very enjoyable and the workload is low. You get to perform skits like monologues, improv, and duets in front of the class."
+  },
+  {
+    "id": "fanpuzeng-15-459-24",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-459",
+    "professor": "Ryan O’Donnell",
+    "date": "Fall 2021",
+    "text": "This course covers the theoretical aspects of quantum computing, starting from the Elitzur-Vaidman bomb algorithm to classical results like Shor’s and Grover’s algorithm."
+  },
+  {
+    "id": "fanpuzeng-15-641-25",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-641",
+    "professor": "Peter Steenkiste",
+    "date": "Fall 2021",
+    "text": "This course is very different from other systems courses, and you will likely stand to gain a lot from it even if you already have a lot of systems experience."
+  },
+  {
+    "id": "fanpuzeng-15-317-26",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-317",
+    "professor": "Karl Crary",
+    "date": "Fall 2021",
+    "text": "I found the theoretical foundations gained from this course immensely helpful for preparing for 15-312 and 15-819."
+  },
+  {
+    "id": "fanpuzeng-15-356-27",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-356",
+    "professor": "Elaine Shi",
+    "date": "Fall 2021",
+    "text": "I found the class relatively easy as I had already taken 15-330 prior to this. There were some pretty cool content like oblivious data structures, multi-party computation, and zero-knowledge proofs."
+  },
+  {
+    "id": "fanpuzeng-15-462-28",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-462",
+    "professor": "Keenan Crane",
+    "date": "Fall 2021",
+    "text": "The course assignments are pretty fun. and there’s many moments of instant gratification, such as when you see your ray tracer paint a beautiful image of light refracting through glass balls."
+  },
+  {
+    "id": "fanpuzeng-18-746-29",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "18-746",
+    "professor": "Greg Ganger, George Amvrosiadis, Huaicheng Li",
+    "date": "Fall 2021",
+    "text": "Overall I thought it was a good class that provides you with a good sense of where the bottlenecks of various I/O-based workloads could lie for different filesystem designs."
+  },
+  {
+    "id": "fanpuzeng-84-380-30",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "84-380",
+    "professor": "Andrew Stravers",
+    "date": "Fall 2021",
+    "text": "As someone who is interested in history and geopolitics I really liked this class. It offers a critical and balanced examination of past US foreign policy and grand strategy under various administrations."
+  },
+  {
+    "id": "fanpuzeng-15-855-31",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-855",
+    "professor": "Ryan O’Donnell",
+    "date": "Spring 2021",
+    "text": "This was my first graduate theory class, and needless to say I struggled a lot with the homework. However, in hindsight I grew a lot from this experience."
+  },
+  {
+    "id": "fanpuzeng-21-301-32",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "21-301",
+    "professor": "John Mackey",
+    "date": "Spring 2021",
+    "text": "I loved 15-151 (Concepts in Mathematics) and after that class I swore that if Mackey ever taught another class, I will take it for sure. Mackey is just as great and fun in Combinatorics as he was in Concepts."
+  },
+  {
+    "id": "fanpuzeng-85-102-33",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "85-102",
+    "professor": "Kody Manke",
+    "date": "Spring 2021",
+    "text": "Kody is a very energetic and fun lecturer, and the class helped to open my eyes to many social phenomenom that I encounter in daily life."
+  },
+  {
+    "id": "fanpuzeng-10-701-34",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "10-701",
+    "professor": "Geoff Gordon, Aarti Singh",
+    "date": "Spring 2021",
+    "text": "I did not really enjoy this class, and felt that it tried to cover too much too quickly, which led to a very shallow and surface-level understanding of many topics."
+  },
+  {
+    "id": "fanpuzeng-15-354-35",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-354",
+    "professor": "Klaus Sutner",
+    "date": "Spring 2021",
+    "text": "Klaus has a reputation of trying to add abstract algebra in everything that he teaches. This was definitely true in his trademark class Computation and Discrete Math (CDM)."
+  },
+  {
+    "id": "fanpuzeng-15-440-36",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-440",
+    "professor": "Mahadev Satyanarayanan, Padmanabhan Pillai",
+    "date": "Spring 2021",
+    "text": "I did not really get much out of this course and wish I had taken something else. This course is usually considered the easiest systems class."
+  },
+  {
+    "id": "fanpuzeng-15-411-37",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-411",
+    "professor": "Seth Goldstein",
+    "date": "Fall 2020",
+    "text": "The best part of the course were the labs by far. This lab allows you to go as crazy as you want, and you can work on whatever optimizations that interests you the most personally."
+  },
+  {
+    "id": "fanpuzeng-15-455-38",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-455",
+    "professor": "Venkatesan Guruswami, Jonathan Mosheiff",
+    "date": "Fall 2020",
+    "text": "I really enjoyed 15-251 Great Theoretical Ideas in Computer Science under Venkat, and decided to take this class with him as well."
+  },
+  {
+    "id": "fanpuzeng-15-445-39",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-445",
+    "professor": "Andy Pavlo",
+    "date": "Fall 2020",
+    "text": "Andy’s lectures are a whole lot of fun, and it is hard to not be fired up by his enthusiasm and energy for databases."
+  },
+  {
+    "id": "fanpuzeng-15-300-40",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-300",
+    "professor": "Bogdan Vasilescu, Jonathan Aldrich",
+    "date": "Fall 2020",
+    "text": "Don’t expect this class to suddenly turn you into a researcher - the motivation must come from within."
+  },
+  {
+    "id": "fanpuzeng-98-212-41",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "98-212",
+    "professor": "Chris Lambert",
+    "date": "Fall 2020",
+    "text": "This was a great class on popular cyber-security Capture-The-Flag (CTF) topics."
+  },
+  {
+    "id": "fanpuzeng-15-410-42",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-410",
+    "professor": "Dave Eckhardt, Brian Railing, Dave O’Hallaron",
+    "date": "Spring 2020",
+    "text": "This is probably the most “famous” systems class at CMU. It is hard to debug a complicated kernel under stress."
+  },
+  {
+    "id": "fanpuzeng-15-259-43",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-259",
+    "professor": null,
+    "date": "Spring 2020",
+    "text": "Mor is absolutely amazing at teaching and in maintaining student’s interest during classes. Homework problems are on the challenging side, but also very fun."
+  },
+  {
+    "id": "fanpuzeng-15-451-44",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-451",
+    "professor": "Danny Sleator, David Woodruff",
+    "date": "Spring 2020",
+    "text": "This is the main algorithms class of CMU, and Danny Sleator and Splay Trees (which he invented) are the heart of it."
+  },
+  {
+    "id": "fanpuzeng-33-228-45",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "33-228",
+    "professor": "Jeffrey Peterson, Ben Hunt, Simranjeet Singh",
+    "date": "Spring 2020",
+    "text": "I personally thought that this is the best class for the lab requirement for CS majors, since it introduces you to the basics of circuits and electronics."
+  },
+  {
+    "id": "fanpuzeng-79-396-46",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "79-396",
+    "professor": "Naum Kats",
+    "date": "Spring 2020",
+    "text": "This was a relatively low-stress and fun class, where each week you would watch a live play, musical, or orchestral concert."
+  },
+  {
+    "id": "fanpuzeng-15-319-47",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-319",
+    "professor": null,
+    "date": "Fall 2019",
+    "text": "I personally enjoyed this class a lot and the amount of industry knowledge that I gained from the course was like having done 3 internships back-to-back."
+  },
+  {
+    "id": "fanpuzeng-15-330-48",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-330",
+    "professor": "Bryan Parno",
+    "date": "Fall 2019",
+    "text": "Bryan is a great lecturer. I personally think it is a form of gross negligence if you ever write critical software systems without having a good understanding of computer security."
+  },
+  {
+    "id": "fanpuzeng-15-210-49",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-210",
+    "professor": null,
+    "date": "Fall 2019",
+    "text": "I found the course okay, some portions were interesting but I don’t remember being very excited by any topic in particular."
+  },
+  {
+    "id": "fanpuzeng-21-268-50",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "21-268",
+    "professor": "Jack Schaeffer",
+    "date": "Fall 2019",
+    "text": "This is the honors version of 21-259 Calculus in Three Dimensions, and I would recommend mathematically strong students take this."
+  },
+  {
+    "id": "fanpuzeng-15-251-51",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-251",
+    "professor": "Venkatesan Guruswami, Vipul Goyal",
+    "date": "Spring 2019",
+    "text": "The class was very well-taught and structured. Homeworks are done in the form of weekly writing sessions, where you have to reproduce proofs to selected homework problems independently in an exam-like setting."
+  },
+  {
+    "id": "fanpuzeng-15-213-52",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-213",
+    "professor": "Seth Goldstein, Brandon Lucia",
+    "date": "Spring 2019",
+    "text": "This class unlocks all other systems classes, and many classes also have this as a requirement to ensure that students have had experience implementing large projects."
+  },
+  {
+    "id": "fanpuzeng-21-122-53",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "21-122",
+    "professor": "Eric Baer",
+    "date": "Spring 2019",
+    "text": "I liked his lectures."
+  },
+  {
+    "id": "fanpuzeng-21-241-54",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "21-241",
+    "professor": "Irina Gheorghiciuc",
+    "date": "Spring 2019",
+    "text": "I personally liked Irina’s to-the-point, no-nonsense teaching style. Her lectures are quite clear and interesting."
+  },
+  {
+    "id": "fanpuzeng-98-317-55",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "98-317",
+    "professor": "Jeanne Luning Prak, Vijay Ramamurthy, Chris Grossack, Charles Yuan",
+    "date": "Spring 2019",
+    "text": "Somehow I was able to complete all the programming assignments despite understanding very little from the lecture, which goes to show how much a strongly typed functional language can inform and guide your code."
+  },
+  {
+    "id": "fanpuzeng-15-151-56",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-151",
+    "professor": "John Mackey",
+    "date": "Fall 2018",
+    "text": "Mackey is an amazing lecturer. In fact, I would go so far as to say his lectures are more like a performance, full of wit and humor."
+  },
+  {
+    "id": "fanpuzeng-15-122-57",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "15-122",
+    "professor": null,
+    "date": "Fall 2018",
+    "text": "I was quite bored during lecture as I already knew most of the content due to my competitive programming background. The assignments were still pretty cool though."
+  },
+  {
+    "id": "fanpuzeng-21-120-58",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "21-120",
+    "professor": null,
+    "date": "Fall 2018",
+    "text": "It was honestly largely a waste of time, but it was also the only class that I took at CMU where I was classmates with a lot of college football players."
+  },
+  {
+    "id": "fanpuzeng-76-106-59",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "76-106",
+    "professor": null,
+    "date": "Fall 2018",
+    "text": "I enjoyed the assigned readings of literature from different cultures, and the class discussions were also quite engaging."
+  },
+  {
+    "id": "fanpuzeng-76-107-60",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "76-107",
+    "professor": null,
+    "date": "Fall 2018",
+    "text": "Found this class relatively dry, and most of the content seemed obvious and boring."
+  },
+  {
+    "id": "fanpuzeng-80-100-61",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "80-100",
+    "professor": null,
+    "date": "Fall 2018",
+    "text": "I had some prior interest and experience with philosophy, and found this a really interesting class that covered a good amount of topics."
+  },
+  {
+    "id": "fanpuzeng-07-131-62",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "07-131",
+    "professor": null,
+    "date": "Fall 2018",
+    "text": "Teaches you the tools of the trade like Git, Vim, etc. You’ll be able to work much more effectively and save a lot of time if you master these skills early."
+  },
+  {
+    "id": "fanpuzeng-07-128-63",
+    "source": "blog",
+    "author": "Fan Pu Zeng",
+    "url": "https://fanpu.io/courses/",
+    "course": "07-128",
+    "professor": "Jacobo Carrasquel, Tom Cortina",
+    "date": "Fall 2018",
+    "text": "One of the most useful parts of this class is how they got professors from each of the 7 departments within the School of Computer Science to talk to us about their research areas."
+  },
+  {
+    "id": "ruiran-09-222-0",
+    "source": "blog",
+    "author": "Rui Ran",
+    "url": "https://ruiran.me/courses/",
+    "course": "09-222",
+    "professor": null,
+    "date": "Spring 2020",
+    "text": "which transitioned to writing lab reports pre-recorded experiment footage and data"
+  },
+  {
+    "id": "ruiran-09-445-1",
+    "source": "blog",
+    "author": "Rui Ran",
+    "url": "https://ruiran.me/courses/",
+    "course": "09-445",
+    "professor": null,
+    "date": "Spring 2020",
+    "text": "which unfortunately just had to completely stop"
+  },
+  {
+    "id": "ruiran-15-316-2",
+    "source": "blog",
+    "author": "Rui Ran",
+    "url": "https://ruiran.me/courses/",
+    "course": "15-316",
+    "professor": null,
+    "date": "Fall 2020",
+    "text": "I ended up dropping a course (15316) so that I could spend more time on 09344 and 15312, a move which definitely served me well!"
+  },
+  {
+    "id": "ruiran-09-344-3",
+    "source": "blog",
+    "author": "Rui Ran",
+    "url": "https://ruiran.me/courses/",
+    "course": "09-344",
+    "professor": null,
+    "date": "Fall 2020",
+    "text": "I ended up dropping a course (15316: Software Foundations of Security and Privacy) so that I could spend more time on 09344 and 15312, a move which definitely served me well!"
+  },
+  {
+    "id": "ruiran-15-312-4",
+    "source": "blog",
+    "author": "Rui Ran",
+    "url": "https://ruiran.me/courses/",
+    "course": "15-312",
+    "professor": null,
+    "date": "Fall 2020",
+    "text": "I ended up dropping a course (15316: Software Foundations of Security and Privacy) so that I could spend more time on 09344 and 15312, a move which definitely served me well!"
+  },
+  {
+    "id": "ruiran-57-332-5",
+    "source": "blog",
+    "author": "Rui Ran",
+    "url": "https://ruiran.me/courses/",
+    "course": "57-332",
+    "professor": null,
+    "date": "Fall 2020",
+    "text": "I also got to teach recitations and take 57332 in-person (modulo COVID precautions), which made me feel a lot more grounded than I otherwise would have."
+  },
+  {
+    "id": "bowad-15-112-0",
+    "source": "blog",
+    "author": "bowad",
+    "url": "https://bowad.net/courses/",
+    "course": "15-112",
+    "professor": "David Kosbie",
+    "date": "Spring 2021",
+    "text": "Despite coming in with prior experience, this course gave me a rigorous set of fundamentals to draw upon compared with my self-taught background, and provided fun opportunities to work on projects for the course hackathon and the term project. I very much enjoyed having Professor David Kosbie as my instructor—I found him an engaging lecturer and a very inspiring person."
+  },
+  {
+    "id": "bowad-17-214-1",
+    "source": "blog",
+    "author": "bowad",
+    "url": "https://bowad.net/courses/",
+    "course": "17-214",
+    "professor": null,
+    "date": "Fall 2021",
+    "text": "17-214 was a nice experience overall, and it covered design patterns and basic software engineering skills quite well. I think this course was ultimately not very challenging, however, and I would have been better served to take 15-213 directly."
+  },
+  {
+    "id": "bowad-21-127-2",
+    "source": "blog",
+    "author": "bowad",
+    "url": "https://bowad.net/courses/",
+    "course": "21-127",
+    "professor": "Garrett Ervin",
+    "date": "Fall 2021",
+    "text": "21-127 was my first experience with discrete math—I thought it was quite difficult at the time. I had Professor Garrett Ervin... he was a very clear, kind, and understanding lecturer."
+  },
+  {
+    "id": "bowad-84-104-3",
+    "source": "blog",
+    "author": "bowad",
+    "url": "https://bowad.net/courses/",
+    "course": "84-104",
+    "professor": "Geoffrey McGovern",
+    "date": "Fall 2021",
+    "text": "84-104 was an unexpected hit for me—the course is taught by Geoffrey McGovern, and he stands out to me as a very charismatic lecturer, who was clearly having a lot of fun teaching the course. There are many reading assignments, but I found them very interesting. Overall, I would definitely recommend this course."
+  },
+  {
+    "id": "bowad-15-150-4",
+    "source": "blog",
+    "author": "bowad",
+    "url": "https://bowad.net/courses/",
+    "course": "15-150",
+    "professor": null,
+    "date": "Spring 2022",
+    "text": "15-150 is surely one of CMU's most iconic courses. I came in with no functional programming experience at all, and leaving it gave me background knowledge that is still useful to this day. I would recommend this course to even non-CS students at CMU who are interested in programming."
+  },
+  {
+    "id": "bowad-15-213-5",
+    "source": "blog",
+    "author": "bowad",
+    "url": "https://bowad.net/courses/",
+    "course": "15-213",
+    "professor": null,
+    "date": "Spring 2022",
+    "text": "15-213 is one of my all time favorite courses at CMU. I thoroughly enjoyed the labs, and I think that the course does a very good job of teaching what it sets out to teach, in a fun and engaging way. For me personally, I feel the workload was lower than 15-150."
+  },
+  {
+    "id": "bowad-98-242-6",
+    "source": "blog",
+    "author": "bowad",
+    "url": "https://bowad.net/courses/",
+    "course": "98-242",
+    "professor": null,
+    "date": "Spring 2022",
+    "text": "98-242 is one of the most fun StuCos I have ever taken (and I have taken many). I highly recommend this course if the thought of learning about and laughing at esoteric programming languages sounds like your idea of a good way to spend a weekday night."
+  },
+  {
+    "id": "bowad-15-251-7",
+    "source": "blog",
+    "author": "bowad",
+    "url": "https://bowad.net/courses/",
+    "course": "15-251",
+    "professor": "Ada",
+    "date": "Fall 2022",
+    "text": "15-251 was certainly a tricky course, but the quality of the lectures and course materials is very high. Additionally, Ada is an amazing lecturer, and perhaps made the entire course for me."
+  },
+  {
+    "id": "bowad-15-210-8",
+    "source": "blog",
+    "author": "bowad",
+    "url": "https://bowad.net/courses/",
+    "course": "15-210",
+    "professor": null,
+    "date": "Fall 2022",
+    "text": "I would generally not recommend taking 15-251 and 15-210 at the same time, unless you find yourself very adept at this sort of content. It was pretty taxing to me and I felt the courses did not play well off of each other, scheduling or content wise."
+  },
+  {
+    "id": "bowad-15-330-9",
+    "source": "blog",
+    "author": "bowad",
+    "url": "https://bowad.net/courses/",
+    "course": "15-330",
+    "professor": "Parno",
+    "date": "Fall 2022",
+    "text": "15-330 was a very nice experience for me! The assignments were very fun, I learned a lot, and the workload was relatively light. An example of a well designed course, in my opinion. I had Parno as a lecturer, who was completely excellent."
+  },
+  {
+    "id": "bowad-15-411-10",
+    "source": "blog",
+    "author": "bowad",
+    "url": "https://bowad.net/courses/",
+    "course": "15-411",
+    "professor": null,
+    "date": "Spring 2023",
+    "text": "15-411 was a great experience for sure. I was blessed, partner-wise, and so the workload was very manageable and I learned a lot. I will say, I wish that the lecture content was more in-depth—the field of compilers has so much to offer, and I really feel that these lectures only scraped the surface."
+  },
+  {
+    "id": "bowad-15-312-11",
+    "source": "blog",
+    "author": "bowad",
+    "url": "https://bowad.net/courses/",
+    "course": "15-312",
+    "professor": "Bob Harper",
+    "date": "Spring 2023",
+    "text": "15-312 was a surprise hit—one of my all-time favorite classes. It is a complete overview of the field of programming languages. Bob Harper is an absolute legend and was a complete joy to learn from. I will say that in my semester, I found the exams significantly more difficult than the homeworks."
+  },
+  {
+    "id": "bowad-79-372-12",
+    "source": "blog",
+    "author": "bowad",
+    "url": "https://bowad.net/courses/",
+    "course": "79-372",
+    "professor": null,
+    "date": "Spring 2023",
+    "text": "79-372 was an interesting class that my roommate randomly proposed that I take with him, and it ended up being very fun. The readings can be a little taxing, but the content is very interesting and I learned a lot from this course. The lecturer was definitely having fun teaching the content, which is always a plus."
+  },
+  {
+    "id": "bowad-15-445-13",
+    "source": "blog",
+    "author": "bowad",
+    "url": "https://bowad.net/courses/",
+    "course": "15-445",
+    "professor": "Andy Pavlo",
+    "date": "Fall 2023",
+    "text": "15-445 is an amazing course. Andy Pavlo is one of my favorite lecturers of all time—he really brought the topic to life for me, and his passion for databases, fast and organized lecturing style, and hilarious sense of humor made me look forward to every lecture. Databases are now my favorite field of computer science, thanks to this class."
+  },
+  {
+    "id": "bowad-98-341-14",
+    "source": "blog",
+    "author": "bowad",
+    "url": "https://bowad.net/courses/",
+    "course": "98-341",
+    "professor": null,
+    "date": "Fall 2023",
+    "text": "98-341 was an excellent excuse to build a 6502-based computer on a breadboard. A good friend of mine is the leader of this course, and he was very knowledgeable and did an excellent job supporting the students. Highly recommended."
+  },
+  {
+    "id": "bowad-15-451-15",
+    "source": "blog",
+    "author": "bowad",
+    "url": "https://bowad.net/courses/",
+    "course": "15-451",
+    "professor": null,
+    "date": "Fall 2023",
+    "text": "15-451 is personally the most difficult class I have taken at CMU. The idea of a course giving you an \"algorithmic toolbox\" is appealing, and I did learn about interesting algorithms from this class, but the scope and exams are not to be underestimated."
+  },
+  {
+    "id": "bowad-15-410-16",
+    "source": "blog",
+    "author": "bowad",
+    "url": "https://bowad.net/courses/",
+    "course": "15-410",
+    "professor": null,
+    "date": "Spring 2024",
+    "text": "15-410 is entirely deserving of its reputation. Building nearly an entire kernel in a semester obviously requires an immense time investment, and results in several baffling debugging experiences. Through the comprehensiveness of the projects and the amazing quality of the lectures, I definitely feel I got a lot out of the course. Despite this, it is definitely not a course for everyone."
+  },
+  {
+    "id": "bowad-15-721-17",
+    "source": "blog",
+    "author": "bowad",
+    "url": "https://bowad.net/courses/",
+    "course": "15-721",
+    "professor": null,
+    "date": "Spring 2024",
+    "text": "15-721 is an excellent continuation of the concepts introduced in 15-445, pushing the discussion started in the last class into areas of active research. Considering the fact that I am currently specializing in the field of database systems, this course is perhaps the most impactful one I have ever taken. If you are interested in database systems, or going beyond what was taught in 445, I cannot recommend this course enough."
+  },
+  {
+    "id": "bowad-15-712-18",
+    "source": "blog",
+    "author": "bowad",
+    "url": "https://bowad.net/courses/",
+    "course": "15-712",
+    "professor": null,
+    "date": "Fall 2024",
+    "text": "15-712 is an excellent tour of landmark systems papers, taught in an exciting and engaging way. I feel that it was definitely valuable to read through the papers selected, to build a foundation of more general knowledge in systems. I would definitely recommend it to anyone interested in systems research."
+  },
+  {
+    "id": "schlomer-10-601-0",
+    "source": "blog",
+    "author": "schlomer",
+    "url": "https://schlomer.xyz/cmu-courses/",
+    "course": "10-601",
+    "professor": null,
+    "date": "Fall 2024",
+    "text": "This class accomplishes exactly what it sets out to do: provide a surface-level introduction to ML without requiring extensive mathematical background. It succeeds admirably at this goal, so if that's what you're looking for, this class is definitely for you. However, I should note that the class often feels like a trivia collection - you learn a little about everything but master nothing. 10-601 required about 5-10 hours of work per week, and its exams are quite manageable if you have some mathematical maturity. Both instructors are incredibly enthusiastic and explain concepts clearly. In fact, this might be the best-organized class I've taken at either CMU or EPFL."
+  },
+  {
+    "id": "schlomer-15-659-1",
+    "source": "blog",
+    "author": "schlomer",
+    "url": "https://schlomer.xyz/cmu-courses/",
+    "course": "15-659",
+    "professor": null,
+    "date": "Fall 2024",
+    "text": "This turned out to be one of my most challenging academic experiences. Despite the professors being very kind and supportive, I found myself struggling to keep up with the pace and structure of the class. The course seemed to attract students with strong competitive mathematics backgrounds, which created a particularly intense learning environment. The course structure raised some questions for me. We spent 14 weeks focusing primarily on Chernoff-derived concentration bounds and Markov chains. While both topics are undoubtedly important, the depth of focus on these specific areas felt somewhat imbalanced for a general probability course."
+  },
+  {
+    "id": "schlomer-98-008-2",
+    "source": "blog",
+    "author": "schlomer",
+    "url": "https://schlomer.xyz/cmu-courses/",
+    "course": "98-008",
+    "professor": null,
+    "date": "Fall 2024",
+    "text": "For a student-taught class, the organization was surprisingly better than many \"real\" CS programming courses. The projects were exceptionally well-written and genuinely fun to complete. Content-wise? I have no idea, as I admittedly paid zero attention in class besides enjoying the amazing show and irresistible charisma of the instructors!"
+  },
+  {
+    "id": "schlomer-15-744-3",
+    "source": "blog",
+    "author": "schlomer",
+    "url": "https://schlomer.xyz/cmu-courses/",
+    "course": "15-744",
+    "professor": "Justine Sherry",
+    "date": "Spring 2024",
+    "text": "While I found this graduate-level class somewhat less engaging than its well-established undergraduate counterpart, it still offered valuable learning experiences. The course deepened my understanding of advanced networking concepts and introduced me to robust research methodologies. While I didn't learn as much in this class quantitatively compared to 15-441, I believe I became wiser. It made me realize I didn't understand some previous concepts as well as I thought, which was a humbling experience, and I now understand them much better."
+  },
+  {
+    "id": "schlomer-15-721-4",
+    "source": "blog",
+    "author": "schlomer",
+    "url": "https://schlomer.xyz/cmu-courses/",
+    "course": "15-721",
+    "professor": null,
+    "date": "Spring 2024",
+    "text": "Taking this class might have been one of the best decisions I've made since coming to CMU. This class teaches you all the ins and outs of becoming a cutting-edge systems researcher. As a matter of fact, I think I gained the most knowledge here out of any other class, and it's way more about diving into the latest innovations than learning how to do research. As usual, Andy is a really good lecturer - his slides are amazing - and he focuses on concepts that actually matter."
+  },
+  {
+    "id": "schlomer-15-689-5",
+    "source": "blog",
+    "author": "schlomer",
+    "url": "https://schlomer.xyz/cmu-courses/",
+    "course": "15-689",
+    "professor": "Justine Sherry, Zili Meng, Adithya Abraham Philip",
+    "date": "Spring 2024",
+    "text": "15-689 doesn't have a standard course structure to review, and the experience can vary greatly depending on your advisors. While I truly appreciated working with my team and learned a lot from them, I must admit it made me realize that I'm not particularly passionate about the intricate details involved in measuring Internet congestion. This kind of research requires immense patience, and the engineering feedback loop is much noisier compared to other areas of systems research."
+  },
+  {
+    "id": "schlomer-15-441-6",
+    "source": "blog",
+    "author": "schlomer",
+    "url": "https://schlomer.xyz/cmu-courses/",
+    "course": "15-441",
+    "professor": "Justine Sherry",
+    "date": "Fall 2023",
+    "text": "I found this class absolutely amazing. Prof. Justine Sherry is an incredible lecturer whose enthusiasm for networking shines through in every lecture. The sessions are highly interactive and entertaining, where complex networking principles are presented in simple, intuitive ways. 15-441 teaches an important lesson: sometimes, 'worse is better'. It's a valuable insight that goes beyond engineering, emphasizing the importance of practical outcomes over looking smart or using fancy technology."
+  },
+  {
+    "id": "schlomer-15-445-7",
+    "source": "blog",
+    "author": "schlomer",
+    "url": "https://schlomer.xyz/cmu-courses/",
+    "course": "15-445",
+    "professor": "Andy Pavlo, Jignesh Patel",
+    "date": "Fall 2023",
+    "text": "15-445 stands out as possibly the most widely recognized openly-accessible database course, and it unquestionably lives up to its reputation. This course has truly opened my eyes to the interdisciplinary nature of databases. The material covered in this course is truly extensive, making it easy to get lost, particularly if you have a limited systems background. However, I find both Prof. Andy Pavlo and Prof. Jignesh Patel to be highly efficient lecturers who focus on the essential concepts."
+  },
+  {
+    "id": "schlomer-15-440-8",
+    "source": "blog",
+    "author": "schlomer",
+    "url": "https://schlomer.xyz/cmu-courses/",
+    "course": "15-440",
+    "professor": null,
+    "date": "Fall 2023",
+    "text": "Despite its popularity among system courses at CMU, I did not find this class to be particularly enjoyable. In hindsight, I regret taking it altogether, as I did not gain much from it aside from learning Go's concurrency model. The course covers different topics to get future software engineers ready for real-world practices. But, it felt like the main goal was to excel in \"system interviews\" rather than truly understanding the material. Although the course content is neither irrelevant nor uninteresting, it lacks a guiding thread or motivation behind the topics covered."
+  },
+  {
+    "id": "schlomer-15-604-9",
+    "source": "blog",
+    "author": "schlomer",
+    "url": "https://schlomer.xyz/cmu-courses/",
+    "course": "15-604",
+    "professor": "David Eckhardt",
+    "date": "Fall 2023",
+    "text": "Overall, I enjoyed these meetings; Prof. David Eckhardt's humor gives the course a stand-up comedy feel. Importantly, it serves as a way to connect with fellow MSCS first-year students since we don't have any mandatory courses to facilitate connections otherwise."
+  },
+  {
+    "id": "schlomer-15-213-10",
+    "source": "blog",
+    "author": "schlomer",
+    "url": "https://schlomer.xyz/cmu-courses/",
+    "course": "15-213",
+    "professor": null,
+    "date": "Summer 2023",
+    "text": "15-213's scope is extensive; it begins with foundational concepts, such as the representation of numbers in computers, and gradually progresses to cover topics like program compilation, linking, execution, and their interactions with hardware and the operating system. It unquestionably provides a thorough, albeit broad, bottom-up understanding of system programming. While this course proved relatively easy for me, considering my background, I was pleasantly surprised by the substantial amount of new knowledge I acquired."
+  },
+  {
+    "id": "joemclaughlin-15-251-0",
+    "source": "blog",
+    "author": "Joe McLaughlin",
+    "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+    "course": "15-251",
+    "professor": null,
+    "date": "Spring 2023",
+    "text": "I was a little nervous about this course after hearing horror stories about it from previous semesters, but I really liked it overall. The content felt challenging but Ada and Gupta both put in a lot of effort to make the topics seem approchable in lecture, and the TAs were also really helpful. I also appreciated the heavy emphasis on group work in this course, something I feel is lacking in most other introductory CS courses."
+  },
+  {
+    "id": "joemclaughlin-10-315-1",
+    "source": "blog",
+    "author": "Joe McLaughlin",
+    "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+    "course": "10-315",
+    "professor": "Pat",
+    "date": "Spring 2023",
+    "text": "I took 10-315 to fulfill my AI elective as a CS major, though I ended up liking the course content more than I thought I would. Pat obviously really cared about the course and bent over backwards to try to improve the it as it went along, which I really appreciated as well. A good class overall, though I think it would have been great with better organization."
+  },
+  {
+    "id": "joemclaughlin-05-392-2",
+    "source": "blog",
+    "author": "Joe McLaughlin",
+    "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+    "course": "05-392",
+    "professor": null,
+    "date": "Spring 2023",
+    "text": "This course was definitely more thought-provoking than 05-391 I took last semester, and I often felt like I was learning the names to design ideas I already intuitively understood, which was a nice feeling. I knew this class wasn’t going to be very technical given the word ‘design’ in its name, but I’m definitely excited to take a more technical HCI course in the future since my interests are starting to lean more towards the technical side of Computer Science."
+  },
+  {
+    "id": "joemclaughlin-79-345-3",
+    "source": "blog",
+    "author": "Joe McLaughlin",
+    "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+    "course": "79-345",
+    "professor": "Scott Sandage",
+    "date": "Spring 2023",
+    "text": "I liked this class much more than the other essay-based humanities classes I’ve taken, though that’s partially because I found the content more interesting. Sandage is a really great, if a bit eccentric, professor, and I honestly wish I had the courage to go to his office hours while I took the class. That being said, this class made me write multiple essays for a large portion of my grade, a cardinal sin in my book."
+  },
+  {
+    "id": "joemclaughlin-70-100-4",
+    "source": "blog",
+    "author": "Joe McLaughlin",
+    "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+    "course": "70-100",
+    "professor": null,
+    "date": "Spring 2023",
+    "text": "I registered for this class thinking I may want to pursue a Business Administration minor, and while I haven’t completely ruled one out yet this class definitely has pointed me in the other direction. A decent course that I think I would have really liked had my learning style not clashed so strongly with the course’s teaching style."
+  },
+  {
+    "id": "joemclaughlin-15-210-5",
+    "source": "blog",
+    "author": "Joe McLaughlin",
+    "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+    "course": "15-210",
+    "professor": null,
+    "date": "Fall 2022",
+    "text": "I enjoyed this class much more than 15-213 last semester; I feel the algorithmic content clicks for me more than the seemingly arbitrary computer design I learned last semester. None of the homeworks were too bad, and I found some of the first few especially rewarding in finding a correct solution. My one complaint is that some of the resources we had to learn the content felt a bit disjointed, where information was presented slightly differently between lecture and recitation and the online course textbook."
+  },
+  {
+    "id": "joemclaughlin-05-391-6",
+    "source": "blog",
+    "author": "Joe McLaughlin",
+    "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+    "course": "05-391",
+    "professor": null,
+    "date": "Fall 2022",
+    "text": "The content really didn’t go too far beyond what I had learned in my HCI mini class a year prior, and while I enjoyed the projects we did for the class I was dissapointed in not learning any major new concepts. That being said, this class works well as an easy Domains Elective for any CS Majors looking for quick requirement to get out of the way."
+  },
+  {
+    "id": "joemclaughlin-36-218-7",
+    "source": "blog",
+    "author": "Joe McLaughlin",
+    "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+    "course": "36-218",
+    "professor": null,
+    "date": "Fall 2022",
+    "text": "36-218 is one of several courses CS majors can take to fulfill their probability requirement, and I kind of regret not taking the more difficult Probability and Computing (15-259) since the latter seems to have been a much more complete introduction to probability. Not to say what I learned in 36-218 wasn’t interesting, but I always felt like we could’ve done more if it wasn’t for the course’s poor organization."
+  },
+  {
+    "id": "joemclaughlin-80-180-8",
+    "source": "blog",
+    "author": "Joe McLaughlin",
+    "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+    "course": "80-180",
+    "professor": "Christina Bjorndahl",
+    "date": "Fall 2022",
+    "text": "This was definitely my favorite humanities class I’ve taken at CMU overall. Beyond the fact that this is the only liberal arts class I’ve taken without an essay focus, I really appreciated how Bjorndahl did everything she could to make the class as engaging as possible. I really wish I had gone to her office hours at some point since she was probably the professor I think I’d like most as a person as well."
+  },
+  {
+    "id": "joemclaughlin-98-205-9",
+    "source": "blog",
+    "author": "Joe McLaughlin",
+    "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+    "course": "98-205",
+    "professor": null,
+    "date": "Fall 2022",
+    "text": "My first fun StuCo at CMU, a course that theoretically goes into the basic mechanics of Minecraft but in reality devolves into a glorious weekly 50-minute collective Minecraft session."
+  },
+  {
+    "id": "joemclaughlin-99-250-10",
+    "source": "blog",
+    "author": "Joe McLaughlin",
+    "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+    "course": "99-250",
+    "professor": null,
+    "date": "Fall 2022",
+    "text": "Overall very relaxed, as it mostly just goes over the diversity and Title IX training you’d do in onboarding for other paid positions."
+  },
+  {
+    "id": "joemclaughlin-15-213-11",
+    "source": "blog",
+    "author": "Joe McLaughlin",
+    "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+    "course": "15-213",
+    "professor": null,
+    "date": "Spring 2022",
+    "text": "15-213 is definitely the class I’ve had the most trouble with so far at CMU, even if not the hardest objectively. I found myself consistently spending well over 20 hours a week working on homeworks in the latter half of the semester, and over 30 hours during malloc lab in particular. This course ended up being more of a course in debugging than actual computer systems for me, and while I feel like a more confident programmer after taking the course I’m very glad I’m done with it."
+  },
+  {
+    "id": "joemclaughlin-15-150-12",
+    "source": "blog",
+    "author": "Joe McLaughlin",
+    "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+    "course": "15-150",
+    "professor": null,
+    "date": "Spring 2022",
+    "text": "I really enjoyed this class overall! I had never been exposed to functional programming before this class but it definitely felt intuitive the further I got along in the course. I wasn’t a big fan of formally proving code like is done on some homeworks, but oh well."
+  },
+  {
+    "id": "joemclaughlin-21-259-13",
+    "source": "blog",
+    "author": "Joe McLaughlin",
+    "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+    "course": "21-259",
+    "professor": null,
+    "date": "Spring 2022",
+    "text": "As excited as I was to take a class with Clive himself, I quickly learned that calculus is not for me. More than any other math class I’ve taken at CMU, I kind of just felt lost the entire time I was taking this course. I felt a bit lost whenever I was doing work for 15-259, and I never really had the ‘aha!’ moment I had in other classes where everything came together."
+  },
+  {
+    "id": "joemclaughlin-76-107-14",
+    "source": "blog",
+    "author": "Joe McLaughlin",
+    "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+    "course": "76-107",
+    "professor": null,
+    "date": "Spring 2022",
+    "text": "I unfortunately didn’t realize each section of the class was taught by a different professor and revolved around a different topic, so I ended up stuck with a class revolving around corpus linguistics, which I really didn’t have an interest in. I found it difficult to motivate myself to do work in this class, and overall had a worse experience than in the second mini I took for First Year Writing."
+  },
+  {
+    "id": "joemclaughlin-76-106-15",
+    "source": "blog",
+    "author": "Joe McLaughlin",
+    "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+    "course": "76-106",
+    "professor": null,
+    "date": "Spring 2022",
+    "text": "Even though I didn’t realize each section of 76-106 had a different topic, I got very lucky that I happened to take a version on Graphic Novel Analysis with a teacher I really liked. I had a lot of fun reading and writing for this class, and I didn’t have any trouble motiviating myself to write either of the two essays for it."
+  },
+  {
+    "id": "joemclaughlin-79-189-16",
+    "source": "blog",
+    "author": "Joe McLaughlin",
+    "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+    "course": "79-189",
+    "professor": "Law",
+    "date": "Fall 2021",
+    "text": "I really enjoyed the lecture components of this class; Professor Law is a really engaging lecturer and I found the broad topics covered genuinely interesting. I also really appreciated how approachable Professor Law was as a person, he and was the first professor I ever had the guts to reach out to."
+  },
+  {
+    "id": "joemclaughlin-07-131-17",
+    "source": "blog",
+    "author": "Joe McLaughlin",
+    "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+    "course": "07-131",
+    "professor": null,
+    "date": "Fall 2021",
+    "text": "A relaxed StuCo that focuses on teaching some Software Engineering tricks of the trade, such as Vim, Git, and various bash commands. The homework isn’t bad at all, just don’t leaving two thirds of it until the last night you can possibly submit it. The exams are also square-root curved, which takes off any pressure that was on them."
+  },
+  {
+    "id": "joemclaughlin-07-128-18",
+    "source": "blog",
+    "author": "Joe McLaughlin",
+    "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+    "course": "07-128",
+    "professor": null,
+    "date": "Fall 2021",
+    "text": "I’m glad CMU offers an introduction to its computer science deparment like this, though I could’ve easily skipped the sections on fields I had no interest in."
+  }
+]

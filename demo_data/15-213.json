@@ -1,0 +1,173 @@
+{
+  "card_id": "15-213",
+  "kind": "single",
+  "course": "15-213",
+  "title": "Introduction to Computer Systems",
+  "frozen_at": "2026-08-13T09:42:01Z",
+  "model": "claude-sonnet-4-6",
+  "retrieval": {
+    "k": 5,
+    "recency": true,
+    "mode": "semantic"
+  },
+  "headline": {
+    "question": "how hard is 15-213, what is the workload, and is it worth it?",
+    "answer_md": "## 15-213: Difficulty, Workload, and Worth It?\n\n### Difficulty\n\nStudents have mixed but generally consistent takes on the challenge level. One student noted: \"15-213 is definitely the class I've had the most trouble with so far at CMU, even if not the hardest objectively.\" [joemclaughlin-15-213-11#0 · Joe McLaughlin — course reviews · Spring 2022 · https://jmmclaug201.github.io/cmu-course-reviews/]\n\nOn specific labs, datalab stands out as a particular pain point: \"When I took 213 I found datalab especially difficult because it's a lot of little puzzles. Thankfully the rest of the labs are more straightforward.\" [reddit-15213-v16yce-elecsafety#0 · r/cmu · 2022 · https://www.reddit.com/r/cmu/comments/v16yce/comment/iakqe5w/]\n\n### Workload\n\nThe workload can be intense. One Reddit commenter put it plainly: \"If you passed 122 there is a path you can follow that ends with you getting a 100 on every lab in 213. Sometimes that path is like 20-25 hours of work in a single week though. It just takes a lot (a LOT) of work.\" [reddit-15213-1hmut34-variousjob#0 · r/cmu · 2024 · https://www.reddit.com/r/cmu/comments/1hmut34/comment/m3yod5x/]\n\nThat said, not everyone found it overwhelming — one student noted: \"For me personally, I feel the workload was lower than 15-150.\" [bowad-15-213-5#1 · bowad — course reviews · Spring 2022 · https://bowad.net/courses/]\n\n### Is It Worth It?\n\nOn the value side, the outlook is positive: \"15-213 is one of my all time favorite courses at CMU. I thoroughly enjoyed the labs, and I think that the course does a very good job of teaching what it sets out to teach, in a fun and engaging way.\" [bowad-15-213-5#0 · bowad — course reviews · Spring 2022 · https://bowad.net/courses/]\n\n---\n\n### Summary & Recommendation\n\n- **Difficulty**: Genuinely hard, especially datalab, but not impossible with early starts and office hours.\n- **Workload**: Expect potentially **20–25 hours in a single week** during heavy lab periods.\n- **Worth it**: Most students seem to find it rewarding despite the grind.\n\n**Recommendation**: Start labs early, go to office hours, and budget serious time — the consensus is it's worth the effort.\n\n**Source mix**: Reddit (2022, 2024) + personal course review blogs (Spring 2022). No RMP data in this evidence set. The 2022 sources are a couple years old; workload specifics may have shifted.",
+    "cited_ids": [
+      "bowad-15-213-5#0",
+      "bowad-15-213-5#1",
+      "joemclaughlin-15-213-11#0",
+      "reddit-15213-1hmut34-variousjob#0",
+      "reddit-15213-v16yce-elecsafety#0"
+    ]
+  },
+  "facets": [
+    {
+      "key": "workload",
+      "label": "Workload & time",
+      "question": "how many hours a week does 15-213 take, and when does the workload spike?",
+      "answer_md": "## Hours Per Week: 15-213\n\n### Typical Weekly Load\nThe workload is substantial. One student reports that even with a strong background, \"Sometimes that path is like 20-25 hours of work in a single week though. It just takes a lot (a LOT) of work.\" [reddit-15213-1hmut34-variousjob#0 · r/cmu · 2024 · https://www.reddit.com/r/cmu/comments/1hmut34/comment/m3yod5x/]\n\nAnother student describes it more sharply: \"I found myself consistently spending well over 20 hours a week working on homeworks in the latter half of the semester.\" [joemclaughlin-15-213-11#1 · Joe McLaughlin — course reviews · Spring 2022 · https://jmmclaug201.github.io/cmu-course-reviews/]\n\n### When the Workload Spikes\nTwo clear spike points emerge from the evidence:\n\n1. **Malloc Lab** is the biggest single spike — the same student notes spending \"over 30 hours during malloc lab in particular.\" [joemclaughlin-15-213-11#1 · Joe McLaughlin — course reviews · Spring 2022 · https://jmmclaug201.github.io/cmu-course-reviews/]\n2. **Data Lab** is flagged as especially grueling early on: \"I found datalab especially difficult because it's a lot of little puzzles.\" [reddit-15213-v16yce-elecsafety#0 · r/cmu · 2022 · https://www.reddit.com/r/cmu/comments/v16yce/comment/iakqe5w/]\n\n### Dissenting View\nOne student offers a contrasting perspective: \"For me personally, I feel the workload was lower than 15-150.\" [bowad-15-213-5#1 · bowad — course reviews · Spring 2022 · https://bowad.net/courses/] This is a clear outlier from the majority view.\n\n### Source Mix\n- Reddit (r/cmu): 2 posts (2022, 2024)\n- Personal course review blogs: 2 sources (Spring 2022)\n\n### Recommendation\nBudget **20–25 hours/week** as a baseline for the latter half of the semester, and treat **Malloc Lab** as a potential **30+ hour week**. Start labs early and use office hours, especially for Data Lab.",
+      "cited_ids": [
+        "bowad-15-213-5#1",
+        "joemclaughlin-15-213-11#1",
+        "reddit-15213-1hmut34-variousjob#0",
+        "reddit-15213-v16yce-elecsafety#0"
+      ]
+    },
+    {
+      "key": "difficulty_type",
+      "label": "Difficulty type",
+      "question": "is 15-213 conceptually hard or is it mostly grinding and volume of work?",
+      "answer_md": "## 15-213: Conceptual Difficulty vs. Grind?\n\nBased on the available evidence, it's **both** — but the dominant theme is **volume of work**, with pockets of genuine conceptual challenge.\n\n---\n\n### Volume / Grind Factor\nThe clearest picture of workload comes from this account:\n\n> \"If you passed 122 there is a path you can follow that ends with you getting a 100 on every lab in 213. Sometimes that path is like 20-25 hours of work in a single week though. It just takes a lot (a LOT) of work.\"\n\n[reddit-15213-1hmut34-variousjob#0 · r/cmu · 2024 · https://www.reddit.com/r/cmu/comments/1hmut34/comment/m3yod5x/]\n\nThis suggests the course is *doable* if you have the prerequisite foundations — the ceiling is high — but getting there requires serious time investment.\n\n---\n\n### Conceptual Difficulty\nSome parts are more puzzle-like and conceptually tricky. One student specifically called out:\n\n> \"When I took 213 I found datalab especially difficult because it's a lot of little puzzles. Thankfully the rest of the labs are more straightforward.\"\n\n[reddit-15213-v16yce-elecsafety#0 · r/cmu · 2022 · https://www.reddit.com/r/cmu/comments/v16yce/comment/iakqe5w/]\n\nAnd one reviewer noted personal struggle even without calling it objectively the hardest:\n\n> \"15-213 is definitely the class I've had the most trouble with so far at CMU, even if not the hardest objectively.\"\n\n[joemclaughlin-15-213-11#0 · Joe McLaughlin — course reviews · Spring 2022 · https://jmmclaug201.github.io/cmu-course-reviews/]\n\n---\n\n### A Counterpoint on Workload\nNot everyone found it overwhelming. One student wrote:\n\n> \"For me personally, I feel the workload was lower than 15-150.\"\n\n[bowad-15-213-5#1 · bowad — course reviews · Spring 2022 · https://bowad.net/courses/]\n\n---\n\n### Source Mix\n- Reddit (r/cmu): 2 posts (2022, 2024)\n- Student blog reviews (bowad, Joe McLaughlin): 3 entries (Spring 2022)\n\n---\n\n### Recommendation\nExpect **primarily a grind** — the concepts are learnable if you have solid 122 foundations, but the labs demand a massive time commitment (20-25 hrs/week in heavy weeks). DataLab is the main conceptual spike; the rest leans more toward methodical implementation. **Start early and use office hours** — the evidence consistently implies that's the differentiating factor.",
+      "cited_ids": [
+        "bowad-15-213-5#1",
+        "joemclaughlin-15-213-11#0",
+        "reddit-15213-1hmut34-variousjob#0",
+        "reddit-15213-v16yce-elecsafety#0"
+      ]
+    },
+    {
+      "key": "structure",
+      "label": "Course structure",
+      "question": "how is 15-213 structured - lectures, assignments, exams, TAs and office hours?",
+      "answer_md": "## 15-213 Course Structure\n\nThe evidence available speaks primarily to **workload and labs** rather than giving a full breakdown of lectures, exams, or TA arrangements. Here is what can be directly supported:\n\n---\n\n### Labs / Assignments\nThe course is heavily lab-based. Multiple sources confirm the workload is substantial:\n\n- \"If you passed 122 there is a path you can follow that ends with you getting a 100 on every lab in 213. Sometimes that path is like 20-25 hours of work in a single week though. It just takes a lot (a LOT) of work.\" [reddit-15213-1hmut34-variousjob#0 · r/cmu · 2024 · https://www.reddit.com/r/cmu/comments/1hmut34/comment/m3yod5x/]\n\n- \"I found myself consistently spending well over 20 hours a week working on homeworks in the latter half of the semester, and over 30 hours during malloc lab in particular.\" [joemclaughlin-15-213-11#1 · Joe McLaughlin — course reviews · Spring 2022 · https://jmmclaug201.github.io/cmu-course-reviews/]\n\n- One notable lab is **datalab**: \"I found datalab especially difficult because it's a lot of little puzzles. Thankfully the rest of the labs are more straightforward.\" [reddit-15213-v16yce-elecsafety#0 · r/cmu · 2022 · https://www.reddit.com/r/cmu/comments/v16yce/comment/iakqe5w/]\n\n### Office Hours\nOne piece of direct advice mentions OH as a key resource: \"Don't worry as long as you start early and go to OH.\" [reddit-15213-v16yce-elecsafety#0 · r/cmu · 2022 · https://www.reddit.com/r/cmu/comments/v16yce/comment/iakqe5w/]\n\n### Overall Tone\nThe course is demanding but well-regarded: \"15-213 is one of my all time favorite courses at CMU. I thoroughly enjoyed the labs, and I think that the course does a very good job of teaching what it sets out to teach, in a fun and engaging way.\" [bowad-15-213-5#0 · bowad — course reviews · Spring 2022 · https://bowad.net/courses/]\n\n---\n\n### ⚠️ Gaps in the Evidence\nThe available evidence does **not** cover: lecture format, exam structure, number/role of TAs, or specific OH logistics. For those details, check the official course website or syllabus directly.\n\n**Source mix:** Reddit (2 posts), personal course review blogs (2 sources). No RMP data present.\n\n**Recommendation:** Start labs **very early** and use office hours consistently — this is the clearest actionable advice across all sources, especially for datalab and malloc lab.",
+      "cited_ids": [
+        "bowad-15-213-5#0",
+        "joemclaughlin-15-213-11#1",
+        "reddit-15213-1hmut34-variousjob#0",
+        "reddit-15213-v16yce-elecsafety#0"
+      ]
+    },
+    {
+      "key": "worth",
+      "label": "Worth it?",
+      "question": "is 15-213 worth taking - what does it unlock and what is the payoff?",
+      "answer_md": "## Is 15-213 Worth Taking?\n\nThe evidence available speaks more to the experience of taking 15-213 than explicitly listing what it \"unlocks,\" so I'll be transparent about that gap — but here's what the sources do say:\n\n---\n\n### What Students Say About the Payoff/Value\n\nOne reviewer calls it a genuinely rewarding course:\n\n> \"15-213 is one of my all time favorite courses at CMU. I thoroughly enjoyed the labs, and I think that the course does a very good job of teaching what it sets out to teach, in a fun and engaging way.\"\n\n[bowad-15-213-5#0 · bowad — course reviews · Spring 2022 · https://bowad.net/courses/]\n\n---\n\n### Workload Reality Check\n\nThe course is demanding but survivable with effort:\n\n> \"If you passed 122 there is a path you can follow that ends with you getting a 100 on every lab in 213. Sometimes that path is like 20-25 hours of work in a single week though. It just takes a lot (a LOT) of work.\"\n\n[reddit-15213-1hmut34-variousjob#0 · r/cmu · 2024 · https://www.reddit.com/r/cmu/comments/1hmut34/comment/m3yod5x/]\n\nOne student noted it was \"definitely the class I've had the most trouble with so far at CMU, even if not the hardest objectively.\" [joemclaughlin-15-213-11#0 · Joe McLaughlin — course reviews · Spring 2022 · https://jmmclaug201.github.io/cmu-course-reviews/]\n\n---\n\n### Source Mix\n- Blog reviews (bowad, Joe McLaughlin): 3 chunks\n- Reddit (r/cmu): 2 chunks\n\n---\n\n### ⚠️ Important Gap\nThe evidence provided **does not directly address** which upper-level courses 15-213 is a prerequisite for or its career/internship payoff. That information is absent from these chunks. For prerequisite chains, I'd recommend checking the CMU course catalog or SIO directly.\n\n**Recommendation:** Based on available evidence, the course appears worth taking if you enjoy systems-level thinking and are prepared for 20–25 hour weeks during lab periods. Start labs early and use office hours.",
+      "cited_ids": [
+        "bowad-15-213-5#0",
+        "joemclaughlin-15-213-11#0",
+        "reddit-15213-1hmut34-variousjob#0"
+      ]
+    }
+  ],
+  "professor_split": {
+    "available": false,
+    "reason": "no per-instructor RMP stats for this course in the corpus",
+    "professors": []
+  },
+  "receipts": {
+    "bowad-15-213-5#1": {
+      "id": "bowad-15-213-5#1",
+      "text": "For me personally, I feel the workload was lower than 15-150.",
+      "source": "blog",
+      "cite": "bowad — course reviews",
+      "url": "https://bowad.net/courses/",
+      "date": "Spring 2022",
+      "verified": true,
+      "course": "15-213",
+      "professor": null,
+      "thread": "blog · bowad",
+      "author": "bowad",
+      "score": 0.366
+    },
+    "reddit-15213-1hmut34-variousjob#0": {
+      "id": "reddit-15213-1hmut34-variousjob#0",
+      "text": "If you passed 122 there is a path you can follow that ends with you getting a 100 on every lab in 213. Sometimes that path is like 20-25 hours of work in a single week though. It just takes a lot (a LOT) of work.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/1hmut34/comment/m3yod5x/",
+      "date": "2024",
+      "verified": true,
+      "course": "15-213",
+      "professor": null,
+      "thread": "How hard is it to get an A in 15213?",
+      "author": "VariousJob4047",
+      "score": 0.358
+    },
+    "joemclaughlin-15-213-11#0": {
+      "id": "joemclaughlin-15-213-11#0",
+      "text": "15-213 is definitely the class I’ve had the most trouble with so far at CMU, even if not the hardest objectively.",
+      "source": "blog",
+      "cite": "Joe McLaughlin — course reviews",
+      "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+      "date": "Spring 2022",
+      "verified": true,
+      "course": "15-213",
+      "professor": null,
+      "thread": "blog · Joe McLaughlin",
+      "author": "Joe McLaughlin",
+      "score": 0.271
+    },
+    "reddit-15213-v16yce-elecsafety#0": {
+      "id": "reddit-15213-v16yce-elecsafety#0",
+      "text": "When I took 213 I found datalab especially difficult because it's a lot of little puzzles. Thankfully the rest of the labs are more straightforward. Don't worry as long as you start early and go to OH.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/v16yce/comment/iakqe5w/",
+      "date": "2022",
+      "verified": true,
+      "course": "15-213",
+      "professor": null,
+      "thread": "I'm taking 15213 and feeling so dumb",
+      "author": "Electrical-Safety-48",
+      "score": 0.262
+    },
+    "bowad-15-213-5#0": {
+      "id": "bowad-15-213-5#0",
+      "text": "15-213 is one of my all time favorite courses at CMU. I thoroughly enjoyed the labs, and I think that the course does a very good job of teaching what it sets out to teach, in a fun and engaging way.",
+      "source": "blog",
+      "cite": "bowad — course reviews",
+      "url": "https://bowad.net/courses/",
+      "date": "Spring 2022",
+      "verified": true,
+      "course": "15-213",
+      "professor": null,
+      "thread": "blog · bowad",
+      "author": "bowad",
+      "score": 0.231
+    },
+    "joemclaughlin-15-213-11#1": {
+      "id": "joemclaughlin-15-213-11#1",
+      "text": "I found myself consistently spending well over 20 hours a week working on homeworks in the latter half of the semester, and over 30 hours during malloc lab in particular.",
+      "source": "blog",
+      "cite": "Joe McLaughlin — course reviews",
+      "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+      "date": "Spring 2022",
+      "verified": true,
+      "course": "15-213",
+      "professor": null,
+      "thread": "blog · Joe McLaughlin",
+      "author": "Joe McLaughlin",
+      "score": 0.265
+    }
+  },
+  "source_mix": {
+    "reddit": 2,
+    "rmp": 0,
+    "blog": 4,
+    "total": 6,
+    "verified": 6,
+    "unverified": 0
+  },
+  "cross_course_citations": []
+}

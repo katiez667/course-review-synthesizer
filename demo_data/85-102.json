@@ -1,0 +1,159 @@
+{
+  "card_id": "85-102",
+  "kind": "single",
+  "course": "85-102",
+  "title": "Introduction to Psychology",
+  "frozen_at": "2026-08-13T09:46:23Z",
+  "model": "claude-sonnet-4-6",
+  "retrieval": {
+    "k": 5,
+    "recency": true,
+    "mode": "semantic"
+  },
+  "headline": {
+    "question": "how hard is 85-102, what is the workload, and is it worth it?",
+    "answer_md": "## 85-102 (Introduction to Psychology / Social Psychology) — Difficulty, Workload & Worth\n\n### Difficulty & Workload\n\nThe course is widely described as manageable. Based on RateMyProfessors, **Kody Manke** carries an overall rating of **4.2/5**, a difficulty of **2.9/5**, and a **71% would-take-again rate** (14 ratings). [rmp-kodymanke-85-102#0 · RateMyProfessors — Kody Manke · 2026-08 · https://www.ratemyprofessors.com/professor/2214158]\n\nOne student put it directly: \"it wasn't a ton of work and was honestly pretty interesting.\" [reddit-85102-116qea9-quarks01#0 · r/cmu · 2022 · https://www.reddit.com/r/cmu/comments/116qea9/comment/j99ibw6/]\n\n### Is It Worth It?\n\nStudent sentiment is consistently positive:\n\n- \"85102 with Manke is pretty chill and his lectures are pretty entertaining — would recommend.\" [reddit-85102-yvndoc-kimmerty#0 · r/cmu · 2022 · https://www.reddit.com/r/cmu/comments/yvndoc/comment/iwfca1v/]\n- \"Kody is an awesome professor — his lecturing style is very interesting.\" [reddit-85102-116qea9-n44m3#0 · r/cmu · 2022 · https://www.reddit.com/r/cmu/comments/116qea9/comment/j97zd3e/]\n- \"Kody is a very energetic and fun lecturer, and the class helped to open my eyes to many social phenomenom that I encounter in daily life.\" [fanpuzeng-85-102-33#0 · Fan Pu Zeng — course reviews · Spring 2021 · https://fanpu.io/courses/]\n\n### Caveats\n\n- All evidence pertains **only to Kody Manke** — no data exists in the evidence for other instructors (e.g., Moya is mentioned by name but has no independent stats here).\n- Reddit posts are from **2022** and the blog review from **Spring 2021**, so some details may be outdated.\n\n### Source Mix\n- RateMyProfessors (1 professor profile)\n- Reddit/r/cmu (2 comments)\n- Student blog (1 review)\n\n### Recommendation\nIf you're looking for a **low-workload, genuinely interesting elective**, 85-102 with Manke appears to be a solid choice. The difficulty rating of ~2.9/5 and unanimous positive student sentiment suggest it's very worth taking as a gen-ed or exploratory course.",
+    "cited_ids": [
+      "fanpuzeng-85-102-33#0",
+      "reddit-85102-116qea9-n44m3#0",
+      "reddit-85102-116qea9-quarks01#0",
+      "reddit-85102-yvndoc-kimmerty#0",
+      "rmp-kodymanke-85-102#0"
+    ]
+  },
+  "facets": [
+    {
+      "key": "workload",
+      "label": "Workload & time",
+      "question": "how many hours a week does 85-102 take, and when does the workload spike?",
+      "answer_md": "The available evidence doesn't contain specific information about weekly hours or workload spikes for 85-102. What the evidence *does* say is more general:\n\n- \"it wasn't a ton of work and was honestly pretty interesting\" [reddit-85102-116qea9-quarks01#0 · r/cmu · 2022 · https://www.reddit.com/r/cmu/comments/116qea9/comment/j99ibw6/]\n- The course is described as \"pretty chill\" [reddit-85102-yvndoc-kimmerty#0 · r/cmu · 2022 · https://www.reddit.com/r/cmu/comments/yvndoc/comment/iwfca1v/]\n- Kody Manke's difficulty rating is **2.9/5** across 14 ratings [rmp-kodymanke-85-102#0 · RateMyProfessors — Kody Manke · 2026-08 · https://www.ratemyprofessors.com/professor/2214158]\n\nNo evidence in the provided sources gives a specific hour-per-week estimate or identifies particular points in the semester when the workload spikes.\n\n**Source mix:** Reddit (3 chunks), RateMyProfessors (1 chunk), blog/course review site (1 chunk).\n\n**Recommendation:** For precise workload data, check CMU's FCE (Faculty Course Evaluations) database, which tracks reported weekly hours directly. The general picture from students here suggests 85-102 is relatively low-effort, but no one quantified it.",
+      "cited_ids": [
+        "reddit-85102-116qea9-quarks01#0",
+        "reddit-85102-yvndoc-kimmerty#0",
+        "rmp-kodymanke-85-102#0"
+      ]
+    },
+    {
+      "key": "difficulty_type",
+      "label": "Difficulty type",
+      "question": "is 85-102 conceptually hard or is it mostly grinding and volume of work?",
+      "answer_md": "## 85-102: Conceptual Difficulty vs. Workload\n\nThe evidence available doesn't include a direct comparison of \"conceptual depth vs. grind,\" but the indirect signals point pretty clearly in one direction:\n\n**It leans neither — it's described as light on both fronts.**\n\n- One student says plainly: \"it wasn't a ton of work and was honestly pretty interesting.\" [reddit-85102-116qea9-quarks01#0 · r/cmu · 2022 · https://www.reddit.com/r/cmu/comments/116qea9/comment/j99ibw6/]\n- Another calls it \"pretty chill\" [reddit-85102-yvndoc-kimmerty#0 · r/cmu · 2022 · https://www.reddit.com/r/cmu/comments/yvndoc/comment/iwfca1v/]\n- On RateMyProfessors, Kody Manke (the primary instructor referenced) scores a **2.9/5 on difficulty** across 14 ratings — solidly below average in terms of challenge. [rmp-kodymanke-85-102#0 · RateMyProfessors — Kody Manke · 2026-08 · https://www.ratemyprofessors.com/professor/2214158]\n- The conceptual content is described as accessible and engaging: \"the class helped to open my eyes to many social phenomenom that I encounter in daily life.\" [fanpuzeng-85-102-33#0 · Fan Pu Zeng — course reviews · Spring 2021 · https://fanpu.io/courses/]\n\n**Source mix:** RMP (1 professor page), Reddit/r/cmu (3 comments), blog review (1). No verified blog or Reddit post describes heavy reading loads or difficult exams.\n\n**Recommendation:** Expect a course that is neither conceptually demanding nor a grind — it reads as a manageable, engaging gen-ed. If you're looking for a light elective, this fits the bill. If you want intellectual rigor, look elsewhere.",
+      "cited_ids": [
+        "fanpuzeng-85-102-33#0",
+        "reddit-85102-116qea9-quarks01#0",
+        "reddit-85102-yvndoc-kimmerty#0",
+        "rmp-kodymanke-85-102#0"
+      ]
+    },
+    {
+      "key": "structure",
+      "label": "Course structure",
+      "question": "how is 85-102 structured - lectures, assignments, exams, TAs and office hours?",
+      "answer_md": "The available evidence touches on **85-102** but doesn't include detailed structural information (lecture format, assignment types, exams, TAs, or office hours). Here's what the evidence *does* tell us:\n\n- The course is described as \"not a ton of work\" and \"pretty interesting\" [reddit-85102-116qea9-quarks01#0 · r/cmu · 2022 · https://www.reddit.com/r/cmu/comments/116qea9/comment/j99ibw6/]\n- Lectures appear to be a central component, with multiple students commenting positively on the lecturing style: \"Kody is a very energetic and fun lecturer, and the class helped to open my eyes to many social phenomenom that I encounter in daily life\" [fanpuzeng-85-102-33#0 · Fan Pu Zeng — course reviews · Spring 2021 · https://fanpu.io/courses/]\n- One student notes \"it wasn't a ton of work,\" suggesting the overall workload is light, but no specifics on assignment types or exams are provided [reddit-85102-116qea9-quarks01#0 · r/cmu · 2022 · https://www.reddit.com/r/cmu/comments/116qea9/comment/j99ibw6/]\n\n**Source mix:** Reddit (r/cmu), RateMyProfessors, one course-review blog — no syllabus or official course document.\n\n**Recommendation:** For specific structural details (exam format, assignment breakdown, TA availability, office hours), check the **course syllabus on Canvas** or the **CMU course catalog**. You could also email the instructor directly — based on reviews, Kody Manke seems approachable [rmp-kodymanke-85-102#0 · RateMyProfessors — Kody Manke · 2026-08 · https://www.ratemyprofessors.com/professor/2214158].",
+      "cited_ids": [
+        "fanpuzeng-85-102-33#0",
+        "reddit-85102-116qea9-quarks01#0",
+        "rmp-kodymanke-85-102#0"
+      ]
+    },
+    {
+      "key": "worth",
+      "label": "Worth it?",
+      "question": "is 85-102 worth taking - what does it unlock and what is the payoff?",
+      "answer_md": "## Is 85-102 Worth Taking?\n\nThe evidence doesn't speak to any specific prerequisite chains or formal \"unlocks\" 85-102 provides — so that part of your question can't be answered from the available sources. What the evidence *does* cover is the general payoff in terms of workload, learning, and instructor quality.\n\n---\n\n### What Students Say About the Payoff\n\nThe intellectual value is described as real and practical:\n\n> \"the class helped to open my eyes to many social phenomenom that I encounter in daily life.\" [fanpuzeng-85-102-33#0 · Fan Pu Zeng — course reviews · Spring 2021 · https://fanpu.io/courses/]\n\nAnd the workload is low relative to the experience:\n\n> \"it wasn't a ton of work and was honestly pretty interesting.\" [reddit-85102-116qea9-quarks01#0 · r/cmu · 2022 · https://www.reddit.com/r/cmu/comments/116qea9/comment/j99ibw6/]\n\n---\n\n### Instructor Context (Kody Manke)\n\nMost evidence centers on Manke as the instructor. He rates **4.2/5** overall on RMP, with **71% would take again** and a difficulty of **2.9/5** (based on 14 ratings) [rmp-kodymanke-85-102#0 · RateMyProfessors — Kody Manke · 2026-08 · https://www.ratemyprofessors.com/professor/2214158]. Students consistently call him entertaining and engaging [reddit-85102-yvndoc-kimmerty#0 · r/cmu · 2022], [reddit-85102-116qea9-n44m3#0 · r/cmu · 2022].\n\n---\n\n### Source Mix\n- RateMyProfessors (1 professor profile)\n- Reddit / r/cmu (3 comments, 2022)\n- Student course blog (1 entry, Spring 2021)\n\n**Recommendation:** Based on available evidence, 85-102 appears to be a low-effort, high-enjoyment course with genuine intellectual value in understanding everyday social behavior. If you need it for a requirement or want a lighter elective, it looks like a solid pick — especially with Manke. However, **no evidence here addresses prerequisite unlocks**, so check the CMU course catalog directly for that.",
+      "cited_ids": [
+        "fanpuzeng-85-102-33#0",
+        "reddit-85102-116qea9-n44m3#0",
+        "reddit-85102-116qea9-quarks01#0",
+        "reddit-85102-yvndoc-kimmerty#0",
+        "rmp-kodymanke-85-102#0"
+      ]
+    }
+  ],
+  "professor_split": {
+    "available": false,
+    "reason": "no per-instructor RMP stats for this course in the corpus",
+    "professors": []
+  },
+  "receipts": {
+    "rmp-kodymanke-85-102#0": {
+      "id": "rmp-kodymanke-85-102#0",
+      "text": "Kody Manke overall 4.2/5, 71% would take again, difficulty 2.9/5, based on 14 ratings.",
+      "source": "rmp",
+      "cite": "RateMyProfessors — Kody Manke",
+      "url": "https://www.ratemyprofessors.com/professor/2214158",
+      "date": "2026-08",
+      "verified": true,
+      "course": "85-102",
+      "professor": "Kody Manke",
+      "thread": "RMP Kody Manke",
+      "author": null,
+      "score": 0.309
+    },
+    "reddit-85102-yvndoc-kimmerty#0": {
+      "id": "reddit-85102-yvndoc-kimmerty#0",
+      "text": "85102 with Manke is pretty chill and his lectures are pretty entertaining — would recommend. Manke's FCEs are also better than Moya's.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/yvndoc/comment/iwfca1v/",
+      "date": "2022",
+      "verified": true,
+      "course": "85-102",
+      "professor": "Kody Manke",
+      "thread": "Thoughts about 85102? Should I take 88120 or 85102",
+      "author": "kimmerty",
+      "score": 0.171
+    },
+    "reddit-85102-116qea9-quarks01#0": {
+      "id": "reddit-85102-116qea9-quarks01#0",
+      "text": "Kody is a great guy. I've taken the class before — it wasn't a ton of work and was honestly pretty interesting.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/116qea9/comment/j99ibw6/",
+      "date": "2022",
+      "verified": true,
+      "course": "85-102",
+      "professor": "Kody Manke",
+      "thread": "85-102 (Intro to Psych) with Kody Manke",
+      "author": "Quarks01",
+      "score": 0.067
+    },
+    "reddit-85102-116qea9-n44m3#0": {
+      "id": "reddit-85102-116qea9-n44m3#0",
+      "text": "I took social psych with him. Kody is an awesome professor — his lecturing style is very interesting.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/116qea9/comment/j97zd3e/",
+      "date": "2022",
+      "verified": true,
+      "course": "85-102",
+      "professor": "Kody Manke",
+      "thread": "85-102 (Intro to Psych) with Kody Manke",
+      "author": "n44m3",
+      "score": 0.039
+    },
+    "fanpuzeng-85-102-33#0": {
+      "id": "fanpuzeng-85-102-33#0",
+      "text": "Kody is a very energetic and fun lecturer, and the class helped to open my eyes to many social phenomenom that I encounter in daily life.",
+      "source": "blog",
+      "cite": "Fan Pu Zeng — course reviews",
+      "url": "https://fanpu.io/courses/",
+      "date": "Spring 2021",
+      "verified": true,
+      "course": "85-102",
+      "professor": "Kody Manke",
+      "thread": "blog · Fan Pu Zeng",
+      "author": "Fan Pu Zeng",
+      "score": -0.001
+    }
+  },
+  "source_mix": {
+    "reddit": 3,
+    "rmp": 1,
+    "blog": 1,
+    "total": 5,
+    "verified": 5,
+    "unverified": 0
+  },
+  "cross_course_citations": []
+}

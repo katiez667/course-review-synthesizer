@@ -1,0 +1,174 @@
+{
+  "card_id": "15-451",
+  "kind": "single",
+  "course": "15-451",
+  "title": "Algorithm Design and Analysis",
+  "frozen_at": "2026-08-13T09:45:30Z",
+  "model": "claude-sonnet-4-6",
+  "retrieval": {
+    "k": 5,
+    "recency": true,
+    "mode": "semantic"
+  },
+  "headline": {
+    "question": "how hard is 15-451, what is the workload, and is it worth it?",
+    "answer_md": "## 15-451 (Algorithm Design & Analysis): Difficulty, Workload, and Worth\n\n---\n\n### Overall Difficulty\n\nThe course has a reputation for being genuinely hard. One student stated bluntly:\n\n> \"15-451 is personally the most difficult class I have taken at CMU.\"\n\n[bowad-15-451-15#0 · bowad — course reviews · Fall 2023 · https://bowad.net/courses/]\n\nThe same reviewer offered this measured take on the promise vs. reality of the course:\n\n> \"The idea of a course giving you an 'algorithmic toolbox' is appealing, and I did learn about interesting algorithms from this class, but the scope and exams are not to be underestimated.\"\n\n[bowad-15-451-15#1 · bowad — course reviews · Fall 2023 · https://bowad.net/courses/]\n\n---\n\n### Professor-Specific Notes\n\nThe evidence includes ratings for two instructors who have taught 15-451 — note these differ significantly:\n\n- **David Woodruff**: 5/5 overall, 100% would take again, difficulty rated **4.5/5** (2 ratings). [rmp-davidwoodruff-15-451#0 · RateMyProfessors — David Woodruff · 2026-08 · https://www.ratemyprofessors.com/professor/2450324]\n- **Danny Sleator**: 2.3/5 overall, only **33% would take again**, difficulty rated **4/5** (6 ratings). [rmp-dannysleator-15-451#0 · RateMyProfessors — Danny Sleator · 2026-08 · https://www.ratemyprofessors.com/professor/776875]\n\nThese are starkly different experiences — **who teaches your section matters a lot**.\n\n---\n\n### Is It Worth It?\n\nDespite the difficulty, student sentiment on value is generally positive. One student noted:\n\n> \"Although 15-451 is a requirement, I thought it was a well-taught requirement, and I found both the professors to be very helpful and supportive.\"\n\n[abigalekim-15-451-10#0 · Abigale Kim — course reviews · Spring 2021 · https://abigalekim.github.io/courses/]\n\n---\n\n### Caveats & Conflicts\n\n- The Abigale Kim review is from **Spring 2021**, so the professor lineup may have changed.\n- The Woodruff RMP rating is based on only **2 ratings** — treat with caution.\n- There is a **clear conflict** between the Woodruff and Sleator experiences; your section assignment could meaningfully shape your outcome.\n\n---\n\n### Source Mix\n| Source | Type |\n|--------|------|\n| bowad.net | Personal blog/course reviews |\n| abigalekim.github.io | Personal blog/course reviews |\n| RateMyProfessors (×2) | RMP |\n\n---\n\n### Recommendation\n\nExpect **high difficulty** — one student called it the hardest CMU class they took — with demanding exams and broad scope. The material is widely considered valuable (algorithms are core to CS interviews and research). **Check which professor is teaching your section carefully**: the gap between the Woodruff and Sleator ratings is significant, and if you have a choice, that decision alone could affect your experience substantially.",
+    "cited_ids": [
+      "abigalekim-15-451-10#0",
+      "bowad-15-451-15#0",
+      "bowad-15-451-15#1",
+      "rmp-dannysleator-15-451#0",
+      "rmp-davidwoodruff-15-451#0"
+    ]
+  },
+  "facets": [
+    {
+      "key": "workload",
+      "label": "Workload & time",
+      "question": "how many hours a week does 15-451 take, and when does the workload spike?",
+      "answer_md": "The available evidence does not contain specific data on weekly hours or workload spikes for 15-451. The chunks only speak to overall difficulty and professor ratings — not time-on-task breakdowns.\n\nWhat the evidence *does* confirm:\n\n- 15-451 is described as \"the most difficult class I have taken at CMU\" [bowad-15-451-15#0 · bowad — course reviews · Fall 2023 · https://bowad.net/courses/]\n- Difficulty ratings back this up: Daniel Sleator is rated 4/5 difficulty [rmp-dannysleator-15-451#0 · RateMyProfessors — Danny Sleator · 2026-08 · https://www.ratemyprofessors.com/professor/776875] and David Woodruff 4.5/5 difficulty [rmp-davidwoodruff-15-451#0 · RateMyProfessors — David Woodruff · 2026-08 · https://www.ratemyprofessors.com/professor/2450324]\n\n**Source mix:** 1 student blog, 2 RMP entries, 1 additional student blog — no Reddit in this pull.\n\n**Recommendation:** The evidence here cannot answer your specific question about hours/week or workload spikes. For that, check ScottyLabs' course reviews, CMU's own course evaluations, or ask on r/cmu where students often report granular time estimates.",
+      "cited_ids": [
+        "bowad-15-451-15#0",
+        "rmp-dannysleator-15-451#0",
+        "rmp-davidwoodruff-15-451#0"
+      ]
+    },
+    {
+      "key": "difficulty_type",
+      "label": "Difficulty type",
+      "question": "is 15-451 conceptually hard or is it mostly grinding and volume of work?",
+      "answer_md": "## 15-451 Difficulty: Conceptual vs. Volume?\n\nThe evidence available doesn't cleanly separate \"conceptual difficulty\" from \"volume/grind\" for 15-451, but here's what students and ratings do say:\n\n**General Course Difficulty**\n\nOne student calls it flatly the hardest course they've taken at CMU: \"15-451 is personally the most difficult class I have taken at CMU\" [bowad-15-451-15#0 · bowad — course reviews · Fall 2023 · https://bowad.net/courses/]. They add a specific warning about scope and assessments: \"The idea of a course giving you an 'algorithmic toolbox' is appealing, and I did learn about interesting algorithms from this class, but the scope and exams are not to be underestimated.\" [bowad-15-451-15#1 · bowad — course reviews · Fall 2023 · https://bowad.net/courses/] — the mention of *scope* and *exams* (rather than homework load) hints that the conceptual breadth and exam difficulty are major pain points.\n\n**Professor-Level Difficulty Ratings (RMP)**\n\n- **David Woodruff**: difficulty **4.5/5** (2 ratings) [rmp-davidwoodruff-15-451#0 · RateMyProfessors — David Woodruff · 2026-08 · https://www.ratemyprofessors.com/professor/2450324]\n- **Danny Sleator**: difficulty **4/5** (6 ratings) [rmp-dannysleator-15-451#0 · RateMyProfessors — Danny Sleator · 2026-08 · https://www.ratemyprofessors.com/professor/776875]\n\nBoth sections are rated high-difficulty regardless of instructor.\n\n**A Contrasting View**\n\nOne student (Spring 2021) found it manageable with support: \"Although 15-451 is a requirement, I thought it was a well-taught requirement, and I found both the professors to be very helpful and supportive.\" [abigalekim-15-451-10#0 · Abigale Kim — course reviews · Spring 2021 · https://abigalekim.github.io/courses/]\n\n---\n\n**Bottom Line:** The evidence points more toward **conceptual/scope difficulty** (broad algorithmic material, hard exams) than pure grind — the word \"scope\" and emphasis on exams is telling. However, the evidence is thin and doesn't directly benchmark homework volume, so treat this as partial. The Spring 2021 review is also a few years old. **Recommendation:** Expect genuine conceptual challenge across a wide range of algorithms topics, and prepare especially seriously for exams.\n\n**Source mix:** 1 personal blog (bowad), 1 personal blog (Abigale Kim), 2 RateMyProfessors entries — no Reddit in this evidence set.",
+      "cited_ids": [
+        "abigalekim-15-451-10#0",
+        "bowad-15-451-15#0",
+        "bowad-15-451-15#1",
+        "rmp-dannysleator-15-451#0",
+        "rmp-davidwoodruff-15-451#0"
+      ]
+    },
+    {
+      "key": "structure",
+      "label": "Course structure",
+      "question": "how is 15-451 structured - lectures, assignments, exams, TAs and office hours?",
+      "answer_md": "## 15-451 Course Structure\n\nUnfortunately, the available evidence does **not contain detailed information** about the specific mechanics of 15-451 — such as lecture frequency, assignment types, exam format, TA support, or office hours. The chunks retrieved focus primarily on overall difficulty and professor impressions rather than course logistics.\n\nHere is what the evidence *does* confirm:\n\n- The course is described as covering an **\"algorithmic toolbox\"** of interesting algorithms, but \"the scope and exams are not to be underestimated\" [bowad-15-451-15#1 · bowad — course reviews · Fall 2023 · https://bowad.net/courses/] — suggesting exams are a significant component worth preparing for seriously.\n- One student called it \"personally the most difficult class I have taken at CMU\" [bowad-15-451-15#0 · bowad — course reviews · Fall 2023 · https://bowad.net/courses/].\n- Another student found the professors \"very helpful and supportive,\" suggesting instructor/TA accessibility exists [abigalekim-15-451-10#0 · Abigale Kim — course reviews · Spring 2021 · https://abigalekim.github.io/courses/].\n\n**Source mix:** 2 student blog posts, 2 RateMyProfessors entries. No Reddit, no syllabus data.\n\n---\n\n**Recommendation:** For accurate, up-to-date structural details (lecture schedule, homework cadence, exam count, OH hours), check the **official course website or syllabus** directly — CMU's 15-451 page typically posts this at the start of each semester. The evidence here simply doesn't cover those specifics.",
+      "cited_ids": [
+        "abigalekim-15-451-10#0",
+        "bowad-15-451-15#0",
+        "bowad-15-451-15#1"
+      ]
+    },
+    {
+      "key": "worth",
+      "label": "Worth it?",
+      "question": "is 15-451 worth taking - what does it unlock and what is the payoff?",
+      "answer_md": "## Is 15-451 Worth Taking?\n\nThe evidence on this course is limited but offers a few useful data points. Note the source mix here is: 2× RateMyProfessors aggregates, 2× personal student course-review blogs — no Reddit threads or detailed payoff breakdowns are present in the available evidence.\n\n---\n\n### What the course offers (the \"toolbox\" argument)\n\nOne student frames the appeal well but adds a caution:\n\n> \"The idea of a course giving you an 'algorithmic toolbox' is appealing, and I did learn about interesting algorithms from this class, but the scope and exams are not to be underestimated.\"\n\n[bowad-15-451-15#1 · bowad — course reviews · Fall 2023 · https://bowad.net/courses/]\n\nSo the advertised payoff — a broad algorithmic foundation — does materialize, but it comes with real cost.\n\n---\n\n### Difficulty: be prepared\n\nThe course is described bluntly as a serious undertaking:\n\n> \"15-451 is personally the most difficult class I have taken at CMU.\"\n\n[bowad-15-451-15#0 · bowad — course reviews · Fall 2023 · https://bowad.net/courses/]\n\nDifficulty ratings from RMP back this up: David Woodruff's section is rated **4.5/5 difficulty** [rmp-davidwoodruff-15-451#0 · RateMyProfessors — David Woodruff · 2026-08 · https://www.ratemyprofessors.com/professor/2450324] and Danny Sleator's **4/5 difficulty** [rmp-dannysleator-15-451#0 · RateMyProfessors — Danny Sleator · 2026-08 · https://www.ratemyprofessors.com/professor/776875].\n\n---\n\n### Professor choice matters — a lot\n\n| Professor | Overall | Would Take Again | Difficulty |\n|---|---|---|---|\n| David Woodruff | 5/5 | 100% | 4.5/5 |\n| Danny Sleator | 2.3/5 | 33% | 4/5 |\n\n[rmp-davidwoodruff-15-451#0 · 2026-08] [rmp-dannysleator-15-451#0 · 2026-08]\n\nThat gap in satisfaction is striking. One student (Spring 2021, so somewhat dated) had a positive experience: \"Although 15-451 is a requirement, I thought it was a well-taught requirement, and I found both the professors to be very helpful and supportive.\" [abigalekim-15-451-10#0 · Abigale Kim — course reviews · Spring 2021 · https://abigalekim.github.io/courses/] — but this predates some of the more critical Sleator reviews.\n\n---\n\n### Caveats & gaps\n\n- **What it \"unlocks\"** (prerequisites for other courses, job recruiting signal, grad school value) is **not directly addressed** in the available evidence — the evidence does not speak to downstream course access or career payoff.\n- The Abigale Kim review is from **Spring 2021** and may not reflect current course structure.\n- RMP ratings for Woodruff are based on only **2 ratings** — too small to generalize confidently.\n\n---\n\n### Direct Recommendation\n\nIf 15-451 is a requirement for your program, the evidence suggests it is **genuinely educational** but **genuinely hard** — plan accordingly. If you have a choice of instructor, the RMP data strongly favors Woodruff over Sleator, though sample sizes are small. The evidence here **cannot** tell you what specific courses or opportunities it unlocks — you'd want to check CMU's prerequisite chains separately.",
+      "cited_ids": [
+        "abigalekim-15-451-10#0",
+        "bowad-15-451-15#0",
+        "bowad-15-451-15#1",
+        "rmp-dannysleator-15-451#0",
+        "rmp-davidwoodruff-15-451#0"
+      ]
+    }
+  ],
+  "professor_split": {
+    "available": false,
+    "reason": "no per-instructor RMP stats for this course in the corpus",
+    "professors": []
+  },
+  "receipts": {
+    "bowad-15-451-15#0": {
+      "id": "bowad-15-451-15#0",
+      "text": "15-451 is personally the most difficult class I have taken at CMU.",
+      "source": "blog",
+      "cite": "bowad — course reviews",
+      "url": "https://bowad.net/courses/",
+      "date": "Fall 2023",
+      "verified": true,
+      "course": "15-451",
+      "professor": null,
+      "thread": "blog · bowad",
+      "author": "bowad",
+      "score": 0.369
+    },
+    "rmp-davidwoodruff-15-451#0": {
+      "id": "rmp-davidwoodruff-15-451#0",
+      "text": "David Woodruff overall 5/5, 100% would take again, difficulty 4.5/5, based on 2 ratings.",
+      "source": "rmp",
+      "cite": "RateMyProfessors — David Woodruff",
+      "url": "https://www.ratemyprofessors.com/professor/2450324",
+      "date": "2026-08",
+      "verified": true,
+      "course": "15-451",
+      "professor": "David Woodruff",
+      "thread": "RMP David Woodruff",
+      "author": null,
+      "score": 0.347
+    },
+    "rmp-dannysleator-15-451#0": {
+      "id": "rmp-dannysleator-15-451#0",
+      "text": "Daniel Sleator overall 2.3/5, 33% would take again, difficulty 4/5, based on 6 ratings.",
+      "source": "rmp",
+      "cite": "RateMyProfessors — Danny Sleator",
+      "url": "https://www.ratemyprofessors.com/professor/776875",
+      "date": "2026-08",
+      "verified": true,
+      "course": "15-451",
+      "professor": "Danny Sleator",
+      "thread": "RMP Daniel Sleator",
+      "author": null,
+      "score": 0.299
+    },
+    "abigalekim-15-451-10#0": {
+      "id": "abigalekim-15-451-10#0",
+      "text": "Although 15-451 is a requirement, I thought it was a well-taught requirement, and I found both the professors to be very helpful and supportive.",
+      "source": "blog",
+      "cite": "Abigale Kim — course reviews",
+      "url": "https://abigalekim.github.io/courses/",
+      "date": "Spring 2021",
+      "verified": true,
+      "course": "15-451",
+      "professor": "Sleator",
+      "thread": "blog · Abigale Kim",
+      "author": "Abigale Kim",
+      "score": 0.244
+    },
+    "bowad-15-451-15#1": {
+      "id": "bowad-15-451-15#1",
+      "text": "The idea of a course giving you an \"algorithmic toolbox\" is appealing, and I did learn about interesting algorithms from this class, but the scope and exams are not to be underestimated.",
+      "source": "blog",
+      "cite": "bowad — course reviews",
+      "url": "https://bowad.net/courses/",
+      "date": "Fall 2023",
+      "verified": true,
+      "course": "15-451",
+      "professor": null,
+      "thread": "blog · bowad",
+      "author": "bowad",
+      "score": 0.125
+    },
+    "frankfan-15-451-5#0": {
+      "id": "frankfan-15-451-5#0",
+      "text": "If David Woodruff is teaching it, there will be some really interesting algorithms and data structures at the end.",
+      "source": "blog",
+      "cite": "Frank Fan — course reviews",
+      "url": "https://weihang7.github.io/courses/",
+      "date": "Spring 2019",
+      "verified": true,
+      "course": "15-451",
+      "professor": "David Woodruff",
+      "thread": "blog · Frank Fan",
+      "author": "Frank Fan",
+      "score": 0.037
+    }
+  },
+  "source_mix": {
+    "reddit": 0,
+    "rmp": 2,
+    "blog": 4,
+    "total": 6,
+    "verified": 6,
+    "unverified": 0
+  },
+  "cross_course_citations": []
+}

@@ -1,0 +1,574 @@
+{
+  "card_id": "ml-4way",
+  "kind": "multi",
+  "courses": [
+    "10-301",
+    "10-315",
+    "10-601",
+    "10-701"
+  ],
+  "title": "Which intro ML course?",
+  "frozen_at": "2026-08-13T09:49:44Z",
+  "model": "claude-sonnet-4-6",
+  "retrieval": {
+    "k": 4,
+    "recency": true,
+    "mode": "semantic"
+  },
+  "headline": {
+    "question": "I need one intro ML course. How do 10-301, 10-315, 10-601 and 10-701 differ in difficulty, math background, and who each one is for?",
+    "answer_md": "## Comparing 10-301, 10-315, 10-601, and 10-701\n\n### 10-301 — Introduction to Machine Learning (Undergrad)\n\n**Who it's for:** Undergraduates, generally accessible but not trivial.\n\n**Difficulty/math:** One student calls it \"very doable\" and praises TA support [reddit-10301-y9ha1g-mavaa#0 · r/cmu · 2022 · https://www.reddit.com/r/cmu/comments/y9ha1g/comment/it5mq4o/]. However, exam style is disputed: one says \"the exams were very math heavy\" [reddit-10301-1icft4q-nukemoose#0 · r/cmu · 2024 · https://www.reddit.com/r/cmu/comments/1icft4q/comment/m9saffg/], while another notes exams are \"mostly fill in the blanks\" and \"conceptual\" [reddit-10301-1icft4q-godoftheholy#0 · r/cmu · 2024 · https://www.reddit.com/r/cmu/comments/1icft4q/comment/m9wvof2/]. Homework difficulty can be real: \"Recent HW #2 is not easy; the programming part was difficult. If you made an A in 15122 it may be easier. Also needs a good linear algebra background.\" [reddit-10301-1icft4q-acceptablespite#0 · r/cmu · 2024 · https://www.reddit.com/r/cmu/comments/1icft4q/comment/maxr3kt/]\n\n---\n\n### 10-315 — Introduction to Machine Learning (Honors/CS)\n\n**Who it's for:** SCS undergrads fulfilling an AI elective; specifically advised for SCS students over 10-701. \"There's a reason 315 is advised for SCS undergrads.\" [reddit-10315-kir1et-defalt#0 · r/cmu · 2020 · https://www.reddit.com/r/cmu/comments/kir1et/comment/ggskzad/]\n\n**Difficulty/math:** Reportedly **more rigorous than 10-301**: \"I've heard 315 is more rigorous than 301, and I'd imagine 701 is more rigorous than both since it's a grad-level course.\" [reddit-10315-kir1et-defalt#1 · r/cmu · 2020 · https://www.reddit.com/r/cmu/comments/kir1et/comment/ggskzad/] The assignments are \"largely math based — mostly linear algebra and some vector calc, the rest just coding it up using numpy.\" One student noted \"it didn't feel like a 12-unit course.\" [reddit-10315-gpswxk-oppossum#0 · r/cmu · 2020 · https://www.reddit.com/r/cmu/comments/gpswxk/comment/fs0sq9e/] A student took it to fulfill an AI elective and \"ended up liking the course content more than I thought I would.\" [joemclaughlin-10-315-1#0 · Joe McLaughlin — course reviews · Spring 2023 · https://jmmclaug201.github.io/cmu-course-reviews/]\n\n---\n\n### 10-601 — Introduction to Machine Learning (Masters-level)\n\n**Who it's for:** Primarily masters students; requires mathematical maturity.\n\n**Difficulty/math:** \"601 is pretty theoretical, with a fair amount of proofs and derivatives on the written homework, and you use what you solve in the written to complete the coding.\" [reddit-10601-1l213wr-mach01dan#1 · r/cmu · 2025 · https://www.reddit.com/r/cmu/comments/1l213wr/comment/mw1at4n/] One reviewer describes it as providing \"a surface-level introduction to ML without requiring extensive mathematical background\" [schlomer-10-601-0#0 · schlomer — course reviews · Fall 2024 · https://schlomer.xyz/cmu-courses/], but importantly adds: \"Great course, but without the math prerequisites it might be one of the hardest classes you've ever taken.\" [reddit-10601-1l213wr-mach01dan#0 · r/cmu · 2025 · https://www.reddit.com/r/cmu/comments/1l213wr/comment/mw1at4n/] Workload is roughly **5–10 hours/week**, and \"exams are quite manageable if you have some mathematical maturity.\" [schlomer-10-601-0#2 · schlomer — course reviews · Fall 2024 · https://schlomer.xyz/cmu-courses/]\n\n---\n\n### 10-701 — Introduction to Machine Learning (PhD-level)\n\n**Who it's for:** PhD students; no prior ML required but expect peers with strong backgrounds. \"You don't need to know any ML beforehand, though a lot of people will have that background.\" [reddit-10701-qs1aaa-moraceae#0 · r/cmu · 2021 · https://www.reddit.com/r/cmu/comments/qs1aaa/comment/hkab1u3/]\n\n**Difficulty/math:** Assignments are described as \"more grindy than difficult,\" with programming tricky due to numpy broadcasting mistakes. [reddit-10701-qs1aaa-moraceae#1 · r/cmu · 2021 · https://www.reddit.com/r/cmu/comments/qs1aaa/comment/hkab1u3/] One dissenting voice: \"I did not really enjoy this class, and felt that it tried to cover too much too quickly, which led to a very shallow and surface-level understanding of many topics.\" [fanpuzeng-10-701-34#0 · Fan Pu Zeng — course reviews · Spring 2021 · https://fanpu.io/courses/] Instructor matters a lot — one student recommends Gormley: \"the best prof for intro ML is Gormley — his slides have easily been the best.\" [reddit-10701-qs1aaa-moraceae#3 · r/cmu · 2021 · https://www.reddit.com/r/cmu/comments/qs1aaa/comment/hkab1u3/]\n\n---\n\n## Summary Table\n\n| Course | Level | Math Intensity | Best For |\n|--------|-------|---------------|----------|\n| 10-301 | Undergrad | Moderate (linear algebra) | General undergrads |\n| 10-315 | Undergrad (honors) | Higher (lin alg + vector calc) | SCS undergrads |\n| 10-601 | Masters | Theoretical, proofs | Masters students w/ math background |\n| 10-701 | PhD | Highest, grindy | PhD students |\n\n## Recommendation\n\n- **Undergrad, not SCS or lighter math background → 10-301**\n- **SCS undergrad → 10-315** (explicitly advised for SCS; more rigorous but appropriately scoped)\n- **Masters student with solid math → 10-601**\n- **PhD student → 10-701**, but be aware that breadth-over-depth is a real concern, and instructor choice matters significantly\n\n**Conflicts to note:** 10-601 is described both as \"surface-level\" and as potentially \"one of the hardest classes you've ever taken\" — these are reconcilable only by math preparation. Also note that the 10-701 and 10-315 Reddit evidence is from 2020–2021 and may be somewhat dated.\n\n**Source mix:** Reddit (r/cmu) dominant across all four courses; supplemented by personal course-review blogs (schlomer, Fan Pu Zeng, Joe McLaughlin). No RateMyProfessors data in this evidence set.",
+    "cited_ids": [
+      "fanpuzeng-10-701-34#0",
+      "joemclaughlin-10-315-1#0",
+      "reddit-10301-1icft4q-acceptablespite#0",
+      "reddit-10301-1icft4q-godoftheholy#0",
+      "reddit-10301-1icft4q-nukemoose#0",
+      "reddit-10301-y9ha1g-mavaa#0",
+      "reddit-10315-gpswxk-oppossum#0",
+      "reddit-10315-kir1et-defalt#0",
+      "reddit-10315-kir1et-defalt#1",
+      "reddit-10601-1l213wr-mach01dan#0",
+      "reddit-10601-1l213wr-mach01dan#1",
+      "reddit-10701-qs1aaa-moraceae#0",
+      "reddit-10701-qs1aaa-moraceae#1",
+      "reddit-10701-qs1aaa-moraceae#3",
+      "schlomer-10-601-0#0",
+      "schlomer-10-601-0#2"
+    ]
+  },
+  "facets": [
+    {
+      "key": "workload",
+      "label": "Workload & time",
+      "question": "how do the workloads of 10-301, 10-315, 10-601 and 10-701 compare week to week?",
+      "answer_md": "## Workload Comparison: 10-301 vs 10-315 vs 10-601 vs 10-701\n\nHere's what the evidence says about each course's week-to-week demands, reported separately:\n\n---\n\n### 10-301 — Introduction to Machine Learning (Undergrad)\nGenerally described as the lightest of the four. One student notes: \"It's not easy but it's definitely a lower workload and difficulty than 15122.\" [reddit-10301-y9ha1g-emoney#0 · r/cmu · 2022] However, recent homework has gotten harder: \"Recent HW #2 is not easy; the programming part was difficult.\" [reddit-10301-1icft4q-acceptablespite#0 · r/cmu · 2024] Exams are math-heavy but have no programming portions. [reddit-10301-1icft4q-nukemoose#0 · r/cmu · 2024] TAs are described as helpful when you get stuck. [reddit-10301-y9ha1g-mavaa#0 · r/cmu · 2022]\n\n---\n\n### 10-315 — Introduction to Machine Learning (Honors)\nDescribed as a step up from 10-301: \"I've heard 315 is more rigorous than 301.\" [reddit-10315-kir1et-defalt#1 · r/cmu · 2020] It is specifically recommended for SCS undergrads over 10-701: \"There's a reason 315 is advised for SCS undergrads.\" [reddit-10315-kir1et-defalt#0 · r/cmu · 2020] One student noted liking the course content more than expected. [joemclaughlin-10-315-1#0 · Joe McLaughlin course reviews · Spring 2023] No specific hours-per-week figure is available in the evidence.\n\n---\n\n### 10-601 — Machine Learning (MS-level)\nThe most concrete workload estimate comes here: \"10-601 required about **5-10 hours of work per week**, and its exams are quite manageable if you have some mathematical maturity.\" [schlomer-10-601-0#2 · schlomer course reviews · Fall 2024] Assignments combine written proofs/derivations with coding: \"601 is pretty theoretical, with a fair amount of proofs and derivatives on the written homework, and you use what you solve in the written to complete the coding.\" [reddit-10601-1l213wr-mach01dan#1 · r/cmu · 2025]\n\n---\n\n### 10-701 — Machine Learning (PhD-level)\nAssignments are described as more **grindy than difficult**: \"The math in the assignments isn't too bad — assignments tend to be more grindy than difficult, and I waste more time on the programming because it's easy to make dumb numpy broadcasting mistakes.\" [reddit-10701-qs1aaa-moraceae#1 · r/cmu · 2021] Structurally, the course is less exam-heavy and more project-driven: \"it isn't very exam-heavy — there's a project worth more than the final, and that's where most of the grade is.\" [reddit-10701-kir1et-sephyrial#0 · r/cmu · 2020] One student dropped it due to teaching quality: \"I tried 701 as an undergrad and dropped it because the teaching was subpar.\" [reddit-10701-qs1aaa-moraceae#2 · r/cmu · 2021]\n\n---\n\n### Summary Table\n\n| Course | Relative Workload | Weekly Hours | Assignment Style | Key Warning |\n|--------|------------------|--------------|-----------------|-------------|\n| 10-301 | Lowest | Not specified | Math + coding HW | Getting harder recently |\n| 10-315 | Medium (more rigorous than 301) | Not specified | Honors-level rigor | Instructor quality varies |\n| 10-601 | Medium-High | ~5–10 hrs/week | Proofs + coding | Math maturity needed |\n| 10-701 | High (but grindy, not hard) | Not specified | Project-heavy, less exams | Teaching quality highly variable |\n\n---\n\n### ⚠️ Caveats\n- The 10-701 comments are from 2020–2021 and may be outdated.\n- 10-315 lacks any hours-per-week data in the evidence.\n- 10-701's workload and difficulty fluctuate significantly by instructor each semester. [reddit-10315-kir1et-defalt#0 · r/cmu · 2020]\n\n**Source mix:** All Reddit (r/cmu), one personal course review blog (schlomer.xyz), one RMP rating, one personal review site (jmmclaug201.github.io).\n\n**Recommendation:** If you want a concrete workload estimate, 10-601 at 5–10 hours/week is the best-documented. 10-301 is lighter but growing harder. 10-701's load is unpredictable and instructor-dependent — check who's teaching before enrolling.",
+      "cited_ids": [
+        "joemclaughlin-10-315-1#0",
+        "reddit-10301-1icft4q-acceptablespite#0",
+        "reddit-10301-1icft4q-nukemoose#0",
+        "reddit-10301-y9ha1g-emoney#0",
+        "reddit-10301-y9ha1g-mavaa#0",
+        "reddit-10315-kir1et-defalt#0",
+        "reddit-10315-kir1et-defalt#1",
+        "reddit-10601-1l213wr-mach01dan#1",
+        "reddit-10701-kir1et-sephyrial#0",
+        "reddit-10701-qs1aaa-moraceae#1",
+        "reddit-10701-qs1aaa-moraceae#2",
+        "schlomer-10-601-0#2"
+      ]
+    },
+    {
+      "key": "difficulty_type",
+      "label": "Difficulty type",
+      "question": "how much math and theory does each of 10-301, 10-315, 10-601, 10-701 assume?",
+      "answer_md": "## Math & Theory Assumptions by Course\n\nHere's what the evidence says about each course, reported separately.\n\n---\n\n### 10-301 — Introduction to Machine Learning (Undergrad)\n\nExams are **math-heavy** but stop short of full proofs. One student notes: \"The exams when I took them were very math heavy. I don't remember any actual programming portions on the tests I've taken\" [reddit-10301-1icft4q-nukemoose#0 · r/cmu · 2024 · https://www.reddit.com/r/cmu/comments/1icft4q/comment/m9saffg/]. Another clarifies the exam format: \"The exams include some coding questions, but very short — you will mostly fill in the blanks. The rest are conceptual questions\" [reddit-10301-1icft4q-godoftheholy#0 · r/cmu · 2024 · https://www.reddit.com/r/cmu/comments/1icft4q/comment/m9wvof2/]. Overall difficulty is described as lower than 15122 [reddit-10301-y9ha1g-emoney#0 · r/cmu · 2022 · https://www.reddit.com/r/cmu/comments/y9ha1g/comment/it86ffq/].\n\n**Takeaway:** Math-present but conceptual; no deep proof-writing expected.\n\n---\n\n### 10-315 — Introduction to Machine Learning (Honors/SCS)\n\nDescribed as **more rigorous than 10-301**: \"I've heard 315 is more rigorous than 301, and I'd imagine 701 is more rigorous than both since it's a grad-level course\" [reddit-10315-kir1et-defalt#1 · r/cmu · 2020 · https://www.reddit.com/r/cmu/comments/kir1et/comment/ggskzad/]. It is specifically recommended for SCS undergrads: \"There's a reason 315 is advised for SCS undergrads\" [reddit-10315-kir1et-defalt#0 · r/cmu · 2020 · https://www.reddit.com/r/cmu/comments/kir1et/comment/ggskzad/].\n\n**Takeaway:** Stronger mathematical rigor than 10-301; the go-to for CS/SCS majors who want a solid theoretical grounding without going full grad-level.\n\n---\n\n### 10-601 — Machine Learning (MS-level)\n\nThis course is explicitly **theoretical**, with proofs and calculus front and center: \"601 is pretty theoretical, with a fair amount of proofs and derivatives on the written homework, and you use what you solve in the written to complete the coding\" [reddit-10601-1l213wr-mach01dan#1 · r/cmu · 2025 · https://www.reddit.com/r/cmu/comments/1l213wr/comment/mw1at4n/]. The math is not optional: \"A lot of the content wouldn't really make sense without the math\" [reddit-10601-1l213wr-nukemoose#0 · r/cmu · 2025 · https://www.reddit.com/r/cmu/comments/1l213wr/comment/mw6yijq/]. Exams are \"quite manageable if you have some mathematical maturity\" [schlomer-10-601-0#2 · schlomer course reviews · Fall 2024 · https://schlomer.xyz/cmu-courses/]. Students without the math prereqs are pointed to 10-606/10-607 first [reddit-10601-1l213wr-moraceae#0 · r/cmu · 2025 · https://www.reddit.com/r/cmu/comments/1l213wr/comment/mw1a4kg/].\n\n**Takeaway:** Heavy theory — proofs, derivatives, and mathematical maturity are genuinely required.\n\n---\n\n### 10-701 — Introduction to Machine Learning (PhD-level)\n\nSurprisingly, one current student reports the math in assignments is not brutally hard day-to-day: \"The math in the assignments isn't too bad — assignments tend to be more grindy than difficult, and I waste more time on the programming because it's easy to make dumb numpy broadcasting mistakes\" [reddit-10701-qs1aaa-moraceae#1 · r/cmu · 2021 · https://www.reddit.com/r/cmu/comments/qs1aaa/comment/hkab1u3/]. It's PhD-level in structure (project-heavy, not exam-heavy): \"701 is a PhD-level course, so it isn't very exam-heavy — there's a project worth more than the final\" [reddit-10701-kir1et-sephyrial#0 · r/cmu · 2020 · https://www.reddit.com/r/cmu/comments/kir1et/comment/ggskzad/]. Prior ML knowledge is not required but common: \"You don't need to know any ML beforehand, though a lot of people will have that background\" [reddit-10701-qs1aaa-moraceae#0 · r/cmu · 2021 · https://www.reddit.com/r/cmu/comments/qs1aaa/comment/hkab1u3/]. **Instructor quality matters enormously**: \"I tried 701 as an undergrad and dropped it because the teaching was subpar\" [reddit-10701-qs1aaa-moraceae#2 · r/cmu · 2021 · https://www.reddit.com/r/cmu/comments/qs1aaa/comment/hkab1u3/].\n\n**Takeaway:** PhD-level framing, but math grind on assignments is described as moderate; bigger grade weight is on the project. Teaching quality is highly variable.\n\n---\n\n## Summary Table\n\n| Course | Math Intensity | Proof-Writing? | Structure |\n|--------|---------------|----------------|-----------|\n| 10-301 | Moderate | No | Conceptual + fill-in coding |\n| 10-315 | Higher than 301 | Likely some | SCS-recommended honors track |\n| 10-601 | High | Yes (proofs + derivatives) | Written theory → coding HW |\n| 10-701 | High (assumed) but \"grindy not hard\" | Assumed yes | Project-dominant, less exam focus |\n\n---\n\n## Caveats & Recommendation\n\n- The 10-315 and 10-701 evidence is from **2020**, so rigor details may have shifted.\n- 10-701's math experience is **highly instructor-dependent** per multiple sources.\n- **Source mix:** Reddit (majority), one personal blog (schlomer), one RMP entry.\n\n**Direct recommendation:** If you want strong theoretical grounding with proof exposure, **10-601** is the most explicitly theory-forward. If you're an SCS undergrad, **10-315** is the community-endorsed path. If you want ML without heavy proof-writing, **10-301** is the gentlest entry point. **10-701** is worth considering only if you're comfortable with ambiguity around instructor quality and want a project-heavy PhD-style experience.",
+      "cited_ids": [
+        "reddit-10301-1icft4q-godoftheholy#0",
+        "reddit-10301-1icft4q-nukemoose#0",
+        "reddit-10301-y9ha1g-emoney#0",
+        "reddit-10315-kir1et-defalt#0",
+        "reddit-10315-kir1et-defalt#1",
+        "reddit-10601-1l213wr-mach01dan#1",
+        "reddit-10601-1l213wr-moraceae#0",
+        "reddit-10601-1l213wr-nukemoose#0",
+        "reddit-10701-kir1et-sephyrial#0",
+        "reddit-10701-qs1aaa-moraceae#0",
+        "reddit-10701-qs1aaa-moraceae#1",
+        "reddit-10701-qs1aaa-moraceae#2",
+        "schlomer-10-601-0#2"
+      ]
+    },
+    {
+      "key": "structure",
+      "label": "Course structure",
+      "question": "how are 10-301, 10-315, 10-601 and 10-701 structured - homeworks, exams, projects?",
+      "answer_md": "## Course Structure: 10-301, 10-315, 10-601, and 10-701\n\nHere's what the evidence says about each course's structure, reported separately.\n\n---\n\n### 10-301 (Introduction to Machine Learning)\n\n**Homeworks:** HWs have both a programming component and math/written work. \"Recent HW #2 is not easy; the programming part was difficult. If you made an A in 15122 it may be easier. Also needs a good linear algebra background.\" [reddit-10301-1icft4q-acceptablespite#0 · r/cmu · 2024 · https://www.reddit.com/r/cmu/comments/1icft4q/comment/maxr3kt/]\n\nTAs are available for help when stuck on HW. [reddit-10301-y9ha1g-mavaa#0 · r/cmu · 2022 · https://www.reddit.com/r/cmu/comments/y9ha1g/comment/it5mq4o/]\n\n**Exams:** There is some disagreement in the evidence:\n- One student recalled: \"The exams when I took them were very math heavy. I don't remember any actual programming portions on the tests I've taken, but that could have changed.\" [reddit-10301-1icft4q-nukemoose#0 · r/cmu · 2024 · https://www.reddit.com/r/cmu/comments/1icft4q/comment/m9saffg/]\n- Another noted: \"The exams include some coding questions, but very short — you will mostly fill in the blanks. The rest are conceptual questions, and they will share sample exams with you some time before the exam.\" [reddit-10301-1icft4q-godoftheholy#0 · r/cmu · 2024 · https://www.reddit.com/r/cmu/comments/1icft4q/comment/m9wvof2/]\n\n**Projects:** No specific project evidence available in the provided sources.\n\n---\n\n### 10-315 (Introduction to Machine Learning — Honors)\n\n**Homeworks/Assignments:** \"The assignments were largely math based — mostly linear algebra and some vector calc, the rest just coding it up using numpy.\" [reddit-10315-gpswxk-oppossum#0 · r/cmu · 2020 · https://www.reddit.com/r/cmu/comments/gpswxk/comment/fs0sq9e/]\n\n**Exams:** \"The tests were also not that bad; they mostly tested understanding/intuition.\" [reddit-10315-gpswxk-oppossum#1 · r/cmu · 2020 · https://www.reddit.com/r/cmu/comments/gpswxk/comment/fs0sq9e/]\n\n**Rigor note:** \"I've heard 315 is more rigorous than 301, and I'd imagine 701 is more rigorous than both since it's a grad-level course.\" [reddit-10315-kir1et-defalt#1 · r/cmu · 2020 · https://www.reddit.com/r/cmu/comments/kir1et/comment/ggskzad/]\n\n**Projects:** No specific project evidence available in the provided sources.\n\n---\n\n### 10-601 (Machine Learning — MS level)\n\n**Homeworks:** Homeworks have both written and coding components: \"601 is pretty theoretical, with a fair amount of proofs and derivatives on the written homework, and you use what you solve in the written to complete the coding.\" [reddit-10601-1l213wr-mach01dan#1 · r/cmu · 2025 · https://www.reddit.com/r/cmu/comments/1l213wr/comment/mw1at4n/]\n\n**Exams/Projects:** No specific exam or project structure evidence available in the provided sources.\n\n**Warning:** \"Great course, but without the math prerequisites it might be one of the hardest classes you've ever taken.\" [reddit-10601-1l213wr-mach01dan#0 · r/cmu · 2025 · https://www.reddit.com/r/cmu/comments/1l213wr/comment/mw1at4n/]\n\n---\n\n### 10-701 (Machine Learning — PhD level)\n\n**Homeworks:** \"The math in the assignments isn't too bad — assignments tend to be more grindy than difficult, and I waste more time on the programming because it's easy to make dumb numpy broadcasting mistakes.\" [reddit-10701-qs1aaa-moraceae#1 · r/cmu · 2021 · https://www.reddit.com/r/cmu/comments/qs1aaa/comment/hkab1u3/]\n\n**Exams vs. Project:** Notably exam-light: \"701 is a PhD-level course, so it isn't very exam-heavy — there's a project worth more than the final, and that's where most of the grade is.\" [reddit-10701-kir1et-sephyrial#0 · r/cmu · 2020 · https://www.reddit.com/r/cmu/comments/kir1et/comment/ggtiv6r/]\n\n**Critical dissent:** \"I did not really enjoy this class, and felt that it tried to cover too much too quickly, which led to a very shallow and surface-level understanding of many topics.\" [fanpuzeng-10-701-34#0 · Fan Pu Zeng — course reviews · Spring 2021 · https://fanpu.io/courses/]\n\n---\n\n## Summary Comparison\n\n| Feature | 10-301 | 10-315 | 10-601 | 10-701 |\n|---|---|---|---|---|\n| HW style | Math + coding | Math (LinAlg) + numpy | Proofs + coding | Grindy math + numpy |\n| Exams | Math-heavy, some fill-in coding | Intuition/conceptual | Unknown | Not the main focus |\n| Projects | Unknown | Unknown | Unknown | Major — worth more than final |\n\n**Source mix:** All Reddit (r/cmu), plus one blog (Fan Pu Zeng) and one course review site (Joe McLaughlin). Note that several 10-315 and 10-701 sources are from 2020–2021 and may be outdated.\n\n**Recommendation:** If exam grades are a priority, 10-315/10-301 may suit you better. If you prefer project-based grading, 10-701 heavily weights a project over the final — but it is PhD-level and demanding. For 10-601, confirm current exam structure with the course website, as the evidence is limited on that point.",
+      "cited_ids": [
+        "fanpuzeng-10-701-34#0",
+        "reddit-10301-1icft4q-acceptablespite#0",
+        "reddit-10301-1icft4q-godoftheholy#0",
+        "reddit-10301-1icft4q-nukemoose#0",
+        "reddit-10301-y9ha1g-mavaa#0",
+        "reddit-10315-gpswxk-oppossum#0",
+        "reddit-10315-gpswxk-oppossum#1",
+        "reddit-10315-kir1et-defalt#1",
+        "reddit-10601-1l213wr-mach01dan#0",
+        "reddit-10601-1l213wr-mach01dan#1",
+        "reddit-10701-kir1et-sephyrial#0",
+        "reddit-10701-qs1aaa-moraceae#1"
+      ]
+    },
+    {
+      "key": "best_fit",
+      "label": "Who each is for",
+      "question": "which of 10-301, 10-315, 10-601, 10-701 should an undergrad vs masters vs PhD take?",
+      "answer_md": "## Which ML Course Should You Take? (10-301 vs 10-315 vs 10-601 vs 10-701)\n\nHere's what the evidence says about each course and its intended audience:\n\n---\n\n### 10-301 — Introduction to Machine Learning (Undergrad-friendly)\nDescribed as accessible and well-supported: \"10301 is very doable. Course content is taught well, and if you get stuck on hw the TAs are very helpful.\" [reddit-10301-y9ha1g-mavaa#0 · r/cmu · 2022 · https://www.reddit.com/r/cmu/comments/y9ha1g/comment/it5mq4o/]\n\nThat said, it's not trivial: \"Recent HW #2 is not easy; the programming part was difficult. If you made an A in 15122 it may be easier. Also needs a good linear algebra background.\" [reddit-10301-1icft4q-acceptablespite#0 · r/cmu · 2024 · https://www.reddit.com/r/cmu/comments/1icft4q/comment/maxr3kt/]\n\n**Best for:** Undergrads earlier in their studies or without strong math/ML background.\n\n---\n\n### 10-315 — Introduction to Machine Learning (Honors, Undergrad)\nExplicitly recommended for SCS undergrads over 10-701: \"I think you should go for 315. I've heard from upperclassmen that because 701 is a grad course, its difficulty heavily depends on the instructor for the semester. **There's a reason 315 is advised for SCS undergrads.**\" [reddit-10315-kir1et-defalt#0 · r/cmu · 2020 · https://www.reddit.com/r/cmu/comments/kir1et/comment/ggskzad/]\n\nIt's more rigorous than 10-301: \"I've heard 315 is more rigorous than 301, and I'd imagine 701 is more rigorous than both since it's a grad-level course.\" [reddit-10315-kir1et-defalt#1 · r/cmu · 2020 · https://www.reddit.com/r/cmu/comments/kir1et/comment/ggskzad/]\n\nOne student took it as a CS major AI elective: \"I took 10-315 to fulfill my AI elective as a CS major, though I ended up liking the course content more than I thought I would.\" [joemclaughlin-10-315-1#0 · Joe McLaughlin — course reviews · Spring 2023 · https://jmmclaug201.github.io/cmu-course-reviews/]\n\n**Best for:** Strong SCS undergrads (honors-track); preferred over 10-701 for undergrads.\n\n---\n\n### 10-601 — Machine Learning (Masters-level)\nDescribed as a well-organized, manageable course for those with math prerequisites: \"10-601 required about 5-10 hours of work per week, and its exams are quite manageable if you have some mathematical maturity.\" [schlomer-10-601-0#2 · schlomer — course reviews · Fall 2024 · https://schlomer.xyz/cmu-courses/]\n\nBut math prep is critical: \"Great course, but without the math prerequisites it might be one of the hardest classes you've ever taken.\" [reddit-10601-1l213wr-mach01dan#0 · r/cmu · 2025 · https://www.reddit.com/r/cmu/comments/1l213wr/comment/mw1at4n/] If you lack those prereqs, consider 10-606/10-607 first. [reddit-10601-1l213wr-moraceae#0 · r/cmu · 2025 · https://www.reddit.com/r/cmu/comments/1l213wr/comment/mw1a4kg/]\n\n**Best for:** Masters students (the standard masters ML course).\n\n---\n\n### 10-701 — Introduction to Machine Learning (PhD-level)\nExplicitly a PhD-level course with a project-heavy structure: \"701 is a PhD-level course, so it isn't very exam-heavy — there's a project worth more than the final, and that's where most of the grade is.\" [reddit-10701-kir1et-sephyrial#0 · r/cmu · 2020 · https://www.reddit.com/r/cmu/comments/kir1et/comment/ggtiv6r/]\n\nThe curve is generous for those who survive it: \"at least 60% of students got an A in my semester.\" [reddit-10701-kir1et-sephyrial#1 · r/cmu · 2020 · https://www.reddit.com/r/cmu/comments/kir1et/comment/ggtiv6r/]\n\nHowever, undergrads attempting it face real risk — one student says directly: \"I tried 701 as an undergrad and dropped it because the teaching was subpar.\" [reddit-10701-qs1aaa-moraceae#2 · r/cmu · 2021 · https://www.reddit.com/r/cmu/comments/qs1aaa/comment/hkab1u3/] Quality also varies heavily by instructor.\n\n**Best for:** PhD students; risky for undergrads.\n\n---\n\n## Summary Table\n\n| Level | Recommended Course |\n|---|---|\n| **Undergrad (standard)** | 10-301 |\n| **Undergrad (SCS/honors)** | 10-315 |\n| **Masters** | 10-601 |\n| **PhD** | 10-701 |\n\n## ⚠️ Caveats\n- The 10-701 instructor matters enormously — evidence warns quality is variable [reddit-10315-kir1et-defalt#0 · 2020].\n- 10-701 data is from 2020–2021 and may not reflect current structure.\n- Pat Virtue (10-315) has a low RMP rating of 2.4/5, 33% would take again [rmp-patvirtue-10-315#0 · RateMyProfessors · 2026-08 · https://www.ratemyprofessors.com/professor/2412547] — check current instructor before enrolling.\n\n**Source mix:** Reddit (r/cmu), personal course review blogs (schlomer, Joe McLaughlin), RateMyProfessors.",
+      "cited_ids": [
+        "joemclaughlin-10-315-1#0",
+        "reddit-10301-1icft4q-acceptablespite#0",
+        "reddit-10301-y9ha1g-mavaa#0",
+        "reddit-10315-kir1et-defalt#0",
+        "reddit-10315-kir1et-defalt#1",
+        "reddit-10601-1l213wr-mach01dan#0",
+        "reddit-10601-1l213wr-moraceae#0",
+        "reddit-10701-kir1et-sephyrial#0",
+        "reddit-10701-kir1et-sephyrial#1",
+        "reddit-10701-qs1aaa-moraceae#2",
+        "rmp-patvirtue-10-315#0",
+        "schlomer-10-601-0#2"
+      ]
+    }
+  ],
+  "per_course": {
+    "10-301": {
+      "title": "Introduction to Machine Learning (undergrad)",
+      "professor_split": {
+        "available": false,
+        "reason": "no per-instructor RMP stats for this course in the corpus",
+        "professors": []
+      },
+      "receipt_ids": [
+        "reddit-10301-1icft4q-acceptablespite#0",
+        "reddit-10301-1icft4q-godoftheholy#0",
+        "reddit-10301-1icft4q-nukemoose#0",
+        "reddit-10301-y9ha1g-mavaa#0"
+      ],
+      "source_mix": {
+        "reddit": 4,
+        "rmp": 0,
+        "blog": 0,
+        "total": 4,
+        "verified": 4,
+        "unverified": 0
+      }
+    },
+    "10-315": {
+      "title": "Introduction to Machine Learning (SCS majors)",
+      "professor_split": {
+        "available": false,
+        "reason": "no per-instructor RMP stats for this course in the corpus",
+        "professors": []
+      },
+      "receipt_ids": [
+        "joemclaughlin-10-315-1#0",
+        "reddit-10315-gpswxk-oppossum#0",
+        "reddit-10315-kir1et-defalt#0",
+        "reddit-10315-kir1et-defalt#1"
+      ],
+      "source_mix": {
+        "reddit": 3,
+        "rmp": 0,
+        "blog": 1,
+        "total": 4,
+        "verified": 4,
+        "unverified": 0
+      }
+    },
+    "10-601": {
+      "title": "Introduction to Machine Learning (masters)",
+      "professor_split": {
+        "available": false,
+        "reason": "no per-instructor RMP stats for this course in the corpus",
+        "professors": []
+      },
+      "receipt_ids": [
+        "reddit-10601-1l213wr-mach01dan#0",
+        "reddit-10601-1l213wr-mach01dan#1",
+        "schlomer-10-601-0#0",
+        "schlomer-10-601-0#2"
+      ],
+      "source_mix": {
+        "reddit": 2,
+        "rmp": 0,
+        "blog": 2,
+        "total": 4,
+        "verified": 4,
+        "unverified": 0
+      }
+    },
+    "10-701": {
+      "title": "Introduction to Machine Learning (PhD)",
+      "professor_split": {
+        "available": false,
+        "reason": "no per-instructor RMP stats for this course in the corpus",
+        "professors": []
+      },
+      "receipt_ids": [
+        "fanpuzeng-10-701-34#0",
+        "reddit-10701-qs1aaa-moraceae#0",
+        "reddit-10701-qs1aaa-moraceae#1",
+        "reddit-10701-qs1aaa-moraceae#3"
+      ],
+      "source_mix": {
+        "reddit": 3,
+        "rmp": 0,
+        "blog": 1,
+        "total": 4,
+        "verified": 4,
+        "unverified": 0
+      }
+    }
+  },
+  "receipts": {
+    "reddit-10301-1icft4q-godoftheholy#0": {
+      "id": "reddit-10301-1icft4q-godoftheholy#0",
+      "text": "The exams include some coding questions, but very short — you will mostly fill in the blanks. The rest are conceptual questions, and they will share sample exams with you some time before the exam.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/1icft4q/comment/m9wvof2/",
+      "date": "2024",
+      "verified": true,
+      "course": "10-301",
+      "professor": null,
+      "thread": "10301 Exams",
+      "author": "God-of-the-holy-land",
+      "score": 0.348
+    },
+    "reddit-10301-1icft4q-nukemoose#0": {
+      "id": "reddit-10301-1icft4q-nukemoose#0",
+      "text": "The exams when I took them were very math heavy. I don't remember any actual programming portions on the tests I've taken, but that could have changed.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/1icft4q/comment/m9saffg/",
+      "date": "2024",
+      "verified": true,
+      "course": "10-301",
+      "professor": null,
+      "thread": "10301 Exams",
+      "author": "Nukemoose37",
+      "score": 0.339
+    },
+    "reddit-10301-y9ha1g-mavaa#0": {
+      "id": "reddit-10301-y9ha1g-mavaa#0",
+      "text": "Not sure about 15122, but 10301 is very doable. Course content is taught well, and if you get stuck on hw the TAs are very helpful.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/y9ha1g/comment/it5mq4o/",
+      "date": "2022",
+      "verified": true,
+      "course": "10-301",
+      "professor": null,
+      "thread": "How hard is 10301? How does it compare to 15122 and time commitment?",
+      "author": "MAVAAMUSICMACHINE",
+      "score": 0.258
+    },
+    "reddit-10301-1icft4q-acceptablespite#0": {
+      "id": "reddit-10301-1icft4q-acceptablespite#0",
+      "text": "Recent HW #2 is not easy; the programming part was difficult. If you made an A in 15122 it may be easier. Also needs a good linear algebra background.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/1icft4q/comment/maxr3kt/",
+      "date": "2024",
+      "verified": true,
+      "course": "10-301",
+      "professor": null,
+      "thread": "10301 Exams",
+      "author": "Acceptable-Spite4358",
+      "score": 0.237
+    },
+    "joemclaughlin-10-315-1#0": {
+      "id": "joemclaughlin-10-315-1#0",
+      "text": "I took 10-315 to fulfill my AI elective as a CS major, though I ended up liking the course content more than I thought I would.",
+      "source": "blog",
+      "cite": "Joe McLaughlin — course reviews",
+      "url": "https://jmmclaug201.github.io/cmu-course-reviews/",
+      "date": "Spring 2023",
+      "verified": true,
+      "course": "10-315",
+      "professor": "Pat",
+      "thread": "blog · Joe McLaughlin",
+      "author": "Joe McLaughlin",
+      "score": 0.276
+    },
+    "reddit-10315-kir1et-defalt#1": {
+      "id": "reddit-10315-kir1et-defalt#1",
+      "text": "I've heard 315 is more rigorous than 301, and I'd imagine 701 is more rigorous than both since it's a grad-level course.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/kir1et/comment/ggskzad/",
+      "date": "2020",
+      "verified": true,
+      "course": "10-315",
+      "professor": null,
+      "thread": "Difference between 10315 and 10701",
+      "author": "__Defalt__",
+      "score": 0.247
+    },
+    "reddit-10315-gpswxk-oppossum#0": {
+      "id": "reddit-10315-gpswxk-oppossum#0",
+      "text": "I took 315 with Virtue and it didn't feel like a 12-unit course. The assignments were largely math based — mostly linear algebra and some vector calc, the rest just coding it up using numpy.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/gpswxk/comment/fs0sq9e/",
+      "date": "2020",
+      "verified": true,
+      "course": "10-315",
+      "professor": "Pat Virtue",
+      "thread": "10315 (intro to ml for cs majors) along with 15213",
+      "author": "awsome_oppossum",
+      "score": 0.246
+    },
+    "reddit-10315-kir1et-defalt#0": {
+      "id": "reddit-10315-kir1et-defalt#0",
+      "text": "I think you should go for 315. I've heard from upperclassmen that because 701 is a grad course, its difficulty heavily depends on the instructor for the semester. There's a reason 315 is advised for SCS undergrads.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/kir1et/comment/ggskzad/",
+      "date": "2020",
+      "verified": true,
+      "course": "10-315",
+      "professor": null,
+      "thread": "Difference between 10315 and 10701",
+      "author": "__Defalt__",
+      "score": 0.194
+    },
+    "reddit-10601-1l213wr-mach01dan#0": {
+      "id": "reddit-10601-1l213wr-mach01dan#0",
+      "text": "Great course, but without the math prerequisites it might be one of the hardest classes you've ever taken.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/1l213wr/comment/mw1at4n/",
+      "date": "2025",
+      "verified": true,
+      "course": "10-601",
+      "professor": null,
+      "thread": "Interest in 10-601 Intro to ML as a Neuro/Psych PhD student without math prereqs",
+      "author": "mach01dan",
+      "score": 0.457
+    },
+    "schlomer-10-601-0#0": {
+      "id": "schlomer-10-601-0#0",
+      "text": "This class accomplishes exactly what it sets out to do: provide a surface-level introduction to ML without requiring extensive mathematical background.",
+      "source": "blog",
+      "cite": "schlomer — course reviews",
+      "url": "https://schlomer.xyz/cmu-courses/",
+      "date": "Fall 2024",
+      "verified": true,
+      "course": "10-601",
+      "professor": null,
+      "thread": "blog · schlomer",
+      "author": "schlomer",
+      "score": 0.365
+    },
+    "reddit-10601-1l213wr-mach01dan#1": {
+      "id": "reddit-10601-1l213wr-mach01dan#1",
+      "text": "601 is pretty theoretical, with a fair amount of proofs and derivatives on the written homework, and you use what you solve in the written to complete the coding.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/1l213wr/comment/mw1at4n/",
+      "date": "2025",
+      "verified": true,
+      "course": "10-601",
+      "professor": null,
+      "thread": "Interest in 10-601 Intro to ML as a Neuro/Psych PhD student without math prereqs",
+      "author": "mach01dan",
+      "score": 0.338
+    },
+    "schlomer-10-601-0#2": {
+      "id": "schlomer-10-601-0#2",
+      "text": "10-601 required about 5-10 hours of work per week, and its exams are quite manageable if you have some mathematical maturity. Both instructors are incredibly enthusiastic and explain concepts clearly.",
+      "source": "blog",
+      "cite": "schlomer — course reviews",
+      "url": "https://schlomer.xyz/cmu-courses/",
+      "date": "Fall 2024",
+      "verified": true,
+      "course": "10-601",
+      "professor": null,
+      "thread": "blog · schlomer",
+      "author": "schlomer",
+      "score": 0.321
+    },
+    "reddit-10701-qs1aaa-moraceae#0": {
+      "id": "reddit-10701-qs1aaa-moraceae#0",
+      "text": "Currently in 701 as my first official ML course. You don't need to know any ML beforehand, though a lot of people will have that background.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/qs1aaa/comment/hkab1u3/",
+      "date": "2021",
+      "verified": true,
+      "course": "10-701",
+      "professor": "Matt Gormley",
+      "thread": "10701 — how much ML/math needed, and how much more work than 10601",
+      "author": "moraceae",
+      "score": 0.301
+    },
+    "reddit-10701-qs1aaa-moraceae#3": {
+      "id": "reddit-10701-qs1aaa-moraceae#3",
+      "text": "To my understanding the best prof for intro ML is Gormley — his slides have easily been the best.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/qs1aaa/comment/hkab1u3/",
+      "date": "2021",
+      "verified": true,
+      "course": "10-701",
+      "professor": "Matt Gormley",
+      "thread": "10701 — how much ML/math needed, and how much more work than 10601",
+      "author": "moraceae",
+      "score": 0.239
+    },
+    "reddit-10701-qs1aaa-moraceae#1": {
+      "id": "reddit-10701-qs1aaa-moraceae#1",
+      "text": "The math in the assignments isn't too bad — assignments tend to be more grindy than difficult, and I waste more time on the programming because it's easy to make dumb numpy broadcasting mistakes.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/qs1aaa/comment/hkab1u3/",
+      "date": "2021",
+      "verified": true,
+      "course": "10-701",
+      "professor": "Matt Gormley",
+      "thread": "10701 — how much ML/math needed, and how much more work than 10601",
+      "author": "moraceae",
+      "score": 0.203
+    },
+    "fanpuzeng-10-701-34#0": {
+      "id": "fanpuzeng-10-701-34#0",
+      "text": "I did not really enjoy this class, and felt that it tried to cover too much too quickly, which led to a very shallow and surface-level understanding of many topics.",
+      "source": "blog",
+      "cite": "Fan Pu Zeng — course reviews",
+      "url": "https://fanpu.io/courses/",
+      "date": "Spring 2021",
+      "verified": true,
+      "course": "10-701",
+      "professor": "Geoff Gordon, Aarti Singh",
+      "thread": "blog · Fan Pu Zeng",
+      "author": "Fan Pu Zeng",
+      "score": 0.191
+    },
+    "reddit-10301-y9ha1g-emoney#0": {
+      "id": "reddit-10301-y9ha1g-emoney#0",
+      "text": "It's not easy but it's definitely a lower workload and difficulty than 15122.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/y9ha1g/comment/it86ffq/",
+      "date": "2022",
+      "verified": true,
+      "course": "10-301",
+      "professor": null,
+      "thread": "How hard is 10301? How does it compare to 15122 and time commitment?",
+      "author": "Emoneymoore",
+      "score": 0.19
+    },
+    "rmp-patvirtue-10-315#0": {
+      "id": "rmp-patvirtue-10-315#0",
+      "text": "Pat Virtue overall 2.4/5, 33% would take again, difficulty 3.4/5, based on 17 ratings.",
+      "source": "rmp",
+      "cite": "RateMyProfessors — Pat Virtue",
+      "url": "https://www.ratemyprofessors.com/professor/2412547",
+      "date": "2026-08",
+      "verified": true,
+      "course": "10-315",
+      "professor": "Pat Virtue",
+      "thread": "RMP Pat Virtue",
+      "author": null,
+      "score": 0.131
+    },
+    "reddit-10601-1l213wr-moraceae#0": {
+      "id": "reddit-10601-1l213wr-moraceae#0",
+      "text": "Check out 10-606 and 10-607 — they cover the prereqs for 10-601 and 10-701.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/1l213wr/comment/mw1a4kg/",
+      "date": "2025",
+      "verified": true,
+      "course": "10-601",
+      "professor": null,
+      "thread": "Interest in 10-601 Intro to ML as a Neuro/Psych PhD student without math prereqs",
+      "author": "moraceae",
+      "score": 0.249
+    },
+    "reddit-10601-1l213wr-nukemoose#0": {
+      "id": "reddit-10601-1l213wr-nukemoose#0",
+      "text": "A lot of the content wouldn't really make sense without the math.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/1l213wr/comment/mw6yijq/",
+      "date": "2025",
+      "verified": true,
+      "course": "10-601",
+      "professor": null,
+      "thread": "Interest in 10-601 Intro to ML as a Neuro/Psych PhD student without math prereqs",
+      "author": "Nukemoose37",
+      "score": 0.147
+    },
+    "reddit-10701-kir1et-sephyrial#0": {
+      "id": "reddit-10701-kir1et-sephyrial#0",
+      "text": "It depends what you're going for. 701 is a PhD-level course, so it isn't very exam-heavy — there's a project worth more than the final, and that's where most of the grade is.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/kir1et/comment/ggtiv6r/",
+      "date": "2020",
+      "verified": true,
+      "course": "10-701",
+      "professor": null,
+      "thread": "Difference between 10315 and 10701",
+      "author": "Sephyrial",
+      "score": 0.093
+    },
+    "reddit-10701-qs1aaa-moraceae#2": {
+      "id": "reddit-10701-qs1aaa-moraceae#2",
+      "text": "The most important factor is the profs teaching: I tried 701 as an undergrad and dropped it because the teaching was subpar. Chai is currently an instructor and I've had positive experiences with both his lectures and his office hours.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/qs1aaa/comment/hkab1u3/",
+      "date": "2021",
+      "verified": true,
+      "course": "10-701",
+      "professor": "Matt Gormley",
+      "thread": "10701 — how much ML/math needed, and how much more work than 10601",
+      "author": "moraceae",
+      "score": 0.093
+    },
+    "reddit-10701-kir1et-sephyrial#1": {
+      "id": "reddit-10701-kir1et-sephyrial#1",
+      "text": "Because it's a PhD course the curve is fairly generous: at least 60% of students got an A in my semester. Probably more work, but a greater chance of a higher grade.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/kir1et/comment/ggtiv6r/",
+      "date": "2020",
+      "verified": true,
+      "course": "10-701",
+      "professor": null,
+      "thread": "Difference between 10315 and 10701",
+      "author": "Sephyrial",
+      "score": 0.08
+    },
+    "reddit-10315-gpswxk-oppossum#1": {
+      "id": "reddit-10315-gpswxk-oppossum#1",
+      "text": "The tests were also not that bad; they mostly tested understanding/intuition. 213 was a lot harder and more involved (at least for me), so 315 and 213 at the same time sounds manageable.",
+      "source": "reddit",
+      "cite": "r/cmu",
+      "url": "https://www.reddit.com/r/cmu/comments/gpswxk/comment/fs0sq9e/",
+      "date": "2020",
+      "verified": true,
+      "course": "10-315",
+      "professor": "Pat Virtue",
+      "thread": "10315 (intro to ml for cs majors) along with 15213",
+      "author": "awsome_oppossum",
+      "score": 0.181
+    },
+    "schlomer-10-601-0#3": {
+      "id": "schlomer-10-601-0#3",
+      "text": "In fact, this might be the best-organized class I've taken at either CMU or EPFL.",
+      "source": "blog",
+      "cite": "schlomer — course reviews",
+      "url": "https://schlomer.xyz/cmu-courses/",
+      "date": "Fall 2024",
+      "verified": true,
+      "course": "10-601",
+      "professor": null,
+      "thread": "blog · schlomer",
+      "author": "schlomer",
+      "score": 0.214
+    }
+  },
+  "source_mix": {
+    "reddit": 19,
+    "rmp": 1,
+    "blog": 5,
+    "total": 25,
+    "verified": 25,
+    "unverified": 0
+  },
+  "cross_course_citations": []
+}

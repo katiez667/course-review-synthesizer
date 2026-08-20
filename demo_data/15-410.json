@@ -1,0 +1,176 @@
+{
+  "card_id": "15-410",
+  "kind": "single",
+  "course": "15-410",
+  "title": "Operating System Design and Implementation",
+  "frozen_at": "2026-08-13T09:44:15Z",
+  "model": "claude-sonnet-4-6",
+  "retrieval": {
+    "k": 5,
+    "recency": true,
+    "mode": "semantic"
+  },
+  "headline": {
+    "question": "how hard is 15-410, what is the workload, and is it worth it?",
+    "answer_md": "## 15-410: Difficulty, Workload, and Worth It?\n\n### Difficulty & Workload\n\nThe consensus across sources is clear: 15-410 is brutal.\n\nOne reviewer puts it directly: \"15-410 is entirely deserving of its reputation. Building nearly an entire kernel in a semester obviously requires an immense time investment, and results in several baffling debugging experiences.\" [bowad-15-410-16#0 · bowad — course reviews · Spring 2024 · https://bowad.net/courses/]\n\nAnother student reinforces this: \"15-410 is one of the hardest, most time-consuming classes in the entire school of computer science. Taking it in my sophomore spring with limited coding experience was a daring move, but I don't regret it one bit.\" [abigalekim-15-410-13#0 · Abigale Kim — course reviews · Spring 2020 · https://abigalekim.github.io/courses/]\n\n### Professor-by-Professor Ratings (RMP)\n\nEach professor is reported separately:\n\n- **Brian Railing**: Overall 1.8/5, difficulty 4.3/5, only 25% would take again (based on 23 ratings). [rmp-brianrailing-15-410#0 · RateMyProfessors — Brian Railing · 2026-08 · https://www.ratemyprofessors.com/professor/2362136]\n- **Dave Eckhardt**: Overall 2.5/5, difficulty 3.7/5, N/A would take again (based on only 3 ratings — small sample). [rmp-daveeckhardt-15-410#0 · RateMyProfessors — Dave Eckhardt · 2026-08 · https://www.ratemyprofessors.com/professor/1173440]\n- **David O'Hallaron**: Overall 2.6/5, difficulty 3.8/5, 0% would take again (based on 9 ratings). [rmp-daveohallaron-15-410#0 · RateMyProfessors — Dave O'Hallaron · 2026-08 · https://www.ratemyprofessors.com/professor/14001]\n\nAll three professors score low overall, and difficulty ratings cluster between 3.7–4.3/5 regardless of instructor — suggesting the course itself drives the experience more than any individual professor.\n\n### Is It Worth It?\n\nDespite the difficulty, at least one student with firsthand experience says yes: \"I don't regret it one bit.\" [abigalekim-15-410-13#0 · Abigale Kim — course reviews · Spring 2020 · https://abigalekim.github.io/courses/] However, the RMP \"would take again\" rates (25%, 0%, and N/A) are a notable dissenting signal from students who may have felt differently.\n\n### Conflicts & Caveats\n- The \"0% would take again\" for O'Hallaron is based on only 9 ratings, and the Eckhardt sample is just 3 — treat those numbers cautiously.\n- The Abigale Kim review is from Spring 2020, which may not reflect the current course structure.\n\n### Source Mix\n- Blog/personal course reviews: 2 (bowad, Abigale Kim)\n- RateMyProfessors: 3 (Railing, Eckhardt, O'Hallaron)\n- Reddit: 0\n\n### Recommendation\nOnly take 15-410 if you are prepared to invest enormous time into systems-level programming (literally building a kernel). It is widely considered one of the hardest CS courses at CMU. If you have the bandwidth and genuine interest in operating systems, the learning payoff appears real — but go in with eyes open about the workload and the low \"would take again\" rates across all instructors.",
+    "cited_ids": [
+      "abigalekim-15-410-13#0",
+      "bowad-15-410-16#0",
+      "rmp-brianrailing-15-410#0",
+      "rmp-daveeckhardt-15-410#0",
+      "rmp-daveohallaron-15-410#0"
+    ]
+  },
+  "facets": [
+    {
+      "key": "workload",
+      "label": "Workload & time",
+      "question": "how many hours a week does 15-410 take, and when does the workload spike?",
+      "answer_md": "## 15-410 Weekly Hours & Workload Spikes\n\n**The honest answer: the evidence doesn't contain precise hour-per-week figures or specific spike points.** What it does consistently convey is that the course demands an *exceptional* time investment — here's what sources say directly:\n\n- \"15-410 is entirely deserving of its reputation. Building nearly an entire kernel in a semester obviously requires an immense time investment, and results in several baffling debugging experiences.\" [bowad-15-410-16#0 · bowad — course reviews · Spring 2024 · https://bowad.net/courses/]\n\n- \"15-410 is one of the hardest, most time-consuming classes in the entire school of computer science. Taking it in my sophomore spring with limited coding experience was a daring move, but I don't regret it one bit.\" [abigalekim-15-410-13#0 · Abigale Kim — course reviews · Spring 2020 · https://abigalekim.github.io/courses/]\n\nThe phrase **\"building nearly an entire kernel in a semester\"** implies workload spikes are tied to major project deadlines (the kernel projects are the core of the course), though the evidence doesn't name specific weeks.\n\n### Professor Difficulty Ratings (for context)\n| Professor | Difficulty | Overall |\n|---|---|---|\n| Brian Railing | 4.3/5 | 1.8/5 [rmp-brianrailing-15-410#0 · RateMyProfessors · 2026-08 · link] |\n| Dave O'Hallaron | 3.8/5 | 2.6/5 [rmp-daveohallaron-15-410#0 · RateMyProfessors · 2026-08 · link] |\n| Dave Eckhardt | 3.7/5 | 2.5/5 [rmp-daveeckhardt-15-410#0 · RateMyProfessors · 2026-08 · link] |\n\n### Source Mix\n- 2 blog/personal course review sites\n- 3 RateMyProfessors entries\n\n### Recommendation\nThe available evidence only confirms this is among CMU CS's most time-intensive courses with a large kernel-building component (implying project-deadline spikes), but **doesn't give specific weekly hour estimates**. For precise numbers, check the CMU ScottyLabs course tool, ask current students on the CMU Discord/Reddit, or look at the course syllabus directly — those sources will have project timelines where you can anticipate crunch periods.",
+      "cited_ids": [
+        "abigalekim-15-410-13#0",
+        "bowad-15-410-16#0",
+        "rmp-brianrailing-15-410#0",
+        "rmp-daveeckhardt-15-410#0",
+        "rmp-daveohallaron-15-410#0"
+      ]
+    },
+    {
+      "key": "difficulty_type",
+      "label": "Difficulty type",
+      "question": "is 15-410 conceptually hard or is it mostly grinding and volume of work?",
+      "answer_md": "## 15-410: Conceptually Hard vs. Volume of Work?\n\nBased on the available evidence, **15-410 appears to be both** — conceptually demanding *and* a massive time investment — rather than one or the other.\n\n### What the Evidence Says\n\nOne reviewer describes it plainly: \"Building nearly an entire kernel in a semester obviously requires an immense time investment, and results in several **baffling debugging experiences**.\" [bowad-15-410-16#0 · bowad — course reviews · Spring 2024 · https://bowad.net/courses/]\n\nThe phrase \"baffling debugging experiences\" points to genuine conceptual difficulty — kernel-level bugs are notoriously hard to reason about, not just tedious to fix. Meanwhile, \"immense time investment\" confirms the grind element is very real too.\n\nAnother student calls it \"one of the hardest, most time-consuming classes in the entire school of computer science,\" and notes that taking it with \"limited coding experience was a daring move.\" [abigalekim-15-410-13#0 · Abigale Kim — course reviews · Spring 2020 · https://abigalekim.github.io/courses/] The pairing of *hardest* and *most time-consuming* again suggests both dimensions are present.\n\n### Professor Difficulty Ratings (for context)\n\n| Professor | Difficulty | Overall |\n|---|---|---|\n| Brian Railing | 4.3/5 | 1.8/5 (23 ratings) [rmp-brianrailing-15-410#0 · RMP · 2026-08] |\n| Dave O'Hallaron | 3.8/5 | 2.6/5 (9 ratings) [rmp-daveohallaron-15-410#0 · RMP · 2026-08] |\n| Dave Eckhardt | 3.7/5 | 2.5/5 (3 ratings) [rmp-daveeckhardt-15-410#0 · RMP · 2026-08] |\n\nHigh difficulty scores across all instructors suggest the course itself (not just a particular professor) is the source of pain.\n\n### Source Mix\n- Blog/personal course reviews: 2 sources\n- RateMyProfessors: 3 sources\n\n### Bottom Line\n\nThe evidence does **not** support framing this as \"mostly grinding.\" The \"baffling debugging\" language points to deep conceptual challenges around concurrency, memory, and systems design that can't be brute-forced. That said, the sheer scope of building a kernel means the volume of work is also enormous. **Expect both.** If you're hoping it's just a time-management problem you can power through, the evidence suggests that's not the full picture.",
+      "cited_ids": [
+        "abigalekim-15-410-13#0",
+        "bowad-15-410-16#0",
+        "rmp-brianrailing-15-410#0",
+        "rmp-daveeckhardt-15-410#0",
+        "rmp-daveohallaron-15-410#0"
+      ]
+    },
+    {
+      "key": "structure",
+      "label": "Course structure",
+      "question": "how is 15-410 structured - lectures, assignments, exams, TAs and office hours?",
+      "answer_md": "## 15-410 Course Structure\n\nThe evidence available for 15-410 is limited in its detail about the specific mechanics of lectures, assignments, exams, TAs, and office hours. Here is what can be directly supported:\n\n### Projects / Assignments\nThe course is built around **large, comprehensive projects** — most notably, students build \"nearly an entire kernel in a semester,\" which \"obviously requires an immense time investment, and results in several baffling debugging experiences.\" [bowad-15-410-16#0 · bowad — course reviews · Spring 2024 · https://bowad.net/courses/]\n\n### Lectures\nOne reviewer specifically praised the teaching side: \"Through the comprehensiveness of the projects and the **amazing quality of the lectures**, I definitely feel I got a lot out of the course.\" [bowad-15-410-16#1 · bowad — course reviews · Spring 2024 · https://bowad.net/courses/]\n\n### Overall Difficulty\nThe course is widely described as one of the hardest at CMU: \"15-410 is one of the hardest, most time-consuming classes in the entire school of computer science.\" [abigalekim-15-410-13#0 · Abigale Kim — course reviews · Spring 2020 · https://abigalekim.github.io/courses/]\n\n### What the Evidence Does NOT Cover\nThe available evidence does **not** specifically describe exam format, TA availability, or office hours structure for 15-410.\n\n---\n\n**Source mix:** blog reviews (2), RateMyProfessors (2). Note the Abigale Kim review is from Spring 2020, which may be outdated.\n\n**Recommendation:** For precise details on exams, TAs, and office hours, check the official 15-410 course website or syllabus directly, as the evidence here only scratches the surface of course structure.",
+      "cited_ids": [
+        "abigalekim-15-410-13#0",
+        "bowad-15-410-16#0",
+        "bowad-15-410-16#1"
+      ]
+    },
+    {
+      "key": "worth",
+      "label": "Worth it?",
+      "question": "is 15-410 worth taking - what does it unlock and what is the payoff?",
+      "answer_md": "## Is 15-410 Worth Taking?\n\n### What the Course Is\n\nThe evidence is clear that 15-410 is an extraordinarily demanding course. As one reviewer puts it: \"15-410 is entirely deserving of its reputation. Building nearly an entire kernel in a semester obviously requires an immense time investment, and results in several baffling debugging experiences.\" [bowad-15-410-16#0 · bowad — course reviews · Spring 2024 · https://bowad.net/courses/]\n\nAnother student describes it as \"one of the hardest, most time-consuming classes in the entire school of computer science,\" but adds: \"Taking it in my sophomore spring with limited coding experience was a daring move, but I don't regret it one bit.\" [abigalekim-15-410-13#0 · Abigale Kim — course reviews · Spring 2020 · https://abigalekim.github.io/courses/]\n\n### The Payoff\n\n**The evidence provided does not contain specific details about what courses 15-410 unlocks as a prerequisite, or concrete career/recruiting payoffs.** Those claims would go beyond what the evidence supports.\n\n### Professor Ratings (reported separately)\n\n- **Brian Railing**: 1.8/5 overall, 25% would take again, difficulty 4.3/5 (23 ratings) [rmp-brianrailing-15-410#0 · RateMyProfessors — Brian Railing · 2026-08 · https://www.ratemyprofessors.com/professor/2362136]\n- **Dave O'Hallaron**: 2.6/5 overall, 0% would take again, difficulty 3.8/5 (9 ratings) [rmp-daveohallaron-15-410#0 · RateMyProfessors — Dave O'Hallaron · 2026-08 · https://www.ratemyprofessors.com/professor/14001]\n- **Dave Eckhardt**: 2.5/5 overall, N/A would take again, difficulty 3.7/5 (3 ratings) [rmp-daveeckhardt-15-410#0 · RateMyProfessors — Dave Eckhardt · 2026-08 · https://www.ratemyprofessors.com/professor/1173440]\n\nAll three instructors rate low on RMP, which is a notable pattern — though RMP samples are small and may skew negative.\n\n### Source Mix\n- 2 student blog reviews (verified)\n- 3 RateMyProfessors entries (verified)\n- No Reddit or blog posts specifically addressing prerequisites unlocked or career payoff\n\n### Recommendation\n\nThe evidence confirms 15-410 is grueling but that at least some students find it worth it despite the difficulty. **However, the evidence here cannot answer what the course specifically unlocks or its concrete payoff.** For that, check CMU's official prerequisite lists, upperclassmen, or course-specific forums — the evidence provided simply doesn't cover it.",
+      "cited_ids": [
+        "abigalekim-15-410-13#0",
+        "bowad-15-410-16#0",
+        "rmp-brianrailing-15-410#0",
+        "rmp-daveeckhardt-15-410#0",
+        "rmp-daveohallaron-15-410#0"
+      ]
+    }
+  ],
+  "professor_split": {
+    "available": false,
+    "reason": "no per-instructor RMP stats for this course in the corpus",
+    "professors": []
+  },
+  "receipts": {
+    "bowad-15-410-16#0": {
+      "id": "bowad-15-410-16#0",
+      "text": "15-410 is entirely deserving of its reputation. Building nearly an entire kernel in a semester obviously requires an immense time investment, and results in several baffling debugging experiences.",
+      "source": "blog",
+      "cite": "bowad — course reviews",
+      "url": "https://bowad.net/courses/",
+      "date": "Spring 2024",
+      "verified": true,
+      "course": "15-410",
+      "professor": null,
+      "thread": "blog · bowad",
+      "author": "bowad",
+      "score": 0.372
+    },
+    "rmp-brianrailing-15-410#0": {
+      "id": "rmp-brianrailing-15-410#0",
+      "text": "Brian Railing overall 1.8/5, 25% would take again, difficulty 4.3/5, based on 23 ratings.",
+      "source": "rmp",
+      "cite": "RateMyProfessors — Brian Railing",
+      "url": "https://www.ratemyprofessors.com/professor/2362136",
+      "date": "2026-08",
+      "verified": true,
+      "course": "15-410",
+      "professor": "Brian Railing",
+      "thread": "RMP Brian Railing",
+      "author": null,
+      "score": 0.333
+    },
+    "rmp-daveohallaron-15-410#0": {
+      "id": "rmp-daveohallaron-15-410#0",
+      "text": "David O'Hallaron overall 2.6/5, 0% would take again, difficulty 3.8/5, based on 9 ratings.",
+      "source": "rmp",
+      "cite": "RateMyProfessors — Dave O'Hallaron",
+      "url": "https://www.ratemyprofessors.com/professor/14001",
+      "date": "2026-08",
+      "verified": true,
+      "course": "15-410",
+      "professor": "Dave O'Hallaron",
+      "thread": "RMP David O'Hallaron",
+      "author": null,
+      "score": 0.276
+    },
+    "abigalekim-15-410-13#0": {
+      "id": "abigalekim-15-410-13#0",
+      "text": "15-410 is one of the hardest, most time-consuming classes in the entire school of computer science. Taking it in my sophomore spring with limited coding experience was a daring move, but I don’t regret it one bit.",
+      "source": "blog",
+      "cite": "Abigale Kim — course reviews",
+      "url": "https://abigalekim.github.io/courses/",
+      "date": "Spring 2020",
+      "verified": true,
+      "course": "15-410",
+      "professor": null,
+      "thread": "blog · Abigale Kim",
+      "author": "Abigale Kim",
+      "score": 0.252
+    },
+    "rmp-daveeckhardt-15-410#0": {
+      "id": "rmp-daveeckhardt-15-410#0",
+      "text": "Dave Eckhardt overall 2.5/5, N/A would take again, difficulty 3.7/5, based on 3 ratings.",
+      "source": "rmp",
+      "cite": "RateMyProfessors — Dave Eckhardt",
+      "url": "https://www.ratemyprofessors.com/professor/1173440",
+      "date": "2026-08",
+      "verified": true,
+      "course": "15-410",
+      "professor": "Dave Eckhardt",
+      "thread": "RMP Dave Eckhardt",
+      "author": null,
+      "score": 0.212
+    },
+    "bowad-15-410-16#1": {
+      "id": "bowad-15-410-16#1",
+      "text": "Through the comprehensiveness of the projects and the amazing quality of the lectures, I definitely feel I got a lot out of the course. Despite this, it is definitely not a course for everyone.",
+      "source": "blog",
+      "cite": "bowad — course reviews",
+      "url": "https://bowad.net/courses/",
+      "date": "Spring 2024",
+      "verified": true,
+      "course": "15-410",
+      "professor": null,
+      "thread": "blog · bowad",
+      "author": "bowad",
+      "score": 0.352
+    }
+  },
+  "source_mix": {
+    "reddit": 0,
+    "rmp": 3,
+    "blog": 3,
+    "total": 6,
+    "verified": 6,
+    "unverified": 0
+  },
+  "cross_course_citations": []
+}

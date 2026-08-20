@@ -1,0 +1,351 @@
+{
+  "Aarti Singh": {
+    "avgDifficulty": 0,
+    "avgRating": 0,
+    "department": "Computer Science",
+    "firstName": "Aarti",
+    "id": "VGVhY2hlci0xODg5NDMy",
+    "lastName": "Singh",
+    "numRatings": 0,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": -1
+  },
+  "Andy Pavlo": null,
+  "Brandon Lucia": {
+    "avgDifficulty": 0,
+    "avgRating": 0,
+    "department": "Computer Science",
+    "firstName": "Brandon",
+    "id": "VGVhY2hlci0yNDUwMzE5",
+    "lastName": "Lucia",
+    "numRatings": 0,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": -1
+  },
+  "Brian Railing": {
+    "avgDifficulty": 4.3,
+    "avgRating": 1.8,
+    "department": "Computer Science",
+    "firstName": "Brian",
+    "id": "VGVhY2hlci0yMzYyMTM2",
+    "lastName": "Railing",
+    "numRatings": 23,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": 25
+  },
+  "Brookes": {
+    "avgDifficulty": 4.6,
+    "avgRating": 2.1,
+    "department": "Computer Science",
+    "firstName": "Stephen",
+    "id": "VGVhY2hlci03NzY4NTY=",
+    "lastName": "Brookes",
+    "numRatings": 11,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": 0
+  },
+  "Bryan Parno": null,
+  "Danny Sleator": {
+    "avgDifficulty": 4,
+    "avgRating": 2.3,
+    "department": "Computer Science",
+    "firstName": "Daniel",
+    "id": "VGVhY2hlci03NzY4NzU=",
+    "lastName": "Sleator",
+    "numRatings": 6,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": 33.3333
+  },
+  "Dave Eckhardt": {
+    "avgDifficulty": 3.7,
+    "avgRating": 2.5,
+    "department": "Computer Science",
+    "firstName": "Dave",
+    "id": "VGVhY2hlci0xMTczNDQw",
+    "lastName": "Eckhardt",
+    "numRatings": 3,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": -1
+  },
+  "Dave O'Hallaron": {
+    "avgDifficulty": 3.8,
+    "avgRating": 2.6,
+    "department": "Computer Science",
+    "firstName": "David",
+    "id": "VGVhY2hlci0xNDAwMQ==",
+    "lastName": "O'Hallaron",
+    "numRatings": 9,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": 0
+  },
+  "David Kosbie": {
+    "avgDifficulty": 3.9,
+    "avgRating": 4.3,
+    "department": "Computer Science",
+    "firstName": "David",
+    "id": "VGVhY2hlci0xMTc5NjI5",
+    "lastName": "Kosbie",
+    "numRatings": 100,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": 68
+  },
+  "David Woodruff": {
+    "avgDifficulty": 4.5,
+    "avgRating": 5,
+    "department": "Computer Science",
+    "firstName": "David",
+    "id": "VGVhY2hlci0yNDUwMzI0",
+    "lastName": "Woodruff",
+    "numRatings": 2,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": 100
+  },
+  "Erdmann": {
+    "avgDifficulty": 3.5,
+    "avgRating": 4.1,
+    "department": "Robotics",
+    "firstName": "Michael",
+    "id": "VGVhY2hlci0yNDUwMzEx",
+    "lastName": "Erdmann",
+    "numRatings": 13,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": 76.9231
+  },
+  "Garrett Ervin": {
+    "avgDifficulty": 3.3,
+    "avgRating": 4.9,
+    "department": "Mathematics",
+    "firstName": "Garrett",
+    "id": "VGVhY2hlci0yNTQxNDA5",
+    "lastName": "Ervin",
+    "numRatings": 15,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": 100
+  },
+  "Geoff Gordon": {
+    "avgDifficulty": 0,
+    "avgRating": 0,
+    "department": "Computer Science",
+    "firstName": "Geoff",
+    "id": "VGVhY2hlci0yNjc4NTY0",
+    "lastName": "Gordon",
+    "numRatings": 0,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": -1
+  },
+  "Irina Gheorghiciuc": {
+    "avgDifficulty": 3.9,
+    "avgRating": 2.9,
+    "department": "Mathematics",
+    "firstName": "Irina",
+    "id": "VGVhY2hlci0xMDgyNDk1",
+    "lastName": "Gheorghiciuc",
+    "numRatings": 84,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": 35.4839
+  },
+  "Jignesh Patel": null,
+  "John Mackey": {
+    "avgDifficulty": 3.7,
+    "avgRating": 4.9,
+    "department": "Mathematics",
+    "firstName": "John",
+    "id": "VGVhY2hlci0zNzI0MzI=",
+    "lastName": "MacKey",
+    "numRatings": 53,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": 95.6522
+  },
+  "Keenan Crane": null,
+  "Kody Manke": {
+    "avgDifficulty": 2.9,
+    "avgRating": 4.2,
+    "department": "Psychology",
+    "firstName": "Kody",
+    "id": "VGVhY2hlci0yMjE0MTU4",
+    "lastName": "Manke",
+    "numRatings": 14,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": 71.4286
+  },
+  "Mahadev Satyanarayanan": {
+    "avgDifficulty": 0,
+    "avgRating": 0,
+    "department": "Computer Science",
+    "firstName": "Mahadev",
+    "id": "VGVhY2hlci0yOTgzMTQ1",
+    "lastName": "Satyanarayanan",
+    "numRatings": 0,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": -1
+  },
+  "Matthew O'Toole": null,
+  "Mor Harchol Balter": null,
+  "Padmanabhan Pillai": null,
+  "Robin Neumayer": null,
+  "Seth Goldstein": null,
+  "Venkatesan Guruswami": {
+    "avgDifficulty": 5,
+    "avgRating": 5,
+    "department": "Computer Science",
+    "firstName": "Venkatesan",
+    "id": "VGVhY2hlci0yNDUwMzEz",
+    "lastName": "Guruswami",
+    "numRatings": 1,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": 100
+  },
+  "Vipul Goyal": {
+    "avgDifficulty": 3.3,
+    "avgRating": 3.3,
+    "department": "Computer Science",
+    "firstName": "Vipul",
+    "id": "VGVhY2hlci0yNDUwMzE0",
+    "lastName": "Goyal",
+    "numRatings": 4,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": 50
+  },
+  "Anil Ada": {
+    "avgDifficulty": 3.9,
+    "avgRating": 4.8,
+    "department": "Computer Science",
+    "firstName": "Anil",
+    "id": "VGVhY2hlci0xOTgxMDY3",
+    "lastName": "Ada",
+    "numRatings": 22,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": 95.2381
+  },
+  "Pat Virtue": {
+    "avgDifficulty": 3.4,
+    "avgRating": 2.4,
+    "department": "Computer Science",
+    "firstName": "Pat",
+    "id": "VGVhY2hlci0yNDEyNTQ3",
+    "lastName": "Virtue",
+    "numRatings": 17,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": 33.3333
+  },
+  "Bob Harper": null,
+  "David Eckhardt": {
+    "avgDifficulty": 3.7,
+    "avgRating": 2.5,
+    "department": "Computer Science",
+    "firstName": "Dave",
+    "id": "VGVhY2hlci0xMTczNDQw",
+    "lastName": "Eckhardt",
+    "numRatings": 3,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": -1
+  },
+  "Jacobo Carrasquel": {
+    "avgDifficulty": 2.5,
+    "avgRating": 3.2,
+    "department": "Computer Science",
+    "firstName": "Jacobo",
+    "id": "VGVhY2hlci0xOTIwMjE=",
+    "lastName": "Carrasquel",
+    "numRatings": 15,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": 0
+  },
+  "Jan Hoffmann": {
+    "avgDifficulty": 0,
+    "avgRating": 0,
+    "department": "Computer Science",
+    "firstName": "Jan",
+    "id": "VGVhY2hlci0yNDUwMzIz",
+    "lastName": "Hoffmann",
+    "numRatings": 0,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": -1
+  },
+  "Mor Harchol-Balter": null,
+  "Phil Gibbons": {
+    "avgDifficulty": 0,
+    "avgRating": 0,
+    "department": "Computer Science",
+    "firstName": "Phillip",
+    "id": "VGVhY2hlci0yNDUwMzE2",
+    "lastName": "Gibbons",
+    "numRatings": 0,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": -1
+  },
+  "Pravesh Kothari": {
+    "avgDifficulty": 3.8,
+    "avgRating": 4.2,
+    "department": "Computer Science",
+    "firstName": "Pravesh",
+    "id": "VGVhY2hlci0yNzEyNDIx",
+    "lastName": "Kothari",
+    "numRatings": 5,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": 80
+  },
+  "Tom Cortina": {
+    "avgDifficulty": 2.7,
+    "avgRating": 4.6,
+    "department": "Computer Science",
+    "firstName": "Tom",
+    "id": "VGVhY2hlci00ODUyMDU=",
+    "lastName": "Cortina",
+    "numRatings": 25,
+    "school": {
+      "name": "Carnegie Mellon University"
+    },
+    "wouldTakeAgainPercent": 85.7143
+  }
+}

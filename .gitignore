@@ -1,0 +1,13 @@
+# secrets — never commit
+.env
+.claude/settings.local.json
+
+# caches / derived
+blog_cache/
+__pycache__/
+*.pyc
+card_cache/
+
+# os / editor junk
+.DS_Store
+.Rhistory
