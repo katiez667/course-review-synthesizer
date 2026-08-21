@@ -210,8 +210,17 @@ async function listDir(dir) {
     .map((f) => f.replace(/\.json$/i, ""));
 }
 
-/** Library mode: no API. Read both card dirs and build the same row shape. */
+/** Library mode: no API.
+ *  Prefers manifest.json (written by build_static.py) because static hosts —
+ *  GitHub Pages, Netlify, Vercel — do not serve directory listings, so the
+ *  listDir() path silently finds nothing there. Falls back to directory
+ *  listing so a plain `python3 -m http.server` still works with no build step. */
 async function loadStatic() {
+  try {
+    const m = await api("manifest.json");
+    if (m && m.courses) return { ...m, offline: true };
+  } catch (e) { /* no manifest — fall through to directory listing */ }
+
   const [seed, cached] = await Promise.all([listDir("demo_data"), listDir("card_cache")]);
   const rows = [];
   const add = async (id, origin) => {
@@ -348,7 +357,9 @@ function Search({ rows, stats, offline, q, setQ, onPick, onAnswer, onCompileCour
     const t = setTimeout(() => {
       api("/api/ask?q=" + encodeURIComponent(q.trim()))
         .then((r) => alive && setAskRes(r))
-        .catch(() => alive && setAskRes(null));
+        // A dead/unreachable server is NOT the same as "no answer exists". Saying
+        // "nothing matches" here would be a lie the user can't diagnose.
+        .catch(() => alive && setAskRes({ unreachable: true, good_match: false }));
     }, 220);
     return () => { alive = false; clearTimeout(t); };
   }, [q, offline]);
@@ -385,6 +396,12 @@ function Search({ rows, stats, offline, q, setQ, onPick, onAnswer, onCompileCour
         </div>
         {open && (
           <div className="suggest">
+            {askRes && askRes.unreachable && (
+              <div className="ask-head" style={{ color: "#a3321f" }}>
+                Can't reach the server — questions need <code>live_server.py</code> running.
+                Course browsing below still works.
+              </div>
+            )}
             {askRes && askRes.good_match && askRes.matches[0] && (
               <>
                 <div className="ask-head">Answer — already compiled, no API call</div>
@@ -443,7 +460,8 @@ function Search({ rows, stats, offline, q, setQ, onPick, onAnswer, onCompileCour
       <p className="scale-line">
         <b>{stats.cards_total} course cards ready</b>
         {!offline && <> · {rows.length} courses searchable</>}
-        {saved > 0 && <span className="saved"> · {saved} opened from cache, {saved} API calls avoided</span>}
+        {offline && stats.corpus_courses > 0 && <> · {stats.corpus_courses} courses in the corpus</>}
+        {saved > 0 && <span className="saved"> · {saved} opened from cache, {plural(saved, "API call")} avoided</span>}
       </p>
     </div>
   );
@@ -532,8 +550,8 @@ function CompilePanel({ row, hasKey, offline, onCompiled }) {
           corpus, no model call made.
         </p>
 
-        {offline && <p className="cp-warn">Browse-only mode: live_server.py isn't running,
-          so this course can't be compiled right now.</p>}
+        {offline && <p className="cp-warn">This public demo is browse-only. Compiling a new
+          course runs a real API call, so it happens locally, not from this page.</p>}
         {previewErr && <p className="cp-warn">Retrieval failed: {previewErr}</p>}
         {preview && preview.hits.length === 0 && (
           <p className="cp-warn">Nothing retrieved for {row.course} — there's no evidence

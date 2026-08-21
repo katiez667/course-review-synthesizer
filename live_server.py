@@ -212,8 +212,25 @@ class Handler(SimpleHTTPRequestHandler):
                 return self._json(404, {"error": f"{course!r} has no chunks in the corpus"})
             return self._json(200, live.retrieval_preview(course))
 
+        # Static serving is rooted at the project dir, which also contains .env and
+        # .claude/settings.local.json. SimpleHTTPRequestHandler would happily serve
+        # both. Bound to localhost or not, credentials must never be fetchable over
+        # HTTP — any local process (or a tunnel someone opens later) could read them.
+        if self._is_blocked(parsed.path):
+            return self._json(404, {"error": "not found"})
+
         self._no_cache_static = True
         return super().do_GET()
+
+    BLOCKED_NAMES = {"settings.local.json"}
+
+    @staticmethod
+    def _is_blocked(path):
+        from urllib.parse import unquote
+        parts = [seg for seg in unquote(path).split("/") if seg]
+        # any dotfile/dotdir (.env, .git, .claude, ...) plus explicit denies
+        return any(seg.startswith(".") for seg in parts) or \
+               any(seg in Handler.BLOCKED_NAMES for seg in parts)
 
     def do_POST(self):
         if urlparse(self.path).path != "/api/compile":

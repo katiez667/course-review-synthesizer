@@ -99,12 +99,29 @@ for c in RAW:
 # ---------- embedding (ship) / TF-IDF (fallback) ------------------------------
 _ST_MODEL = None          # cache: the model was being rebuilt on every retrieve() call,
                           # which dominated runtime. Pure memoization — ranking is unchanged.
+_ST_LOCK = __import__("threading").Lock()
+
 def embed_texts(texts):
+    """Thread-safe, CPU-pinned embedding.
+
+    Two deliberate constraints, both learned from a hard crash:
+
+    1. device="cpu". On Apple Silicon sentence-transformers auto-selects the MPS
+       (Metal) backend. Concurrent encodes on MPS segfault the whole process inside
+       at::native::mps::copy_cast_kernel_mps. This model is 22M params and the corpus
+       is small, so CPU is fast enough and does not take the process down.
+    2. A module-level lock. live_server.py is a ThreadingHTTPServer — one thread per
+       request — and /api/ask embeds a query on every keystroke, so without this
+       several encodes overlap. Serializing them costs milliseconds at this scale.
+
+    Ranking is unaffected: same model, same weights, same normalized vectors.
+    """
     global _ST_MODEL
-    if _ST_MODEL is None:
-        from sentence_transformers import SentenceTransformer
-        _ST_MODEL = SentenceTransformer("all-MiniLM-L6-v2")
-    return _ST_MODEL.encode(texts, normalize_embeddings=True)
+    with _ST_LOCK:
+        if _ST_MODEL is None:
+            from sentence_transformers import SentenceTransformer
+            _ST_MODEL = SentenceTransformer("all-MiniLM-L6-v2", device="cpu")
+        return _ST_MODEL.encode(texts, normalize_embeddings=True)
 
 def _semantic(query, docs):
     import numpy as np

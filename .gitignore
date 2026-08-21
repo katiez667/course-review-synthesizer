@@ -14,3 +14,6 @@ card_cache/
 
 # stray local duplicate, not part of the project
 retrieval_spike copy.py
+
+# build output (regenerate with build_static.py)
+dist/
