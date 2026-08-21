@@ -144,6 +144,15 @@
          padding: .6rem 1rem; font: 600 13.5px/1 inherit; cursor: pointer; }
   .btn:disabled { background: #c8c0b4; cursor: not-allowed; }
   .cp-cost { font-size: 12px; color: #8a8177; }
+  .byok { margin: 1rem 0 0; padding: .85rem .95rem; border: 1px solid #e4ddd3;
+          border-radius: 9px; background: #faf6f0; }
+  .byok-h { font-size: 12.5px; color: #6d655c; margin: 0 0 .5rem; }
+  .byok-row { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
+  .byok input { flex: 1; min-width: 220px; border: 1px solid #ddd6cc; border-radius: 7px;
+                padding: .5rem .6rem; font: 13px/1.2 ui-monospace, Menlo, monospace;
+                background: #fffdfa; color: inherit; }
+  .byok input:focus { outline: 0; border-color: #1c1a17; }
+  .byok-note { font-size: 11.5px; color: #8a8177; margin: .5rem 0 0; line-height: 1.5; }
   .cp-status { margin-top: .8rem; font-size: 13px; }
   .cp-status.err { color: #a3321f; }
 
@@ -242,6 +251,89 @@ async function loadStatic() {
     stats: { cards_total: rows.length, cards_seed: seed.length,
              cards_cached: rows.length - seed.length, cache_hits: 0, api_calls_spent: 0 },
   };
+}
+
+/* ── browser-side compile (bring your own key) ─────────────────────────────
+ * A static host has no server, so a viewer who wants to compile a new course
+ * calls Anthropic directly from their own browser with their own key. The key
+ * is held in React state only — never written to localStorage, never sent
+ * anywhere except api.anthropic.com.
+ *
+ * Retrieval already happened at build time (dist/bundles/*.json), so this only
+ * does the model call plus the SAME citation gate the server enforces: every
+ * cited id must exist in the bundle, else retry with a correction, then fail.
+ */
+function bundleIds(bundle) {
+  const ids = new Set();
+  const walk = (n) => {
+    Object.values(n.professors || {}).forEach((p) =>
+      (p.chunks || []).forEach((c) => ids.add(c.id)));
+    (n.general || []).forEach((c) => ids.add(c.id));
+  };
+  walk(bundle);
+  Object.values(bundle.courses || {}).forEach(walk);
+  return ids;
+}
+
+function auditCitations(answer, bundle) {
+  const known = bundleIds(bundle);
+  const cited = new Set();
+  for (const m of answer.matchAll(/\[([^\]\n]+)\]/g)) {
+    const head = m[1].split("·")[0].trim().replace(/`/g, "");
+    if (head) cited.add(head);
+  }
+  return {
+    cited: [...cited].filter((c) => known.has(c)).sort(),
+    invented: [...cited].filter((c) => !known.has(c) && c.includes("#")).sort(),
+  };
+}
+
+function userMsg(bundle) {
+  const course = bundle.course || Object.keys(bundle.courses || {}).join(", ");
+  return `Question: ${bundle.query}\nCourse: ${course}\n\n` +
+         `Evidence (JSON):\n${JSON.stringify(bundle, null, 2)}\n\n` +
+         "Write one grounded answer following the rules.";
+}
+
+async function callAnthropic(key, model, system, user) {
+  const res = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      "x-api-key": key,
+      "anthropic-version": "2023-06-01",
+      // Required for browser-origin calls; without it Anthropic blocks CORS.
+      "anthropic-dangerous-direct-browser-access": "true",
+    },
+    body: JSON.stringify({
+      model, max_tokens: 16000,
+      system,
+      messages: [{ role: "user", content: user }],
+    }),
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data?.error?.message || `${res.status} from Anthropic`);
+  return (data.content || []).filter((b) => b.type === "text").map((b) => b.text).join("");
+}
+
+/** Gated compile in the browser. Same rule as the server: fail closed. */
+async function compileInBrowser(key, cfg, bundle, onAttempt) {
+  const base = userMsg(bundle);
+  let msg = base, answer = null, invented = [];
+  const valid = [...bundleIds(bundle)].sort();
+  for (let n = 1; n <= 3; n++) {
+    onAttempt && onAttempt(n);
+    answer = await callAnthropic(key, cfg.model, cfg.system_prompt, msg);
+    const a = auditCitations(answer, bundle);
+    if (!a.invented.length) return { answer, cited: a.cited };
+    invented = a.invented;
+    msg = base + cfg.correction_template
+      .replace("{n}", n).replace("{bad}", invented.join(", "))
+      .replace("{valid}", valid.map((v) => `  - ${v}`).join("\n"));
+  }
+  const e = new Error("Citation check failed after 3 attempts — answer refused rather than shown.");
+  e.invented = invented;
+  throw e;
 }
 
 /* ── matching ─────────────────────────────────────────────────────────────── */
@@ -508,25 +600,45 @@ function Library({ rows, onPick }) {
   );
 }
 
-function CompilePanel({ row, hasKey, offline, onCompiled }) {
+function CompilePanel({ row, hasKey, offline, cfg, onCompiled }) {
   const [preview, setPreview] = useState(null);
   const [previewErr, setPreviewErr] = useState(null);
+  const [bundle, setBundle] = useState(null);      // static mode: prebuilt evidence
   const [full, setFull] = useState(false);
   const [busy, setBusy] = useState(false);
   const [status, setStatus] = useState(null);
+  const [key, setKey] = useState("");              // in memory only — never persisted
 
   useEffect(() => {
-    setPreview(null); setPreviewErr(null); setStatus(null);
-    if (offline) return;
+    setPreview(null); setPreviewErr(null); setStatus(null); setBundle(null);
+    if (offline) {
+      // Evidence was retrieved at build time, so it is viewable with no key at all.
+      api(`bundles/${encodeURIComponent(row.course)}.json`)
+        .then((b) => {
+          setBundle(b);
+          const chunks = [
+            ...Object.values(b.professors || {}).flatMap((p) => p.chunks || []),
+            ...(b.general || []),
+          ];
+          setPreview({ hits: chunks.map((c) => ({
+            pid: c.id, source: (c.cite || "").toLowerCase().includes("reddit") ? "reddit"
+                  : (c.cite || "").toLowerCase().includes("ratemyprofessors") ? "rmp" : "blog",
+            date: c.date, snippet: c.text.slice(0, 180), verified: c.verified,
+          })) });
+        })
+        .catch(() => setPreviewErr("No prebuilt evidence for this course."));
+      return;
+    }
     api("/api/preview?course=" + encodeURIComponent(row.course))
       .then(setPreview).catch((e) => setPreviewErr(e.message));
   }, [row.course, offline]);
 
   const thin = preview && preview.hits.length > 0 &&
                new Set(preview.hits.map((h) => h.source)).size < 2;
-  const canCompile = hasKey && !offline && preview && preview.hits.length > 0 && !busy;
+  const canServer = hasKey && !offline && preview && preview.hits.length > 0 && !busy;
+  const canBrowser = offline && bundle && key.trim().startsWith("sk-ant-") && !busy;
 
-  const compile = () => {
+  const compileServer = () => {
     setBusy(true); setStatus(null);
     api("/api/compile", { method: "POST", headers: { "Content-Type": "application/json" },
                           body: JSON.stringify({ course: row.course, full }) })
@@ -538,6 +650,49 @@ function CompilePanel({ row, hasKey, offline, onCompiled }) {
       });
   };
 
+  const compileBrowser = async () => {
+    setBusy(true); setStatus(null);
+    try {
+      const { answer, cited } = await compileInBrowser(
+        key.trim(), cfg, bundle,
+        (n) => setStatus({ ok: true, msg: n === 1 ? "Calling Claude…"
+                            : `Citation check failed — retrying (${n}/3)…` }));
+      const receipts = {};
+      [...Object.values(bundle.professors || {}).flatMap((p) => p.chunks || []),
+       ...(bundle.general || [])].forEach((c) => {
+        receipts[c.id] = { id: c.id, text: c.text, cite: c.cite, url: c.url,
+                            date: c.date, verified: c.verified,
+                            source: (c.cite || "").toLowerCase().includes("reddit") ? "reddit"
+                              : (c.cite || "").toLowerCase().includes("ratemyprofessors") ? "rmp" : "blog",
+                            course: bundle.course };
+      });
+      const used = Object.values(receipts).filter((r) => cited.includes(r.id));
+      setBusy(false);
+      onCompiled({
+        card_id: row.course, kind: "single", course: row.course,
+        title: row.title || row.course,
+        frozen_at: new Date().toISOString().slice(0, 19) + "Z",
+        model: cfg.model, retrieval: { k: 5, recency: true, mode: "semantic" },
+        headline: { question: bundle.query, answer_md: answer, cited_ids: cited },
+        facets: [], professor_split: { available: false,
+          reason: "no per-instructor stats for this course in the corpus", professors: [] },
+        receipts,
+        source_mix: {
+          reddit: used.filter((r) => r.source === "reddit").length,
+          rmp: used.filter((r) => r.source === "rmp").length,
+          blog: used.filter((r) => r.source === "blog").length,
+          total: used.length,
+          verified: used.filter((r) => r.verified).length,
+          unverified: used.filter((r) => !r.verified).length,
+        },
+        cross_course_citations: [], _origin: "byok",
+      });
+    } catch (e) {
+      setBusy(false);
+      setStatus({ msg: e.message + (e.invented?.length ? ` (${e.invented.join(", ")})` : "") });
+    }
+  };
+
   return (
     <div className="cp">
       <div className="cp-card">
@@ -546,13 +701,11 @@ function CompilePanel({ row, hasKey, offline, onCompiled }) {
           {row.title && <span className="cp-title">{row.title}</span>}
         </div>
         <p className="cp-sub">
-          No card yet. This is the evidence retrieval found — real passages from the
-          corpus, no model call made.
+          No card yet. This is the evidence retrieval found for this course — real
+          passages from the corpus, no model call made.
         </p>
 
-        {offline && <p className="cp-warn">This public demo is browse-only. Compiling a new
-          course runs a real API call, so it happens locally, not from this page.</p>}
-        {previewErr && <p className="cp-warn">Retrieval failed: {previewErr}</p>}
+        {previewErr && <p className="cp-warn">{previewErr}</p>}
         {preview && preview.hits.length === 0 && (
           <p className="cp-warn">Nothing retrieved for {row.course} — there's no evidence
             to cite, so compiling is disabled.</p>
@@ -571,23 +724,49 @@ function CompilePanel({ row, hasKey, offline, onCompiled }) {
           <p className="cp-warn">Heads up: every passage here comes from one source.
             The card will be a summary, not a cross-source synthesis.</p>
         )}
-        {!hasKey && !offline && (
-          <p className="cp-warn">ANTHROPIC_API_KEY isn't set on the server, so compiling
-            is disabled.</p>
+
+        {!offline && (
+          <>
+            {!hasKey && <p className="cp-warn">ANTHROPIC_API_KEY isn't set on the server,
+              so compiling is disabled.</p>}
+            <div className="cp-actions">
+              <button className="btn" disabled={!canServer} onClick={compileServer}>
+                {busy ? "Compiling…" : full ? "Compile full card (5 calls)" : "Compile card (1 call)"}
+              </button>
+              <label className="cp-full">
+                <input type="checkbox" checked={full} disabled={busy}
+                       onChange={(e) => setFull(e.target.checked)} />
+                all 4 facets too
+              </label>
+              <span className="cp-cost">real API call · ~15–60s · then cached forever</span>
+            </div>
+          </>
         )}
 
-        <div className="cp-actions">
-          <button className="btn" disabled={!canCompile} onClick={compile}>
-            {busy ? "Compiling…" : full ? "Compile full card (5 calls)" : "Compile card (1 call)"}
-          </button>
-          <label className="cp-full">
-            <input type="checkbox" checked={full} disabled={busy}
-                   onChange={(e) => setFull(e.target.checked)} />
-            all 4 facets too
-          </label>
-          <span className="cp-cost">real API call · ~15–60s · then cached forever</span>
-        </div>
-        {status && <p className="cp-status err">{status.msg}</p>}
+        {offline && bundle && (
+          <div className="byok">
+            <p className="byok-h">
+              Want to see this course actually compiled? Run it with your own Anthropic key.
+            </p>
+            <div className="byok-row">
+              <input type="password" placeholder="sk-ant-..." value={key} autoComplete="off"
+                     spellCheck="false" disabled={busy}
+                     onChange={(e) => setKey(e.target.value)} />
+              <button className="btn" disabled={!canBrowser} onClick={compileBrowser}>
+                {busy ? "Compiling…" : "Compile"}
+              </button>
+            </div>
+            <p className="byok-note">
+              Your key goes straight from your browser to api.anthropic.com — it is never
+              sent to this site, never stored, and disappears when you reload. The call is
+              billed to your account (one request, a few cents). The answer runs through the
+              same citation check as every card here: if it cites a source that isn't in the
+              evidence above, it's rejected rather than shown.
+            </p>
+          </div>
+        )}
+
+        {status && <p className={"cp-status " + (status.ok ? "" : "err")}>{status.msg}</p>}
       </div>
     </div>
   );
@@ -641,7 +820,7 @@ function App() {
   else if (loading) body = <div className="boot">Opening card…</div>;
   else if (card) body = <CourseCard card={card} />;
   else body = <CompilePanel row={sel} hasKey={idx.has_key} offline={offline}
-                             onCompiled={afterCompile} />;
+                             cfg={idx} onCompiled={afterCompile} />;
 
   return (
     <>

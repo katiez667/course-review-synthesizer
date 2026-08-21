@@ -15,7 +15,9 @@ and more defensible public surface than republishing the whole scraped corpus.
 import json, os, shutil
 
 import corpus_all as c
+import synthesize as syn
 from freeze_cards import TITLES
+from live_compile_demo import overview_question
 
 OUT = "dist"
 SEED_DIR, CACHE_DIR = "demo_data", "card_cache"
@@ -65,6 +67,30 @@ def corpus_rows(have):
     return out
 
 
+def write_bundles(courses):
+    """Pre-retrieve the evidence for every uncompiled course.
+
+    The compile question is deterministic per course, so retrieval can run at build
+    time. That buys two things on a static host: the evidence is viewable with no
+    key at all, and a viewer who supplies their own key only has to make the model
+    call — no embeddings needed in the browser."""
+    os.makedirs(os.path.join(OUT, "bundles"), exist_ok=True)
+    written, skipped = 0, 0
+    for row in courses:
+        if row["has_card"]:
+            continue
+        course = row["course"]
+        q = overview_question(course)
+        b = syn.get_bundle(q, course=course, k=5, recency=True)
+        if not b.get("professors") and not b.get("general"):
+            skipped += 1
+            continue
+        json.dump(b, open(os.path.join(OUT, "bundles", f"{course}.json"), "w"),
+                  indent=2, ensure_ascii=False)
+        written += 1
+    return written, skipped
+
+
 def main():
     if os.path.isdir(OUT):
         shutil.rmtree(OUT)
@@ -82,8 +108,17 @@ def main():
     rest = corpus_rows(have)
     courses = cards + rest
 
+    print("pre-retrieving evidence bundles (this runs the embedder, ~1 min)...")
+    n_bundles, n_empty = write_bundles(courses)
+
     manifest = {
         "courses": courses,
+        # Shipped so a browser compile uses the SAME prompt and model as the server
+        # path — one definition, no drift between them.
+        "system_prompt": syn.SYSTEM,
+        "correction_template": syn.CORRECTION,
+        "model": syn.MODEL,
+        "bundles_available": n_bundles,
         "stats": {
             "cards_total": len(cards),
             "cards_seed": sum(1 for r in cards if r["origin"] == "seed"),
@@ -107,6 +142,7 @@ def main():
     print(f"  cards: {len(cards)}  (seed {manifest['stats']['cards_seed']}, "
           f"cached {manifest['stats']['cards_cached']})")
     print(f"  courses listed: {len(courses)}")
+    print(f"  evidence bundles: {n_bundles}  ({n_empty} courses had no retrievable evidence)")
     print(f"  NOT copied: raw corpus files, _meta.json, .env, server code")
 
 
